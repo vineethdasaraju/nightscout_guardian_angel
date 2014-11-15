@@ -1,0 +1,1404 @@
+<!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    
+
+    <dimen name="actionbar_home_width">60dp</dimen>
+    
+    <dimen name="shadow_width">10dp</dimen>
+     <dimen name="menu_item_padding">12dp</dimen>
+    <dimen name="menu_header_padding_top">8dp</dimen>
+    <dimen name="menu_header_line">3dp</dimen>
+    <dimen name="menu_icon_side">40dp</dimen>
+    <dimen name="slidingmenu_offset">40dp</dimen>
+    
+    <dimen name="ps_lbl1_size">22sp</dimen>
+    <dimen name="ps_lbl2_size">40sp</dimen>
+    <dimen name="ps_lbl3_size">12sp</dimen>
+    <dimen name="ps_lbl1_mb">40dp</dimen>
+    
+    <dimen name="homeScreenImageSize">160dp</dimen>
+    
+<!--     settigs screen start -->
+<!-- 		text size -->
+		<dimen name="settings_btn_label_t_size">20sp</dimen>
+		
+<!-- 		margins -->
+		<dimen name="settings_btn_label_m_top">10dp</dimen>
+		<dimen name="settings_btn_sub_label_m_top">2dp</dimen>
+		<dimen name="settings_btn_sub_label_icon_holder_w">110dp</dimen>
+		
+<!-- 		hxw -->
+		<dimen name="settings_btn_icon_w">34dp</dimen>
+		<dimen name="settings_btn_icon_holder_w">55dp</dimen>
+		<dimen name="settings_btn_label_h">55dp</dimen>
+		<dimen name="settings_btn_icon_h">34dp</dimen>
+		<dimen name="settings_btn_abt_slide_down">20dp</dimen>
+		
+		
+<!-- 		alhpa -->
+		<item type="integer" name="settings_btn_icon_a">0.6</item>
+		
+		
+<!--     settigs screen end -->
+    
+    
+<!--     footerView page -->
+
+<dimen name="fv_main_layout">10dp</dimen>
+
+<dimen name="fv_inside_main_layout">10dp</dimen>
+
+<dimen name="fv_time_line_list_item_txt">13sp</dimen>
+
+<dimen name="fv_progressBar1">5dp</dimen>
+
+ <!--   End of  footerView page -->
+    
+<!--     Login new page -->
+
+<dimen name="ln_ln_inside_main_layout">0dp</dimen>
+
+<dimen name="ln_ln_boost_image">30dp</dimen>
+
+<dimen name="ln_ln_bottom_div">0dp</dimen>
+
+<dimen name="ln_enter_btn_height">40dp</dimen>
+<dimen name="ln_enter_btn_width">120dp</dimen>
+
+<dimen name="ln_login_form_marginLeft">7dp</dimen>
+<dimen name="ln_login_form_marginRight">7dp</dimen>
+
+<dimen name="ln_login_main1_popup_username_box_textSize">15sp</dimen>
+<dimen name="ln_login_main1_popup_username_box_padding">10dp</dimen>
+
+<dimen name="ln_login_main1_popup_pwd_box_textSize">15sp</dimen>
+<dimen name="ln_login_main1_popup_pwd_box_padding">10dp</dimen>
+
+<dimen name="ln_ln_under_enter_paddingLeft">3dp</dimen>
+
+<dimen name="ln_ac_label_textSize">13sp</dimen>
+
+<dimen name="ln_extra_btns_marginTop">20dp</dimen>
+<dimen name="ln_extra_btns_marginLeft">7dp</dimen>
+<dimen name="ln_extra_btns_marginRight">7dp</dimen>
+
+<dimen name="ln_forgot_pswd_layout_height">30dp</dimen>
+
+<dimen name="ln_signup_btn_layout_height">30dp</dimen>
+
+<!--     End of Login new page -->
+
+<!-- nf_signUp_1 page -->
+
+<dimen name="nf_s1_nf_s1_main_layout_paddingTop">15dp</dimen>
+<dimen name="nf_s1_nf_s1_main_layout_paddingLeft">20dp</dimen>
+<dimen name="nf_s1_nf_s1_main_layout_paddingRight">20dp</dimen>
+
+<dimen name="nf_s1_top_div_layout_height">150dp</dimen>
+
+<dimen name="nf_s1_top_image_layout_layout_height">120dp</dimen>
+<dimen name="nf_s1_top_image_layout_layout_width">120dp</dimen>
+<dimen name="nf_s1_top_image_layout_marginBottom">20dp</dimen>
+<dimen name="nf_s1_top_image_layout_height">100dp</dimen>
+<dimen name="nf_s1_top_image_layout_width">100dp</dimen>
+
+<dimen name="nf_s1_details_div_layout_height">45dp</dimen>
+<dimen name="nf_s1_details_text_textSize">20sp</dimen>
+
+<dimen name="nf_s1_input1_div_marginTop">15dp</dimen>
+<dimen name="nf_s1_input1_div_marginBottom">5dp</dimen>
+
+<dimen name="nf_s1_signup_bname_layout_height">42dp</dimen>
+<dimen name="nf_s1_signup_bname_paddingTop">5dp</dimen>
+<dimen name="nf_s1_signup_bname_paddingLeft">55dp</dimen>
+<dimen name="nf_s1_signup_bname_paddingBottom">5dp</dimen>
+<dimen name="nf_s1_signup_bname_paddingRight">5dp</dimen>
+
+<dimen name="nf_s1_name_imageDiv_layout_width">42dp</dimen>
+<dimen name="nf_s1_name_imageDiv_layout_height">42dp</dimen>
+
+<dimen name="nf_s1_name_image_layout_height">40dp</dimen>
+<dimen name="nf_s1_name_image_layout_width">40dp</dimen>
+
+<dimen name="nf_s1_bottomDiv_marginTop">15dp</dimen>
+
+<dimen name="nf_s1_dropImage_layout_height">20dp</dimen>
+<dimen name="nf_s1_dropImage_layout_width">20dp</dimen>
+<dimen name="nf_s1_dropImage_marginRight">10dp</dimen>
+
+<dimen name="nf_s1_back_layout_height">42dp</dimen>
+<dimen name="nf_s1_next_layout_height">42dp</dimen>
+<dimen name="nf_s1_next_layout_marginLeft">2dp</dimen>
+
+<!-- End of nf_signUp_1 page -->
+
+<!-- nf_signUp_2 page -->
+
+<dimen name="nf_s2_signup_addr1_layout_height">35dp</dimen>
+<dimen name="nf_s2_signup_addr1_paddingTop">5dp</dimen>
+<dimen name="nf_s2_signup_addr1_paddingLeft">14dp</dimen>
+<dimen name="nf_s2_signup_addr1_paddingBottom">5dp</dimen>
+<dimen name="nf_s2_signup_addr1_paddingRight">10dp</dimen>
+
+<dimen name="nf_s2_streetDiv_marginTop">10dp</dimen>
+
+<dimen name="nf_s2_signup_city_marginRight">2dp</dimen>
+
+<dimen name="nf_s2_signup_pin_marginLeft">2dp</dimen>
+
+<dimen name="nf_s2_countryScroll_layout_height">20dp</dimen>
+<dimen name="nf_s2_countryScroll_layout_width">20dp</dimen>
+<dimen name="nf_s2_countryScroll_marginRight">10dp</dimen>
+
+<dimen name="nf_s2_back_layout_height">42dp</dimen>
+
+<dimen name="nf_s2_next_marginLeft">2dp</dimen>
+
+<!-- End of nf_signUp_2 page -->
+
+<!-- nf_signUp_3 page -->
+
+<dimen name="nf_s3_signup_email_layout_height">42dp</dimen>
+
+<dimen name="nf_s3_signup_email_paddingTop">5dp</dimen>
+<dimen name="nf_s3_signup_email_paddingLeft">55dp</dimen>
+<dimen name="nf_s3_signup_email_paddingBottom">5dp</dimen>
+<dimen name="nf_s3_signup_email_paddingRight">5dp</dimen>
+
+<dimen name="nf_s3_emailImageDiv_layout_width">42dp</dimen>
+<dimen name="nf_s3_emailImageDiv_layout_height">42dp</dimen>
+
+<dimen name="nf_s3_emailImage_layout_height">40dp</dimen>
+<dimen name="nf_s3_emailImage_layout_width">40dp</dimen>
+
+<dimen name="nf_s3_bottomDiv_marginTop">15dp</dimen>
+
+<dimen name="nf_s3_back_layout_height">42dp</dimen>
+<dimen name="nf_s3_next_marginLeft">2dp</dimen>
+
+<!-- End of nf_signUp_3 page -->
+
+<!-- nf_signUp_4 page -->
+
+<dimen name="nf_s4_editAddressDiv_marginBottom">30dp</dimen>
+
+<dimen name="nf_s4_signup_bsubdomain_layout_height">42dp</dimen>
+<dimen name="nf_s4_signup_bsubdomain_paddingTop">5dp</dimen>
+<dimen name="nf_s4_signup_bsubdomain_paddingLeft">5dp</dimen>
+<dimen name="nf_s4_signup_bsubdomain_paddingBottom">5dp</dimen>
+<dimen name="nf_s4_signup_bsubdomain_paddingRight">5dp</dimen>
+
+<dimen name="nf_s4_domain_textSize">25sp</dimen>
+<dimen name="nf_s4_domain_layout_margin">10dp</dimen>
+
+<dimen name="nf_s4_back_layout_height">42dp</dimen>
+
+<dimen name="nf_s4_next_marginLeft">2dp</dimen>
+
+<!-- End of nf_signUp_4 page -->
+
+<!-- nf_signUp_5 page -->
+
+<dimen name="nf_s5_holder1_padding">15dp</dimen>
+
+<dimen name="nf_s5_signup_bsubtv_textSize">25sp</dimen>
+
+<dimen name="nf_s5_domain_textSize">20sp</dimen>
+
+<dimen name="nf_s5_domain_availability_layout_width">15dp</dimen>
+<dimen name="nf_s5_domain_availability_layout_height">15dp</dimen>
+
+<dimen name="nf_s5_changeDiv_layout_height">60dp</dimen>
+<dimen name="nf_s5_changeDiv_marginTop">-15dp</dimen>
+
+<dimen name="nf_s5_insideChangeDiv_layout_height">33dp</dimen>
+<dimen name="nf_s5_insideChangeDiv_layout_marginLeft">45dp</dimen>
+
+<dimen name="nf_s5_label_textSize">15sp</dimen>
+
+<dimen name="nf_s5_signup_here_btn_layout_height">30dp</dimen>
+<dimen name="nf_s5_signup_here_btn_textSize">15sp</dimen>
+
+<dimen name="nf_s5_back_layout_height">42dp</dimen>
+
+<dimen name="nf_s5_next_layout_marginLeft">2dp</dimen>
+
+<!-- End of nf_signUp_5 page -->
+
+<!-- signUp_holder page -->
+
+<dimen name="sh_pager_layout_height">0dp</dimen>
+
+<dimen name="sh_indicator_padding">10dip</dimen>
+<dimen name="sh_indicator_radius">3dp</dimen>
+<dimen name="sh_indicator_strokeWidth">0dp</dimen>
+
+<!-- End of signUp_holder page -->    
+
+<!--    Action bar dimensions -->
+
+<dimen name="actionBar_layout_height">55dp</dimen>
+<dimen name="actionBar_paddingLeft">2dip</dimen>
+<dimen name="actionBar_paddingRight">2dip</dimen>
+
+<dimen name="actionBar_leftButtonDiv_layout_width">60dp</dimen>
+<dimen name="actionBar_leftButtonDiv_layout_height">60dp</dimen>
+<dimen name="actionBar_leftButtonDiv_marginRight">10dip</dimen>
+
+<dimen name="actionBar_leftButton_layout_width">30dp</dimen>
+<dimen name="actionBar_leftButton_layout_height">30dp</dimen>
+<dimen name="actionBar_leftButton_layout_marginRight">10dip</dimen>
+<dimen name="actionBar_leftButton_paddingLeft">10px</dimen>
+
+<dimen name="actionBar_rightButtonDiv_layout_width">60dp</dimen>
+<dimen name="actionBar_rightButtonDiv_layout_height">60dp</dimen>
+
+<dimen name="actionBar_rightButton_layout_width">26dp</dimen>
+<dimen name="actionBar_rightButton_layout_height">26dp</dimen>
+
+<dimen name="message_detail_view_sharebutton_layout_width">32dp</dimen>
+<dimen name="message_detail_view_sharebutton_layout_height">32dp</dimen>
+
+<dimen name="actionBar_rightButton_layout_marginRight">10dip</dimen>
+<dimen name="actionBar_rightButton_paddingLeft">10px</dimen>
+
+<!--   End of Action bar dimensions -->
+
+<!--    Analytics screen  -->
+
+<dimen name="as_actionBar_leftButton_layout_marginLeft">15dp</dimen>
+
+<dimen name="as_linearLayout1_layout_marginLeft">17dp</dimen>
+<dimen name="as_linearLayout1_layout_marginRight">17dp</dimen>
+
+<dimen name="as_subscribersDiv_layout_height">55dp</dimen>
+
+<dimen name="as_imageView1_layout_width">50dp</dimen>
+<dimen name="as_imageView1_layout_height">50dp</dimen>
+<dimen name="as_imageView1_layout_marginLeft">15dp</dimen>
+
+<dimen name="as_analytics_screen_subscribers_txt_paddingRight">15dp</dimen>
+
+<dimen name="as_analytics_screen_subscribers_textview_paddingLeft">15dp</dimen>
+<dimen name="as_analytics_screen_subscribers_textview_textSize">17sp</dimen>
+
+
+<dimen name="as_analytics_screen_visitors_parent_layout_marginTop">26dp</dimen>
+
+<!--    End of Analytics screen  -->
+
+<!--    Business address screen  -->
+
+<dimen name="ba_actionBar_leftButton_layout_marginLeft">10dp</dimen>
+
+<dimen name="ba_business_address_top_bar_store_save_button_layout_width">40dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_layout_height">40dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_paddingBottom">10dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_paddingLeft">20dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_paddingRight">20dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_paddingTop">10dp</dimen>
+<dimen name="ba_business_address_top_bar_store_save_button_layout_marginRight">10dp</dimen>
+
+<dimen name="ba_business_address_store_business_address_txt_box_minHeight">40dp</dimen>
+<dimen name="ba_business_address_store_business_address_txt_box_marginTop">20dp</dimen>
+
+<dimen name="ba_business_address_store_business_address_txt_box_paddingTop">15dp</dimen>
+<dimen name="ba_business_address_store_business_address_txt_box_paddingBottom">15dp</dimen>
+
+<dimen name="ba_business_address_store_business_address_txt_box_textSize">15sp</dimen>
+
+<dimen name="ba_textView1_marginLeft">17dp</dimen>
+<dimen name="ba_textView1_marginRight">17dp</dimen>
+<dimen name="ba_textView1_marginTop">20dp</dimen>
+<dimen name="ba_textView1_paddingBottom">10dp</dimen>
+
+<dimen name="ba_textView1_paddingTop">10dp</dimen>
+<dimen name="ba_textView1_textSize">13sp</dimen>
+
+<dimen name="ba_calltocustomercare_height">50dp</dimen>
+
+<dimen name="ba_calltocustomercare_marginTop">20dp</dimen>
+<dimen name="ba_calltocustomercare_marginBottom">20dp</dimen>
+
+<dimen name="ba_call_textSize">20sp</dimen>
+
+<!--    End of Business address screen  -->
+
+<!--    Business details screen  -->
+
+<dimen name="bd_business_details_top_bar_store_back_button_marginLeft">10dp</dimen>
+
+<dimen name="bd_business_details_top_bar_store_save_button_width">30dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_height">30dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_paddingBottom">10dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_paddingLeft">20dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_paddingRight">20dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_paddingTop">10dp</dimen>
+<dimen name="bd_business_details_top_bar_store_save_button_marginRight">10dp</dimen>
+
+<dimen name="bd_business_details_store_business_name_txt_marginLeft">20dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_marginTop">20dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_textSize">15sp</dimen>
+
+<dimen name="bd_firstView_height">5dp</dimen>
+
+<dimen name="bd_business_details_store_business_name_txt_box_minHeight">40dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_marginLeft">17dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_marginRight">17dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_textSize">15sp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_paddingBottom">10dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_paddingLeft">20dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_paddingRight">20dp</dimen>
+<dimen name="bd_business_details_store_business_name_txt_box_paddingTop">10dp</dimen>
+
+<!--    End of Business details screen  -->
+
+<!--    Business hours screen  -->
+
+<dimen name="bh_business_hours_top_bar_store_back_button_click_width">80dp</dimen>
+<dimen name="bh_business_hours_top_bar_store_back_button_click_height">50dp</dimen>
+
+<dimen name="bh_business_hours_top_bar_back_button_marginLeft">10dp</dimen>
+
+<dimen name="bh_business_hours_top_bar_store_save_button_click_width">80dp</dimen>
+
+<dimen name="bh_business_hours_top_bar_save_button_marginRight">10dp</dimen>
+
+<dimen name="bh_timings_marginLeft">17dp</dimen>
+<dimen name="bh_timings_marginRight">17dp</dimen>
+<dimen name="bh_timings_marginTop">20dp</dimen>
+<dimen name="bh_timings_paddingLeft">0dp</dimen>
+<dimen name="bh_timings_paddingRight">0dp</dimen>
+
+<dimen name="bh_fromTime_width">100dp</dimen>
+<dimen name="bh_fromTime_height">50dp</dimen>
+<dimen name="bh_fromTime_textSize">15sp</dimen>
+<dimen name="bh_fromTime_padding">12dp</dimen>
+
+<dimen name="bh_business_hours_time_am_to_txt_textSize">18sp</dimen>
+
+<dimen name="bh_scrollView_marginLeft">17dp</dimen>
+<dimen name="bh_scrollView_marginRight">17dp</dimen>
+<dimen name="bh_scrollView_marginTop">20dp</dimen>
+
+<dimen name="bh_allDaysDiv_padding">17dp</dimen>
+
+<dimen name="bh_business_hours_day1_height">50dp</dimen>
+<dimen name="bh_business_hours_day1_txt_marginLeft">10px</dimen>
+<dimen name="bh_business_hours_day1_checkBox_marginRight">10dp</dimen>
+
+<!--    End of Business hours screen  -->
+
+<!--    Contact information screen  -->
+
+<dimen name="ci_contact_info_top_bar_store_back_button_click_width">80dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_back_button_click_height">60dp</dimen>
+
+<dimen name="ci_contact_info_top_bar_store_back_button_marginLeft">10dp</dimen>
+
+<dimen name="ci_contact_info_top_bar_store_txt_marginLeft">20dp</dimen>
+
+<dimen name="ci_contact_info_top_bar_store_save_button_click_width">80dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_save_button_click_height">60dp</dimen>
+
+<dimen name="ci_contact_info_top_bar_store_save_paddingBottom">10dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_save_paddingLeft">20dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_save_paddingRight">20dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_save_paddingTop">10dp</dimen>
+<dimen name="ci_contact_info_top_bar_store_save_marginRight">10dp</dimen>
+
+<dimen name="ci_scrollView_paddingBottom">10dp</dimen>
+
+<dimen name="ci_contact_info_store_mobile_no1_txt_marginLeft">17dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_marginRight">17dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_marginTop">20dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_textSize">18sp</dimen>
+
+<dimen name="ci_firstView_height">5dp</dimen>
+
+<dimen name="ci_contact_info_store_mobile_no1_txt_box_height">40dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_box_minHeight">100dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_box_marginLeft">17dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no1_txt_box_marginRight">17dp</dimen>
+
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_height">40dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_minHeight">40dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_marginLeft">17dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_marginRight">17dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_marginTop">20dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_textSize">15sp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_paddingBottom">10dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_paddingLeft">20dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_paddingRight">20dp</dimen>
+<dimen name="ci_contact_info_store_mobile_no2_txt_box_paddingTop">10dp</dimen>
+
+<!--    End of Contact information screen  -->
+
+<!--    Custom dialog screen  -->
+
+<dimen name="cd_custom_dilog_text_msg_button_height">55dp</dimen>
+
+<dimen name="cd_custom_dilog_imageView1_width">30dp</dimen>
+<dimen name="cd_custom_dilog_imageView1_height">30dp</dimen>
+<dimen name="cd_custom_dilog_imageView1_marginLeft">10dp</dimen>
+
+<dimen name="cd_custom_dilog_textView1_marginLeft">10dp</dimen>
+<dimen name="cd_custom_dilog_textView1_textSize">25sp</dimen>
+
+<dimen name="cd_firstView_height">1dp</dimen>
+
+<dimen name="cd_custom_dilog_picture_msg_button_padding">5dp</dimen>
+
+<!--    End of Custom dialog screen  -->
+
+<!--    Custom toast screen  -->
+
+<dimen name="ct_toast_layout_root_padding">8dp</dimen>
+
+<dimen name="ct_text_paddingTop">20dp</dimen>
+<dimen name="ct_text_paddingBottom">20dp</dimen>
+<dimen name="ct_text_paddingLeft">2dp</dimen>
+<dimen name="ct_text_paddingRight">2dp</dimen>
+
+<!--    End of Custom toast screen  -->
+
+<!--    Facebook share screen  -->
+
+<dimen name="fbs_fb_share_dilog_paddingBottom">10dp</dimen>
+
+<dimen name="fbs_fb_shorturl_progress_width">150dp</dimen>
+<dimen name="fbs_fb_shorturl_progress_height">40dp</dimen>
+<dimen name="fbs_fb_shorturl_progress_paddingLeft">10dp</dimen>
+<dimen name="fbs_fb_shorturl_progress_paddingRight">10dp</dimen>
+<dimen name="fbs_fb_shorturl_progress_txt_paddingTop">10dp</dimen>
+<dimen name="fbs_fb_shorturl_progress_txt_textSize">16sp</dimen>
+<dimen name="fbs_fb_shorturl_progress_bar_marginBottom">-17dp</dimen>
+
+<dimen name="fbs_fb_text_box_marginLeft">10dp</dimen>
+<dimen name="fbs_fb_text_box_marginRight">10dp</dimen>
+<dimen name="fbs_fb_text_box_marginTop">15dp</dimen>
+
+<dimen name="fbs_fb_publish_button_click_width">110dp</dimen>
+<dimen name="fbs_fb_publish_button_click_height">45dp</dimen>
+
+<dimen name="fbs_fb_publish_button_width">90dp</dimen>
+<dimen name="fbs_fb_publish_button_height">30dp</dimen>
+<dimen name="fbs_fb_publish_button_marginTop">6dp</dimen>
+<dimen name="fbs_fb_publish_button_padding">2dp</dimen>
+
+<dimen name="fbs_linearLayout1_height">35dp</dimen>
+<dimen name="fbs_linearLayout1_marginTop">6dp</dimen>
+
+<dimen name="fbs_fb_progressBar_marginRight">-10dp</dimen>
+
+<dimen name="fbs_fb_progressBar_txt_marginTop">15dp</dimen>
+<dimen name="fbs_fb_progressBar_txt_textSize">14sp</dimen>
+
+<dimen name="fbs_fb_data_save_dilog_marginLeft">10dp</dimen>
+<dimen name="fbs_fb_data_save_dilog_marginRight">10dp</dimen>
+
+<dimen name="fbs_fb_save_data_txt_marginTop">5dp</dimen>
+<dimen name="fbs_fb_save_data_txt_paddingTop">13dp</dimen>
+<dimen name="fbs_fb_save_data_txt_paddingLeft">15dp</dimen>
+<dimen name="fbs_fb_save_data_txt_paddingRight">15dp</dimen>
+<dimen name="fbs_fb_save_data_txt_paddingBottom">17dp</dimen>
+<dimen name="fbs_fb_save_data_txt_textSize">14sp</dimen>
+
+<dimen name="fbs_below_fb_save_data_txt_width">190dp</dimen>
+
+<dimen name="fbs_fb_data_save_yes_button_width">90dp</dimen>
+<dimen name="fbs_fb_data_save_yes_button_height">50dp</dimen>
+<dimen name="fbs_fb_data_save_yes_button_marginRight">10dp</dimen>
+
+<dimen name="fbs_relative1_width">90dp</dimen>
+<dimen name="fbs_relative1_height">30dp</dimen>
+<dimen name="fbs_relative1_marginTop">6dp</dimen>
+<dimen name="fbs_relative1_marginRight">10dp</dimen>
+<dimen name="fbs_relative1_padding">2dp</dimen>
+
+<dimen name="fbs_fb_data_save_no_button_width">90dp</dimen>
+<dimen name="fbs_fb_data_save_no_button_height">50dp</dimen>
+
+<dimen name="fbs_relative2_width">90dp</dimen>
+<dimen name="fbs_relative2_height">30dp</dimen>
+<dimen name="fbs_relative2_marginTop">6dp</dimen>
+<dimen name="fbs_relative2_padding">2dp</dimen>
+
+<!--    End of Facebook share screen  -->
+
+<!--    Feedback screen  -->
+
+<dimen name="feds_back_button_marginLeft">10dp</dimen>
+
+<dimen name="feds_feedback_button_paddingBottom">10dp</dimen>
+<dimen name="feds_feedback_button_paddingLeft">20dp</dimen>
+<dimen name="feds_feedback_button_paddingRight">20dp</dimen>
+<dimen name="feds_feedback_button_paddingTop">10dp</dimen>
+<dimen name="feds_feedback_button_marginRight">10dp</dimen>
+
+<dimen name="feds_linearLayout1_margin">17dp</dimen>
+
+<dimen name="feds_editTextTo_height">40dp</dimen>
+<dimen name="feds_editTextTo_minHeight">40dp</dimen>
+<dimen name="feds_editTextTo_marginBottom">17dp</dimen>
+<dimen name="feds_editTextTo_paddingBottom">10px</dimen>
+<dimen name="feds_editTextTo_paddingLeft">20px</dimen>
+<dimen name="feds_editTextTo_paddingRight">20px</dimen>
+<dimen name="feds_editTextTo_paddingTop">10px</dimen>
+
+<!--    End of Feedback screen  -->
+
+<!--    First list item screen  -->
+
+<dimen name="fli_first_list_item_img_marginBottom">20dp</dimen>
+
+<dimen name="fli_first_list_item_tag_marginBottom">20dp</dimen>
+<dimen name="fli_first_list_item_tag_padding">15dp</dimen>
+<dimen name="fli_first_list_item_tag_textSize">18sp</dimen>
+
+<dimen name="fli_firstview_height">10dp</dimen>
+
+<!--    End of First list item screen  -->
+
+<!--    Float a message screen  -->
+
+<dimen name="fam_message_top_bar_store_back_button_marginLeft">10dp</dimen>
+
+<dimen name="fam_message_top_bar_store_save_button_paddingBottom">10dp</dimen>
+<dimen name="fam_message_top_bar_store_save_button_paddingLeft">20dp</dimen>
+<dimen name="fam_message_top_bar_store_save_button_paddingRight">20dp</dimen>
+<dimen name="fam_message_top_bar_store_save_button_paddingTop">10dp</dimen>
+<dimen name="fam_message_top_bar_store_save_button_marginRight">10dp</dimen>
+
+<dimen name="fam_scrolll_marginLeft">17dp</dimen>
+<dimen name="fam_scrolll_marginRight">17dp</dimen>
+<dimen name="fam_scrolll_marginTop">20dp</dimen>
+
+<dimen name="fam_relative1_marginTop">0dp</dimen>
+
+<dimen name="fam_float_a_message_msg_height">75dp</dimen>
+<dimen name="fam_float_a_message_msg_paddingLeft">20px</dimen>
+<dimen name="fam_float_a_message_msg_paddingBottom">10px</dimen>
+<dimen name="fam_float_a_message_msg_paddingTop">15px</dimen>
+<dimen name="fam_float_a_message_msg_textSize">13sp</dimen>
+
+<dimen name="fam_float_a_message_no_of_characters_txt_paddingBottom">10px</dimen>
+<dimen name="fam_float_a_message_no_of_characters_txt_paddingRight">10px</dimen>
+<dimen name="fam_float_a_message_no_of_characters_txt_paddingTop">10px</dimen>
+<dimen name="fam_float_a_message_no_of_characters_txt_textSize">10sp</dimen>
+
+<dimen name="fam_float_a_message_subscribers_checkBox_marginRight">12dp</dimen>
+<dimen name="fam_float_a_message_subscribers_checkBox_marginTop">8dp</dimen>
+<dimen name="fam_float_a_message_subscribers_checkBox_marginLeft">17dp</dimen>
+
+<dimen name="fam_float_a_message_share_container_height">50dp</dimen>
+
+<dimen name="fam_firstView_height">1dp</dimen>
+
+<dimen name="fam_secondView_height">1dp</dimen>
+
+<dimen name="fam_table_paddingTop">3dp</dimen>
+
+<dimen name="fam_textView1_padding">10dp</dimen>
+<dimen name="fam_textView1_marginLeft">20dp</dimen>
+<dimen name="fam_textView1_textSize">25dp</dimen>
+
+<dimen name="fam_float_a_message_share_fb_parent_width">10dp</dimen>
+<dimen name="fam_float_a_message_share_fb_parent_marginLeft">12dp</dimen>
+
+<dimen name="fam_float_a_message_share_fb_width">50dp</dimen>
+<dimen name="fam_float_a_message_share_fb_marginBottom">2dp</dimen>
+
+<dimen name="fam_float_a_message_share_fb_page_parent_width">1dp</dimen>
+
+<dimen name="fam_float_a_message_share_fb_page_marginBottom">2dp</dimen>
+
+<dimen name="fam_float_a_message_share_twitter_parent_width">10dp</dimen>
+<dimen name="fam_float_a_message_share_twitter_parent_marginRight">17dp</dimen>
+
+
+<dimen name="fam_float_a_message_share_marginBottom">2dp</dimen>
+
+<!--    End of Float a message screen  -->
+
+<!--    Float a picture screen  -->
+
+<dimen name="fap_back_button1_marginLeft">10dp</dimen>
+
+<dimen name="fap_float_a_picture_publish_button_marginRight">10dp</dimen>
+<dimen name="fap_float_a_picture_publish_button_padding">10dp</dimen>
+<dimen name="fap_float_a_picture_publish_button_textSize">10sp</dimen>
+
+<dimen name="fap_relativeLayout1_marginLeft">17dp</dimen>
+<dimen name="fap_relativeLayout1_marginRight">17dp</dimen>
+<dimen name="fap_relativeLayout1_marginTop">20dp</dimen>
+
+<dimen name="fap_float_a_picture_img_width">60dp</dimen>
+<dimen name="fap_float_a_picture_img_height">60dp</dimen>
+<dimen name="fap_float_a_picture_img_marginTop">0dp</dimen>
+
+<dimen name="fap_belowImage_textSize">10sp</dimen>
+<dimen name="fap_belowImage_marginTop">4dp</dimen>
+
+
+<dimen name="fap_linearLayout1_marginLeft">0dp</dimen>
+<dimen name="fap_linearLayout1_marginRight">17dp</dimen>
+<dimen name="fap_linearLayout1_marginTop">20dp</dimen>
+
+<dimen name="fap_float_a_picture_msg_height">110dp</dimen>
+<dimen name="fap_float_a_picture_msg_marginLeft">-5px</dimen>
+<dimen name="fap_float_a_picture_msg_marginRight">10px</dimen>
+<dimen name="fap_float_a_picture_msg_paddingBottom">10px</dimen>
+<dimen name="fap_float_a_picture_msg_paddingLeft">20px</dimen>
+<dimen name="fap_float_a_picture_msg_paddingTop">15px</dimen>
+<dimen name="fap_float_a_picture_msg_textSize">13sp</dimen>
+
+<dimen name="fap_float_a_picture_no_of_characters_txt_marginLeft">-5px</dimen>
+<dimen name="fap_float_a_picture_no_of_characters_txt_marginRight">10px</dimen>
+<dimen name="fap_float_a_picture_no_of_characters_txt_paddingBottom">10px</dimen>
+<dimen name="fap_float_a_picture_no_of_characters_txt_paddingRight">10px</dimen>
+<dimen name="fap_float_a_picture_no_of_characters_txt_paddingTop">10px</dimen>
+<dimen name="fap_float_a_picture_no_of_characters_txt_textSize">10sp</dimen>
+
+<dimen name="fap_float_a_picture_share_container_height">50dp</dimen>
+
+<dimen name="fap_firstView_height">1dp</dimen>
+
+<dimen name="fap_secondView_height">1dp</dimen>
+
+<dimen name="fap_tabel_paddingTop">3dp</dimen>
+
+<dimen name="fap_textView1_padding">10dp</dimen>
+<dimen name="fap_textView1_marginLeft">20dp</dimen>
+<dimen name="fap_textView1_textSize">15sp</dimen>
+
+<dimen name="fap_subscriber_check_height">32dp</dimen>
+<dimen name="fap_subscriber_check_textSize">15sp</dimen>
+<dimen name="fap_subscriber_check_paddingLeft">5dp</dimen>
+<dimen name="fap_subscriber_check_paddingRight">5dp</dimen>
+
+<dimen name="fap_sharingDiv_marginLeft">5dp</dimen>
+
+<dimen name="fap_float_a_picture_share_fb_parent_width">10dp</dimen>
+<dimen name="fap_float_a_picture_share_fb_parent_marginLeft">12dp</dimen>
+
+<dimen name="fap_float_a_picture_share_fb_width">50dp</dimen>
+<dimen name="fap_float_a_picture_share_fb_marginBottom">2dp</dimen>
+
+<dimen name="fap_float_a_picture_share_fb_page_parent_width">1dp</dimen>
+
+<dimen name="fap_float_a_picture_share_fb_page_marginBottom">2dp</dimen>
+
+<dimen name="fap_float_a_picture_share_twitter_parent_width">10dp</dimen>
+<dimen name="fap_float_a_picture_share_twitter_parent_marginRight">17dp</dimen>
+
+<dimen name="fap_float_a_picture_share_twitter_marginBottom">2dp</dimen>
+
+<dimen name="fap_float_a_message_subscribers_checkBox_marginTop">8dp</dimen>
+<dimen name="fap_float_a_message_subscribers_checkBox_marginRight">12dp</dimen>
+
+<!--    End of Float a picture screen  -->
+
+<!--    Float an offer screen  -->
+
+<dimen name="fao_tile_marginLeft">30px</dimen>
+
+<dimen name="fao_float_an_offer_top_bar_height">50px</dimen>
+
+<dimen name="fao_float_an_offer_top_bar_txt_textSize">16sp</dimen>
+<dimen name="fao_float_an_offer_top_bar_txt_marginLeft">20px</dimen>
+
+<dimen name="fao_float_an_offer_publish_button_height">50px</dimen>
+
+<dimen name="fao_float_an_offer_top_bar_marginTop">20px</dimen>
+
+<dimen name="fao_imageView1_width">40px</dimen>
+<dimen name="fao_imageView1_height">40px</dimen>
+<dimen name="fao_imageView1_marginLeft">10px</dimen>
+
+<dimen name="fao_float_an_offer_msg_paddingLeft">20px</dimen>
+<dimen name="fao_float_an_offer_msg_paddingRight">20px</dimen>
+<dimen name="fao_float_an_offer_msg_paddingTop">15px</dimen>
+<dimen name="fao_float_an_offer_msg_marginLeft">-5px</dimen>
+<dimen name="fao_float_an_offer_msg_paddingBottom">10px</dimen>
+<dimen name="fao_float_an_offer_msg_marginRight">10px</dimen>
+<dimen name="fao_float_an_offer_msg_textSize">13sp</dimen>
+
+<dimen name="fao_float_an_offer_no_of_characters_txt_paddingRight">10px</dimen>
+<dimen name="fao_float_an_offer_no_of_characters_txt_marginLeft">-5px</dimen>
+<dimen name="fao_float_an_offer_no_of_characters_txt_paddingTop">10px</dimen>
+<dimen name="fao_float_an_offer_no_of_characters_txt_paddingBottom">10px</dimen>
+<dimen name="fao_float_an_offer_no_of_characters_txt_marginRight">10px</dimen>
+<dimen name="fao_float_an_offer_no_of_characters_txt_textSize">10sp</dimen>
+
+<dimen name="fao_float_an_offer_start_date_height">70px</dimen>
+<dimen name="fao_float_an_offer_start_date_marginTop">10px</dimen>
+<dimen name="fao_float_an_offer_start_date_marginRight">10px</dimen>
+<dimen name="fao_float_an_offer_start_date_marginLeft">70px</dimen>
+<dimen name="fao_float_an_offer_start_date_textSize">10sp</dimen>
+
+<!--    End of Float an offer screen  -->
+
+<!--    Generic alert dialog screen  -->
+
+<dimen name="gad_mainLayout_marginLeft">20px</dimen>
+<dimen name="gad_mainLayout_marginRight">20px</dimen>
+<dimen name="gad_mainLayout_height">280px</dimen>
+
+<dimen name="gad_generic_alert_dilog_text_padding">20px</dimen>
+<dimen name="gad_generic_alert_dilog_text_textSize">28px</dimen>
+<dimen name="gad_generic_alert_dilog_button_width">150px</dimen>
+<dimen name="gad_generic_alert_dilog_button_padding">20px</dimen>
+<dimen name="gad_generic_alert_dilog_button_marginTop">20px</dimen>
+
+<!--    End of Generic alert dialog screen  -->
+
+<!--    Grid image screen  -->
+
+<dimen name="gi_grid_img_imageView_width">100dp</dimen>
+<dimen name="gi_grid_img_imageView_height">100dp</dimen>
+
+<!--    End of Grid image screen  -->
+
+<!--    Image gallery main screen  -->
+
+<dimen name="igm_linear1_marginLeft">10px</dimen>
+<dimen name="igm_linear1_marginRight">10px</dimen>
+
+<dimen name="igm_image_gallery_main_primary_img_button_height">100px</dimen>
+
+<dimen name="igm_image_gallery_main_secondary_img_button_height">100px</dimen>
+<dimen name="igm_image_gallery_main_secondary_img_button_marginTop">50px</dimen>
+
+<!--    End of Image gallery main screen  -->
+
+<!--    Image gallery screen  -->
+
+
+<dimen name="ig_leftButtonDiv_marginLeft">10dip</dimen>
+
+<dimen name="ig_img_gallery_left_action_button_marginRight">10dip</dimen>
+<dimen name="ig_img_gallery_right_action_button_width">60dp</dimen>
+<dimen name="ig_img_gallery_right_action_button_height">60dp</dimen>
+
+<dimen name="ig_topImage_width">40px</dimen>
+<dimen name="ig_topImage_height">40px</dimen>
+<dimen name="ig_topImage_marginRight">10dip</dimen>
+<dimen name="ig_topImage_paddingLeft">10px</dimen>
+
+<dimen name="ig_gridview_horizontalSpacing">0dp</dimen>
+<dimen name="ig_gridview_verticalSpacing">0dp</dimen>
+<dimen name="ig_gridview_padding">0dp</dimen>
+<dimen name="ig_gridview_marginBottom">45dp</dimen>
+
+<dimen name="ig_img_gallery_delete_button_height">42dp</dimen>
+
+<dimen name="ig_secondImage_width">50px</dimen>
+<dimen name="ig_secondImage_height">50px</dimen>
+
+<dimen name="ig_firstView_height">1dp</dimen>
+
+<dimen name="ig_img_gallery_option_container_height">45dp</dimen>
+
+<dimen name="ig_img_gallery_take_picture_button_width">40dp</dimen>
+
+<dimen name="ig_img_gallery_choose_picture_button_width">40dp</dimen>
+
+<!--    End of Image gallery screen  -->
+
+<!--    Inbox list item screen  -->
+
+<dimen name="ili_mainLayout_padding">10dp</dimen>
+
+<dimen name="ili_inbox_list_item_user_info_parent_paddingLeft">3dp</dimen>
+<dimen name="ili_inbox_list_item_user_info_parent_paddingRight">3dp</dimen>
+
+<dimen name="ili_inbox_list_item_icon_width">15dp</dimen>
+<dimen name="ili_inbox_list_item_icon_height">15dp</dimen>
+<dimen name="ili_inbox_list_item_icon_marginLeft">10dp</dimen>
+
+<dimen name="ili_inbox_list_item_header_txt_marginLeft">5dp</dimen>
+<dimen name="ili_inbox_list_item_header_txt_marginRight">17dp</dimen>
+
+<dimen name="ili_inbox_list_item_triangle_width">15dp</dimen>
+<dimen name="ili_inbox_list_item_triangle_height">15dp</dimen>
+<dimen name="ili_inbox_list_item_triangle_marginLeft">37px</dimen>
+
+<dimen name="ili_messageDiv_padding">5dp</dimen>
+
+<dimen name="ili_inbox_list_item_msg_txt_marginTop">8dp</dimen>
+<dimen name="ili_inbox_list_item_msg_txt_marginLeft">25dp</dimen>
+<dimen name="ili_inbox_list_item_msg_txt_textSize">13sp</dimen>
+
+<dimen name="ili_inbox_list_item_msg_time_txt_marginTop">12px</dimen>
+<dimen name="ili_inbox_list_item_msg_time_txt_textSize">10sp</dimen>
+<dimen name="ili_inbox_list_item_msg_time_txt_paddingBottom">5sp</dimen>
+<dimen name="ili_inbox_list_item_msg_time_txt_marginLeft">17dp</dimen>
+
+<!--    End of Inbox list item screen  -->
+
+<!--    Inbox screen  -->
+
+<dimen name="in_leftButtonDiv_marginLeft">10dp</dimen>
+
+<dimen name="in_inbox_left_action_button_width">30dp</dimen>
+<dimen name="in_inbox_left_action_button_height">30dp</dimen>
+
+<dimen name="in_inbox_pull_to_refresh_list_view_dividerHeight">5dp</dimen>
+<dimen name="in_inbox_pull_to_refresh_list_view_marginTop">5dp</dimen>
+
+<!--    End of Inbox screen  -->
+
+<!--    List item screen  -->
+
+<dimen name="li_text_textSize">10pt</dimen>
+<dimen name="li_text_padding">5dp</dimen>
+
+<!--    End of List item screen  -->
+
+<!--    Log in progress screen  -->
+
+<dimen name="lip_req_default_bar_paddingLeft">10dp</dimen>
+
+<dimen name="lip_text_marginLeft">5sp</dimen>
+
+<!--    End of Log in progress screen  -->
+
+<!--    Main screen  -->
+
+<dimen name="ms_leftLinear_marginLeft">17dp</dimen>
+
+<dimen name="ms_firstView_width">1dp</dimen>
+
+<dimen name="ms_secondView_width">1dp</dimen>
+
+<dimen name="ms_main_screen_bounce_listview_marginTop">-200px</dimen>
+<dimen name="ms_main_screen_bounce_listview_dividerHeight">0dp</dimen>
+
+<dimen name="ms_title_img_width">140dp</dimen>
+
+<dimen name="ms_no_udpate_bar_paddingLeft">20dp</dimen>
+<dimen name="ms_no_udpate_bar_paddingRight">20dp</dimen>
+<dimen name="ms_no_udpate_bar_marginTop">20dp</dimen>
+<dimen name="ms_noUpdateBarText1_width">0dp</dimen>
+<dimen name="ms_noUpdateBarLabel_marginLeft">-30dp</dimen>
+<dimen name="ms_noUpdateBarLabel_marginRight">-30dp</dimen>
+<dimen name="ms_noUpdateBarLabel_textSize">17sp</dimen>
+<dimen name="ms_noUpdateBarText2_width">0dp</dimen>
+<dimen name="ms_resizableImageView_width">80dp</dimen>
+<dimen name="ms_resizableImageView_marginTop">20dp</dimen>
+<dimen name="ms_resizableImageView_marginBottom">20dp</dimen>
+<dimen name="ms_resizableLabel1_marginLeft">-10dp</dimen>
+<dimen name="ms_resizableLabel1_marginRight">-10dp</dimen>
+<dimen name="ms_resizableLabel1_textSize">17sp</dimen>
+<dimen name="ms_resizableLabel2_marginLeft">-10dp</dimen>
+<dimen name="ms_resizableLabel2_marginRight">-10dp</dimen>
+<dimen name="ms_resizableLabel2_textSize">11sp</dimen>
+<dimen name="ms_resizableLabel2_marginBottom">20dp</dimen>
+<dimen name="ms_gettingStarted_height">45dp</dimen>
+<dimen name="ms_gettingStarted_width">250dp</dimen>
+<dimen name="ms_gettingStarted_marginLeft">-10dp</dimen>
+<dimen name="ms_gettingStarted_marginRight">-10dp</dimen>
+<dimen name="ms_gettingStarted_textSize">16sp</dimen>
+<dimen name="ms_gettingStarted_marginBottom">20dp</dimen>
+
+<!--    End of Main screen  -->
+
+<!--    Message detail view screen  -->
+
+<dimen name="mdv_back_button2_marginLeft">10dp</dimen>
+
+<dimen name="mdv_message_detail_view_delete_button_marginRight">20dp</dimen>
+
+<dimen name="mdv_container_marginLeft">10dp</dimen>
+<dimen name="mdv_container_marginRight">10dp</dimen>
+<dimen name="mdv_container_marginTop">10dp</dimen>
+<dimen name="mdv_container_marginBottom">10dp</dimen>
+
+<dimen name="mdv_time_line_list_item_img1_paddingTop">20px</dimen>
+<dimen name="mdv_time_line_list_item_img1_paddingLeft">20px</dimen>
+<dimen name="mdv_time_line_list_item_img1_paddingRight">20px</dimen>
+
+<dimen name="mdv_time_line_list_item_txt12_paddingBottom">10px</dimen>
+
+<dimen name="mdv_time_line_list_item_txt12_paddingTop">20px</dimen>
+<dimen name="mdv_time_line_list_item_txt12_textSize">17sp</dimen>
+
+
+<dimen name="mdv_time_line_list_item_txt1_textSize">13sp</dimen>
+<dimen name="mdv_time_line_list_item_txt2_textSize">12sp</dimen>
+
+<dimen name="mdv_time_line_list_item_day_txt1_paddingBottom">10px</dimen>
+
+<dimen name="mdv_time_line_list_item_day_txt1_paddingTop">10px</dimen>
+<dimen name="mdv_time_line_list_item_day_txt1_marginTop">25px</dimen>
+<dimen name="mdv_time_line_list_item_day_txt1_textSize">12sp</dimen>
+
+<dimen name="mdv_firstView_height">15dp</dimen>
+<dimen name="mdv_firstView_marginTop">20px</dimen>
+<dimen name="mdv_firstView_marginBottom">20px</dimen>
+
+<dimen name="fdv_tag_line_list_item_day_txt12_paddingBottom">10px</dimen>
+
+<dimen name="fdv_tag_line_list_item_day_txt12_paddingTop">10px</dimen>
+<dimen name="fdv_tag_line_list_item_day_txt12_textSize">17sp</dimen>
+
+<dimen name="fdv_tag_line_list_item_day_txt1_marginBottom">50px</dimen>
+
+<dimen name="fdv_tag_line_list_item_day_txt1_textSize">12sp</dimen>
+
+<dimen name="fdv_secondView_height">1px</dimen>
+
+<!--    End of Message detail view screen  -->
+
+<!--    Message list item screen  -->
+
+<dimen name="mli_text_padding">10dp</dimen>
+<dimen name="mli_text_textSize">16sp</dimen>
+
+<!--    End of Message list item screen  -->
+
+<!--    My line chart screen  -->
+
+<dimen name="mlc_backButtonDiv_width">60dp</dimen>
+<dimen name="mlc_backButtonDiv_height">60dp</dimen>
+
+<dimen name="mlc_visits_top_bar_store_back_button_width">30dp</dimen>
+<dimen name="mlc_visits_top_bar_store_back_button_height">30dp</dimen>
+<dimen name="mlc_visits_top_bar_store_back_button_marginLeft">10dp</dimen>
+
+<dimen name="mlc_message_top_bar_store_save_button_click_width">60dp</dimen>
+<dimen name="mlc_message_top_bar_store_save_button_click_height">60dp</dimen>
+
+<!--    End of My line chart screen  -->
+
+<!--    Primary image screen screen  -->
+
+<dimen name="pis_primary_img_top_bar_store_back_button_marginLeft">10dp</dimen>
+
+<dimen name="pis_image_holder_marginTop">20dp</dimen>
+<dimen name="pis_image_holder_padding">3dp</dimen>
+<dimen name="pis_image_holder_marginLeft">17dp</dimen>
+<dimen name="pis_image_holder_marginRight">17dp</dimen>
+
+<dimen name="pis_primary_img_screen1_img_margin">20px</dimen>
+
+<dimen name="pis_primary_change_button_marginTop">20dp</dimen>
+<dimen name="pis_primary_change_button_marginBottom">20dp</dimen>
+
+<dimen name="pis_change_textSize">20sp</dimen>
+
+<!--    End of Primary image screen screen  -->
+
+<!--    Pull to refresh screen  -->
+
+<dimen name="ptr_mainLayout_paddingTop">10dip</dimen>
+<dimen name="ptr_mainLayout_paddingBottom">15dip</dimen>
+
+<dimen name="ptr_pull_to_refresh_progress_marginLeft">30dip</dimen>
+<dimen name="ptr_pull_to_refresh_progress_marginRight">20dip</dimen>
+<dimen name="ptr_pull_to_refresh_progress_marginTop">10dip</dimen>
+
+<dimen name="ptr_pull_to_refresh_image_marginLeft">30dip</dimen>
+<dimen name="ptr_pull_to_refresh_image_marginRight">20dip</dimen>
+
+<dimen name="ptr_pull_to_refresh_text_paddingTop">5dip</dimen>
+
+<!--   End of Pull to refresh screen  -->
+
+<!--    Search list item screen  -->
+
+<dimen name="sli_mainLayout_padding">10dp</dimen>
+
+<dimen name="sli_time_line_list_item_type_img_width">28dp</dimen>
+<dimen name="sli_time_line_list_item_type_img_height">28dp</dimen>
+<dimen name="sli_time_line_list_item_type_img_marginLeft">0dp</dimen>
+<dimen name="sli_time_line_list_item_type_img_marginTop">0dp</dimen>
+
+<dimen name="sli_searchListDiv_marginLeft">-5px</dimen>
+<dimen name="sli_searchListDiv_marginTop">5dp</dimen>
+
+<dimen name="sli_time_line_list_item_txt_search_paddingBottom">10px</dimen>
+<dimen name="sli_time_line_list_item_txt_search_paddingLeft">20px</dimen>
+<dimen name="sli_time_line_list_item_txt_search_paddingRight">20px</dimen>
+<dimen name="sli_time_line_list_item_txt_search_paddingTop">10px</dimen>
+<dimen name="sli_time_line_list_item_txt_search_textSize">13sp</dimen>
+
+<dimen name="sli_time_line_list_item_day_txt_search_textSize">10sp</dimen>
+
+<dimen name="sli_imageView2_width">15dp</dimen>
+<dimen name="sli_imageView2_marginTop">15dp</dimen>
+
+<!--    End of Search list item screen  -->
+
+<!--    Search screen  -->
+
+<dimen name="search_search_header_paddingLeft">2dip</dimen>
+<dimen name="search_search_header_paddingRight">2dip</dimen>
+
+<dimen name="search_inbox_left_action_button_marginLeft">10dp</dimen>
+
+<dimen name="search_inbox_pull_to_refresh_list_view_search_dividerHeight">5dp</dimen>
+<dimen name="search_inbox_pull_to_refresh_list_view_search_marginTop">8dp</dimen>
+
+<!--    End of Search screen  -->
+
+<!--    Secondary image upload screen  -->
+
+<dimen name="sius_secondary_img_upload_screen_top_bar_txt_marginLeft">20px</dimen>
+<dimen name="sius_secondary_img_upload_screen_top_bar_txt_textSize">16sp</dimen>
+
+<dimen name="sius_secondary_img_upload_screen_top_bar_publish_button_paddingBottom">10dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_top_bar_publish_button_paddingLeft">20dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_top_bar_publish_button_paddingRight">20dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_top_bar_publish_button_paddingTop">10dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_top_bar_publish_button_marginRight">10dp</dimen>
+
+<dimen name="sius_secondary_img_upload_screen_cancel_button_width">30dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_cancel_button_height">30dp</dimen>
+<dimen name="sius_secondary_img_upload_screen_cancel_button_marginLeft">10dp</dimen>
+
+<dimen name="sius_scroll_marginTop">20dp</dimen>
+<dimen name="sius_scroll_marginBottom">20dp</dimen>
+
+<dimen name="sius_image_holder_padding">3dp</dimen>
+<dimen name="sius_image_holder_marginLeft">17dp</dimen>
+<dimen name="sius_image_holder_marginRight">17dp</dimen>
+
+<dimen name="sius_secondary_img_upload_screen_img_margin">20px</dimen>
+
+<!--    End of Secondary image upload screen  -->
+
+<!--    Settings screen  -->
+
+<dimen name="set_actionLeftDiv_marginLeft">10dp</dimen>
+
+<dimen name="set_linearLayout1_marginLeft">17dp</dimen>
+<dimen name="set_linearLayout1_marginRight">17dp</dimen>
+
+<dimen name="set_settings_screen_fb_parent_minHeight">80dp</dimen>
+
+<dimen name="set_settings_screen_fb_img_width">50dp</dimen>
+<dimen name="set_settings_screen_fb_img_height">50dp</dimen>
+<dimen name="set_settings_screen_fb_img_marginLeft">15dp</dimen>
+
+<dimen name="set_settings_screen_fb_txt_paddingLeft">15dp</dimen>
+<dimen name="set_settings_screen_fb_txt_textSize">17sp</dimen>
+
+<dimen name="set_settings_screen_fb_id_marginLeft">5dp</dimen>
+
+<dimen name="set_settings_screen_fb_page_parent_minHeight">80dp</dimen>
+<dimen name="set_settings_screen_fb_page_parent_marginTop">10dp</dimen>
+
+<dimen name="set_settings_screen_fb_page_id_marginLeft">5dp</dimen>
+
+<dimen name="set_settings_screen_twitter_parent_minHeight">80dp</dimen>
+<dimen name="set_settings_screen_twitter_parent_marginTop">10dp</dimen>
+
+<dimen name="set_settings_screen_twitter_id_marginLeft">5dp</dimen>
+
+<!--    End of Settings screen  -->
+
+<!--    Sliding menu lib shadow screen  -->
+<dimen name="smls_mainLayout_width">30dp</dimen>
+<!--    End of Sliding menu lib shadow screen  -->
+
+<!--    Sliding menu lib sliding row screen  -->
+<dimen name="smlr_slidingmenurowicon_padding">10dp</dimen>
+<!--    End of Sliding menu lib sliding row screen  -->
+
+<!--    Time line list item screen  -->
+
+<dimen name="tlli_mainLayout_paddingBottom">10px</dimen>
+<dimen name="tlli_mainLayout_paddingTop">10dp</dimen>
+
+<dimen name="tlli_time_line_list_item_type_img_width">28dp</dimen>
+<dimen name="tlli_time_line_list_item_type_img_height">28dp</dimen>
+<dimen name="tlli_time_line_list_item_type_img_marginLeft">5dp</dimen>
+<dimen name="tlli_time_line_list_item_type_img_marginTop">0dp</dimen>
+
+<dimen name="tlli_listItemDiv_marginLeft">15dp</dimen>
+<dimen name="tlli_listItemDiv_marginRight">15dp</dimen>
+<dimen name="tlli_listItemDiv_marginTop">15dp</dimen>
+
+
+<dimen name="tlli_time_line_list_item_img_margin">20px</dimen>
+
+<dimen name="tlli_time_line_list_item_txt_paddingBottom">10dp</dimen>
+<dimen name="tlli_time_line_list_item_txt_paddingLeft">20dp</dimen>
+<dimen name="tlli_time_line_list_item_txt_paddingRight">20dp</dimen>
+<dimen name="tlli_time_line_list_item_txt_paddingTop">10dp</dimen>
+<dimen name="tlli_time_line_list_item_txt_textSize">13sp</dimen>
+
+<dimen name="tlli_time_line_list_item_day_txt_textSize">10sp</dimen>
+
+<dimen name="tlli_imageView2_width">15dp</dimen>
+<dimen name="tlli_imageView2_marginTop">15dp</dimen>
+
+<!--    End of Time line list item screen  -->
+
+<!--    Slide out screen  -->
+
+<dimen name="sos_mainLayout_paddingBottom">20dp</dimen>
+<dimen name="sos_mainLayout_marginLeft">7dp</dimen>
+<dimen name="sos_mainLayout_marginRight">0dp</dimen>
+<dimen name="sos_mainLayout_paddingTop">12dp</dimen>
+
+<dimen name="sos_slide_out_screen_home_button_height">50dp</dimen>
+<dimen name="sos_slide_out_screen_home_button_marginLeft">15dp</dimen>
+<dimen name="sos_slide_out_screen_home_button_marginRight">-1dp</dimen>
+<dimen name="sos_slide_out_screen_home_button_marginTop">10dp</dimen>
+<dimen name="sos_slide_out_screen_home_button_popupMarginTop">2dp</dimen>
+
+<dimen name="sos_slide_out_screen_home_img_width">35dp</dimen>
+<dimen name="sos_slide_out_screen_home_img_height">35dp</dimen>
+
+<dimen name="sos_lock">15dp</dimen>
+
+
+<dimen name="sos_slide_out_screen_home_img_marginLeft">16dp</dimen>
+
+<dimen name="sos_slide_out_screen_home_marginLeft">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_inbox_marginLeft">10dp</dimen>
+<dimen name="sos_slide_out_screen_inbox_textSize">7dp</dimen>
+
+<dimen name="sos_slide_out_screen_squeries_button_height">50dp</dimen>
+<dimen name="sos_slide_out_screen_squeries_button_marginLeft">15dp</dimen>
+<dimen name="sos_slide_out_screen_squeries_button_marginRight">10dp</dimen>
+<dimen name="sos_slide_out_screen_squeries_button_marginTop">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_image_gallery_marginLeft">10dp</dimen>
+<dimen name="sos_slide_out_screen_image_gallery_textSize">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_inbox_img_width">35dp</dimen>
+<dimen name="sos_slide_out_screen_inbox_img_height">35dp</dimen>
+<dimen name="sos_slide_out_screen_inbox_img_marginLeft">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_image_gallery_arrow_width">20dp</dimen>
+<dimen name="sos_slide_out_screen_image_gallery_arrow_height">20dp</dimen>
+<dimen name="sos_slide_out_screen_image_gallery_arrow_marginRight">7dp</dimen>
+
+<dimen name="sos_socialOptionsDiv_height">50dp</dimen>
+<dimen name="sos_socialOptionsDiv_marginLeft">15dp</dimen>
+<dimen name="sos_socialOptionsDiv_marginRight">10dp</dimen>
+<dimen name="sos_socialOptionsDiv_marginTop">5dp</dimen>
+<dimen name="sos_socialOptionsDiv_paddingLeft">73dp</dimen>
+<dimen name="sos_socialOptionsDiv_textSize">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_settings_marginLeft">10dp</dimen>
+<dimen name="sos_slide_out_screen_settings_textSize">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_analytics_marginLeft">10dp</dimen>
+<dimen name="sos_slide_out_screen_analytics_marginLeftPopUp">60dp</dimen>
+<dimen name="sos_slide_out_screen_analytics_textSize">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_manage_store_marginLeft">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_manage_store_arrow_width">20dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_arrow_height">20dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_arrow_marginRight">7dp</dimen>
+
+<dimen name="sos_slide_out_screen_feedback_button_height">50dp</dimen>
+<dimen name="sos_slide_out_screen_feedback_button_marginLeft">15dp</dimen>
+<dimen name="sos_slide_out_screen_feedback_button_marginRight">10dp</dimen>
+<dimen name="sos_slide_out_screen_feedback_button_marginTop">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_feedback_marginLeft">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_logout_height">50dp</dimen>
+<dimen name="sos_slide_out_screen_logout_marginLeft">10dp</dimen>
+
+<dimen name="sos_slide_out_screen_manage_store_business_logo_height">50dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_business_logo_marginLeft">15dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_business_logo_marginRight">10dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_business_logo_marginTop">5dp</dimen>
+<dimen name="sos_slide_out_screen_manage_store_business_logo_paddingLeft">73dp</dimen>
+
+<!--    End of Slide out screen  -->
+
+<!--    App settings screen  -->
+
+<dimen name="aps_relativeLayout1_height">55dp</dimen>
+<dimen name="aps_relativeLayout1_paddingLeft">2dip</dimen>
+<dimen name="aps_relativeLayout1_paddingRight">2dip</dimen>
+<dimen name="aps_ActionBarLeftDiv_width">60dp</dimen>
+<dimen name="aps_ActionBarLeftDiv_height">60dp</dimen>
+<dimen name="aps_ActionBarLeftDiv_marginRight">10dip</dimen>
+<dimen name="aps_as_menu_action_button_width">30dp</dimen>
+<dimen name="aps_as_menu_action_button_height">30dp</dimen>
+<dimen name="aps_as_menu_action_button_marginRight">10dip</dimen>
+
+<!--    End of App settings screen  -->
+
+<!--    Login new1 screen  -->
+
+<dimen name="ln1_topDiv_height">0dp</dimen>
+<dimen name="ln1_topImage_padding">30dp</dimen>
+<dimen name="ln1_bottomDiv_height">0dp</dimen>
+<dimen name="ln1_labelDiv_marginBottom">10dp</dimen>
+<dimen name="ln1_enterButton_height">40dp</dimen>
+<dimen name="ln1_enterButton_width">120dp</dimen>
+<dimen name="ln1_login_form_marginLeft">7dp</dimen>
+<dimen name="ln1_login_form_marginRight">7dp</dimen>
+<dimen name="ln1_login_main1_popup_username_box_height">40dp</dimen>
+<dimen name="ln1_login_main1_popup_username_box_textSize">15sp</dimen>
+<dimen name="ln1_login_main1_popup_username_box_padding">10dp</dimen>
+<dimen name="ln1_login_main1_popup_pwd_box_height">40dp</dimen>
+<dimen name="ln1_login_main1_popup_pwd_box_marginTop">3dp</dimen>
+<dimen name="ln1_login_main1_popup_pwd_box_textSize">15sp</dimen>
+<dimen name="ln1_login_main1_popup_pwd_box_padding">10dp</dimen>
+<dimen name="ln1_bottomLinear_paddingLeft">3dp</dimen>
+<dimen name="ln1_ac_label_textSize">13sp</dimen>
+<dimen name="ln1_extra_btns_marginTop">0dp</dimen>
+<dimen name="ln1_extra_btns_marginLeft">7dp</dimen>
+<dimen name="ln1_extra_btns_marginRight">7dp</dimen>
+<dimen name="ln1_forgot_pswd_height">50dp</dimen>
+<dimen name="ln1_forgot_pswd_paddingRight">5dp</dimen>
+<dimen name="login_pd_width">40dp</dimen>
+<dimen name="login_pd_height">40dp</dimen>
+
+<!--    End of Login new1 screen  -->
+
+<!--    Pre login screen  -->
+
+<dimen name="pre_topDiv_height">0dp</dimen>
+<dimen name="pre_topDiv_paddingTop">30dp</dimen>
+<dimen name="pre_topDivText_width">200dp</dimen>
+<dimen name="pre_middleDiv_height">0dp</dimen>
+<dimen name="pre_middleDiv_paddingLeft">12dp</dimen>
+<dimen name="pre_middleDiv_paddingRight">12dp</dimen>
+<dimen name="pre_middleDiv_paddingTop">10dp</dimen>
+<dimen name="pre_pre_signup_btn_holder_height">42dp</dimen>
+<dimen name="pre_signUpDiv_width">0dp</dimen>
+<dimen name="pre_loginDiv_width">0dp</dimen>
+
+<!--    End of Pre login screen  -->
+
+<!--    Pre SignUp slides screen  -->
+
+<dimen name="pre_s1_ps_indicator_padding">10dip</dimen>
+<dimen name="pre_s1_ps_indicator_radius">3dp</dimen>
+<dimen name="pre_s1_ps_indicator_strokeWidth">0dp</dimen>
+<dimen name="pre_s1_ps_indicator_marginBottom">30dp</dimen>
+<dimen name="pre_s1_bottom_btn_holder_height">50dp</dimen>
+<dimen name="pre_s1_bottom_btn_holder_paddingTop">2dp</dimen>
+<dimen name="pre_s1_ps_create_width">0dp</dimen>
+<dimen name="pre_s1_ps_create_tv_textSize">16sp</dimen>
+<dimen name="pre_s1_underCreate_textSize">8sp</dimen>
+<dimen name="pre_s1_firstView_width">2dp</dimen>
+<dimen name="pre_s1_ps_login_width">0dp</dimen>
+<dimen name="pre_s1_ps_login_tv_textSize">16sp</dimen>
+<dimen name="pre_s1_underLogin_textSize">8sp</dimen>
+
+<!--    End of Pre SignUp slides screen  -->
+
+<!--    Pre SignUp slide2 screen  -->
+
+<dimen name="pre_s2_linear1_paddingBottom">20dp</dimen>
+<dimen name="pre_s2_mainImage_width">170dp</dimen>
+<dimen name="pre_s2_description_marginTop">40dp</dimen>
+<dimen name="pre_s2_description_paddingLeft">20dp</dimen>
+<dimen name="pre_s2_description_paddingRight">20dp</dimen>
+
+<!--    End of Pre SignUp slide2 screen  -->
+
+<!--    Pre SignUp slide3 screen  -->
+
+<dimen name="pre_s3_linear1_paddingBottom">20dp</dimen>
+<dimen name="pre_s3_mainImage_width">170dp</dimen>
+<dimen name="pre_s3_description_marginTop">40dp</dimen>
+<dimen name="pre_s3_description_paddingLeft">20dp</dimen>
+<dimen name="pre_s3_description_paddingRight">20dp</dimen>
+
+<!--    End of Pre SignUp slide3 screen  -->
+
+<!--    Pre SignUp slide7 screen  -->
+
+<dimen name="pre_s7_topDiv_height">0dp</dimen>
+<dimen name="pre_s7_topDiv_paddingTop">30dp</dimen>
+<dimen name="pre_s7_topDivText_width">200dp</dimen>
+<dimen name="pre_s7_bottomDiv_height">0dp</dimen>
+<dimen name="pre_s7_bottomDiv_paddingLeft">12dp</dimen>
+<dimen name="pre_s7_bottomDiv_paddingRight">12dp</dimen>
+<dimen name="pre_s7_bottomDiv_paddingTop">10dp</dimen>
+
+<!--    End of Pre SignUp slide7 screen  -->
+
+<!--    Business Logo screen  -->
+
+<dimen name="bl_primary_img_top_bar_store_back_button_marginLeft">10dp</dimen>
+<dimen name="bl_imageDiv_marginTop">20dp</dimen>
+<dimen name="bl_imageDiv_padding">3dp</dimen>
+<dimen name="bl_imageDiv_marginLeft">17dp</dimen>
+<dimen name="bl_imageDiv_marginRight">17dp</dimen>
+<dimen name="bl_primary_img_screen1_img_margin">20px</dimen>
+<dimen name="bl_primary_change_button_height">50dp</dimen>
+<dimen name="bl_primary_change_button_marginLeft">17dp</dimen>
+<dimen name="bl_primary_change_button_marginRight">17dp</dimen>
+<dimen name="bl_primary_change_button_marginTop">20dp</dimen>
+<dimen name="bl_primary_change_button_marginBottom">20dp</dimen>
+<dimen name="bl_changeText_textSize">20sp</dimen>
+
+<!--    End of Business Logo screen  -->
+
+
+<!-- 	NF STore list item start -->
+
+<dimen name="nfs_li_name">15sp</dimen>
+<dimen name="nfs_li_desc">10sp</dimen>
+<dimen name="nfs_li_price">12sp</dimen>
+<!-- 	NF STore list item end -->
+
+<!--  	widgets detail view -->
+		
+		<dimen name="wd_c_padding">30dp</dimen>
+		<dimen name="wd_c1_padding">20dp</dimen>
+		<dimen name="wd_min_h">140dp</dimen>
+		<dimen name="wd_img_wh">80dp</dimen>
+		<dimen name="wd_widget_name_t">22sp</dimen>
+		<dimen name="wd_widget_price">20sp</dimen>
+		
+		
+		<dimen name="wd_widget_title_t">22sp</dimen>
+		<dimen name="wd_widget_desc_t">18sp</dimen>
+		
+		<dimen name="wd_screen_pdtop">6dp</dimen>
+		<dimen name="wd_screen_pdleft">3dp</dimen>
+		
+
+<!--  	End of widgets detail view -->
+
+
+<!-- gallery start -->
+
+<dimen name="list_padding">10dp</dimen>
+
+    <dimen name="album_thumbnail_size">148dp</dimen>
+    <dimen name="photo_thumbnail_size">100dp</dimen>
+    <dimen name="album_thumbnail_spacing">6dp</dimen>
+    <dimen name="photo_thumbnail_spacing">2dp</dimen>
+    <dimen name="activity_vertical_margin">60dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+
+<!-- gallery end -->
+
+
+</resources>
