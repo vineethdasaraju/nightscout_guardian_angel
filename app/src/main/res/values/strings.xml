@@ -9,5 +9,521 @@
     <string name="hint_user_email">Enter Email ID</string>
     <string name="button_register">Register</string>
     <string name="button_login">Sign In</string>
+    <string name="landing_button_sign_in">SIGN IN</string>
+    <string name="landing_button_register">REGISTER</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register_activity_title">Registration</string>
+    <string name="login_activity_title">SIGN IN</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <string name="license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmtfDikZcbWSvq3f+pEsAL5KQCNy3X96j++Z1PnjvidpJCEe0/S1xdPs4CfT3JkeQl7SNps/9cPu3EuOOFdx76QPpAqlqXHMKMwM9H+ikx5iUWPSilRjwLfJNjbJZT2xpuI6k32VyHhqLyU4rR95nrAPTGrocyyV1jtTFSYt77YZew8YfeePlcB2STLP3Ookho37Ah1QovelfdaG5ZNWz5OPYKnificSPyYjioYkfUmpnUJvN0INYMGFKefhfPtWPx5UCiQp15A6ir4wH0wVL3/QksonIb0JMiXpuXvWuggNb1AqEtdiPuBTleU5GovKL+HToKjwQu8NSuJsb3EacIwIDAQAB</string>
+
+        <string name="app_id">193559690753525</string>
+        <string name="menu_settings">Settings</string>
+        <string name="map_api_key">0CuQEeiyP9t4CQE5p1sGqX2hVK4sGY9iV7nSHow</string>
+        <string name="addr_url">https://maps.googleapis.com/maps/api/place/search/json?location=%1$s,%2$s&amp;radius=%3$s&amp;name=%4$s&amp;sensor=false&amp;key=%5$s</string>
+        <string name="web_name_suggestion">The website name you chose already exists.We suggest :\n\n</string>
+        <string name="new_line">\n</string>
+        <string name="bounce_to_refresh">bounce refresh</string>
+        <string name="bounce_refresh">bounce refresh</string>
+        <string name="bounce_refreshing">Refreshing</string>
+        <string name="bounce_last_updated">Updated: %1$s</string>
+        <string name="sign_up">sign up&#160;</string>
+        <string name="forgot_pwd">&#160;forgot your password?&#160;</string>
+        <string name="sign_as_another">&#160;sign in as different user&#160;</string>
+        <string name="save_data_txt">Save time and \navoid irritation for next time? \nLogin to NowFloats?</string>
+        <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+        <string name="pull_to_refresh_release_label">Release to refresh...</string>
+        <string name="pull_to_refresh_refreshing_label">Loading...</string>
+        <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+        <string name="signup_fname_regex">^([A-z\'\.-ᶜ]*(\s))+[A-z\'\.-ᶜ]*$</string>
+        <string name="signup_uname_regex">^[a-z0-9_-]{3,15}$</string>
+        <string name="signup_email_regex">^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$</string>
+        <string name="signup_pass_regex">^[a-z0-9_-]{3,15}$</string>
+        <string name="signup_cpass_regex">^[a-z0-9_-]{3,15}$</string>
+        <string name="regex_default">.{1,}</string>
+        <string name="regex_all">.*</string>
+        <string name="signup_bname">.{3,}</string>
+        <string name="signup_pin">^[0-9]{6,15}</string>
+        <string name="signup_phoneCode">^[0-9]{1,4}</string>
+        <string name="signup_subd">^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]$</string>
+
+
+        <!--  footer view screen -->
+
+        <string name="fv_time_line_list_item_txt">More messages coming up...</string>
+
+        <!--  End of footer view screen -->
+
+        <!--  Login new screen -->
+
+        <string name="ln_login_main1_popup_username_box_hint">Email ID</string>
+        <string name="ln_login_main1_popup_pwd_box_hint">Password</string>
+        <string name="ln_ac_label">SIGN IN</string>
+        <string name="ln_forgot_pswd">forgot your password?</string>
+        <string name="ln_signup_btn">sign-up</string>
+        <string name="ln1_LoggedAs">You are logged in as</string>
+        <string name="ln1_hasLoggedIn">You have logged in as</string>
+
+        <!--  End of Login new screen -->
+
+        <!--  Nf_signup screen1 screen -->
+
+        <string name="nf_s1_details_text">BUSINESS DETAILS</string>
+        <string name="nf_s1_signup_name">Name</string>
+        <string name="nf_s1_signup_bname">Business Name</string>
+        <string name="nf_s1_signup_bcat">Business Category</string>
+        <string name="nf_s1_back">BACK</string>
+        <string name="nf_s1_next">NEXT</string>
+        <string name="nf_s1_lbl_create_site">Create a website instantly</string>
+        <string name="nf_s1_lbl_create_site_disclaimer">We will use your Facebook page details to create the site.\nDon\'t worry we wont take any extra information.</string>
+        <string name="nf_s1_lbl_fb_signin">Sign in with Facebook</string>
+
+        <!--  End of Nf_signup screen1 screen -->
+
+        <!--  Nf_signup screen2 screen -->
+
+        <string name="nf_s2_address">BUSINESS ADDRESS</string>
+        <string name="nf_s2_signup_addr1">House number, Building Name</string>
+        <string name="nf_s2_signup_addr2">Street name, Locality(optional)</string>
+        <string name="nf_s2_signup_city">City</string>
+        <string name="nf_s2_signup_pin">Pin code</string>
+        <string name="nf_s2_signup_country">Country</string>
+        <string name="nf_s2_signup_state">State</string>
+        <string name="nf_s2_back">BACK</string>
+        <string name="nf_s2_next">NEXT</string>
+
+        <!--  End of Nf_signup screen2 screen -->
+
+        <!--  Nf_signup screen3 screen -->
+
+        <string name="nf_s3_detailsText">CONTACT DETAILS</string>
+        <string name="nf_s3_signup_email">Email Address</string>
+        <string name="nf_s3_signup_phone">Mobile</string>
+        <string name="nf_s3_back">BACK</string>
+        <string name="nf_s3_next">NEXT</string>
+
+        <string name="label_typeface_def">HN55Roman.ttf</string>
+
+
+
+        <!-- 	Pre-signup slides	 -->
+
+        <string name="ps_create_lbl">CREATE</string>
+        <string name="ps_login_lbl">LOG IN</string>
+
+        <string name="ps_create_lbl_tag">a website with NowFloats</string>
+        <string name="ps_login_lbl_tag">to manage NowFloats website</string>
+
+
+        <string name="ps_sc2_lbl1">INSTANT &amp; EASY</string>
+        <string name="ps_sc2_lbl2">IDENTITY</string>
+        <string name="ps_sc2_lbl3">An online identity for your business that is \ninstantly created &amp; easily managed by the app.\n</string>
+
+        <string name="ps_sc3_lbl1">DISCOVERABLE</string>
+        <string name="ps_sc3_lbl2">ON SEARCH</string>
+        <string name="ps_sc3_lbl3">With Location-Based-SEO<sup><small>TM</small></sup> get discovered\nfor relevant keyword searches and improve\nyour business search ranking on Google.</string>
+
+        <string name="ps_sc4_lbl1">ENGAGE YOUR</string>
+        <string name="ps_sc4_lbl2">CUSTOMERS</string>
+        <string name="ps_sc4_lbl3">Keep your existing customers informed and\nlet new ones get in touch through the site.\n</string>
+
+        <string name="ps_sc5_lbl1">GENERATE BUSINESS</string>
+        <string name="ps_sc5_lbl2">LEADS</string>
+        <string name="ps_sc5_lbl3">More business leads by getting\ndiscovered online &amp; inquiries through\nour \'Talk-To-Business\' feature.</string>
+
+
+        <string name="ps_sc6_lbl1">SOCIAL SHARING &amp;</string>
+        <string name="ps_sc6_lbl2">ANALYTICS</string>
+        <string name="ps_sc6_lbl3">Push out your messages to\nfacebook and twitter.\nKnow who is visiting your website and why.</string>
+
+        <string name="ps_sc8_lbl1">PREMIUM FEATURES IN</string>
+        <string name="ps_sc8_lbl2">NOWFLOATS</string>
+        <string name="ps_sc8_lbl3">Get additional features for your\nbusiness website from the\nin-app NowFloats Store.</string>
+        <string name="ps_sc8_lbl4">NOWFLOATS STORE</string>
+
+        <string name="ps_sc1_lbl1_tf">HN53exd.ttf</string>
+        <string name="ps_sc1_lbl2_tf">HN53exd.ttf</string>
+
+        <string name="ps_create_lbl_tf">HN75Bold.ttf</string>
+        <string name="ps_create_tag_tf">HN56IT.ttf</string>
+
+
+        <string name="tf_hn75bold">HN75Bold.ttf</string>
+        <string name="tf_hlight">HelveticaLight.ttf</string>
+        <string name="tf_hn55roman">HN55Roman.ttf</string>
+        <string name="tf_hn45light">HN45Light.ttf</string>
+
+        <!-- 	no updates screens -->
+
+        <string name="no_updates_label2">This could be product description or USPs of\nyour business. You will only get discoverd if\nyou post something :)</string>
+        <!--  End of Nf_signup screen3 screen -->
+
+        <!--  Nf_signup screen4 screen -->
+
+        <string name="nf_s4_signup_bsubdomain">Website address</string>
+        <string name="nf_s4_domain">.nowfloats.com</string>
+        <string name="nf_s4_back">BACK</string>
+        <string name="nf_s4_next">LOOKS GOOD!</string>
+
+        <!--  End of Nf_signup screen4 screen -->
+
+        <!--  Nf_signup screen5 screen -->
+
+        <string name="nf_s5_addressText">WEBSITE ADDRESS</string>
+        <string name="nf_s5_signup_bsubtv">.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com.nowfloats.com</string>
+        <string name="nf_s5_domain">.nowfloats.com</string>
+        <string name="nf_s5_label">Dont like it? Tap to change it</string>
+        <string name="nf_s5_signup_here_btn">HERE!</string>
+        <string name="nf_s5_back">BACK</string>
+        <string name="nf_s5_next">CREATE MY SITE</string>
+
+        <!--  End of Nf_signup screen5 screen -->
+
+        <!--  Analytics screen screen -->
+
+        <string name="as_analytics_action_bar_nowfloats_txt">Analytics</string>
+        <string name="as_analytics_screen_subscribers_txt">0</string>
+        <string name="as_analytics_screen_subscribers_textview">Subscribers</string>
+        <string name="as_analytics_screen_visitors_textview">Visits</string>
+        <string name="as_analytics_screen_visitors_txt">0</string>
+        <string name="as_analytics_screen_search1_textview">Search Queries</string>
+
+        <!--  End of Analytics screen screen -->
+
+        <!--  Business address screen -->
+
+        <string name="ba_business_address_top_bar_store_txt">Business Details</string>
+        <string name="ba_textView1">Note: The address cannot be changed through the app. You can drop us an email with your new/correct address by hitting the button below. (If you are in India, you can call us on +91 916 000 4303 for the same)</string>
+        <string name="ba_call">Email</string>
+
+        <!--  End of Business address screen -->
+
+        <!--  Business details screen -->
+
+        <string name="bd_business_details_top_bar_store_txt">Business Details</string>
+        <string name="bd_business_details_store_business_name_txt">Business Name</string>
+        <string name="bd_business_details_store_business_name_txt_box">Business Name</string>
+        <string name="bd_business_details_store_business_desc_txt">Business Description</string>
+        <string name="bd_business_details_store_business_desc_txt_box">Business Description</string>
+
+        <!--  End of Business details screen -->
+
+        <!--  Business hours screen -->
+
+        <string name="bh_business_hours_top_bar_txt">Business Hours</string>
+        <string name="bh_business_hours_time_open_button">00:00AM</string>
+        <string name="bh_business_hours_time_am_to_txt">to</string>
+        <string name="bh_business_hours_time_close_button">00:00PM</string>
+        <string name="bh_business_hours_day1_txt">Sunday</string>
+        <string name="bh_business_hours_day2_txt">Monday</string>
+        <string name="bh_business_hours_day3_txt">Tuesday</string>
+        <string name="bh_business_hours_day4_txt">Wednesday</string>
+        <string name="bh_business_hours_day5_txt">Thursday</string>
+        <string name="bh_business_hours_day6_txt">Friday</string>
+        <string name="bh_business_hours_day7_txt">Saturday</string>
+
+        <!--  End of Business hours screen -->
+
+        <!--  Business logo screen -->
+        <string name="bl_businessLogo">Business Logo</string>
+        <string name="bl_change">Change</string>
+        <!--  End of Business logo screen -->
+
+        <!--  Contact information screen -->
+
+        <string name="ci_contact_info_top_bar_store_txt">Contact Numbers</string>
+        <string name="ci_contact_info_store_mobile_no1_txt">Phone Numbers</string>
+        <string name="ci_contact_info_store_mobile_no1_txt_box">Not available</string>
+        <string name="ci_contact_info_store_mobile_no2_txt_box">Not available</string>
+        <string name="ci_contact_info_store_mobile_no3_txt_box">Not available</string>
+        <string name="ci_contact_info_store_email_txt">Email</string>
+        <string name="ci_contact_info_store_email_txt_box">no email available</string>
+        <string name="ci_contact_info_store_website_txt">Other Website</string>
+        <string name="ci_contact_info_store_website_txt_box">no website available</string>
+        <string name="ci_contact_info_store_fbpage_txt">Facebook Page</string>
+        <string name="ci_contact_info_store_fbpage_txt_box">www.facebook.com/</string>
+
+        <!--  End of Contact information screen -->
+
+        <!--  Custom dialog screen -->
+
+        <string name="cd_custom_dilog_textView1">Post A Text Message</string>
+        <string name="cd_custom_dilog_textView2">Post A Picture Message</string>
+
+        <!--  End of Custom dialog screen -->
+
+        <!--  Fb share screen -->
+
+        <string name="fb_shorturl_progress_txt">Loading</string>
+        <string name="fb_submit">SUBMIT</string>
+        <string name="fb_progressBar_txt">posting your fb</string>
+        <string name="fb_data_save_yes_button_txt">YES</string>
+        <string name="fb_data_save_no_button_txt">NO</string>
+
+        <!--  End of Fb share screen -->
+
+        <!--  Feedback screen -->
+
+        <string name="feds_feedback_details_top_bar_store_txt">Feedback</string>
+        <string name="feds_editTextTo">hello@nowfloats.com</string>
+        <string name="feds_editTextToCc">Cc</string>
+        <string name="feds_editTextSubject">feedback </string>
+        <string name="feds_editTextMessage">Enter your feedback here</string>
+
+        <!--  End of Feedback screen -->
+
+        <!--  First list item screen -->
+        <string name="fli_first_list_item_tag">...</string>
+        <!--  End of First list item screen -->
+
+        <!--  Float a message screen -->
+
+        <string name="fam_message_top_bar_store_txt">Message</string>
+        <string name="fam_float_a_message_msg">Type your message here </string>
+        <string name="fam_float_a_message_no_of_characters_txt">0</string>
+        <string name="fam_float_a_message_subscribers_checkBox">Subscribers</string>
+        <string name="fam_textView1">Share</string>
+
+        <!--  End of Float a message screen -->
+
+        <!--  Float a picture screen -->
+
+        <string name="fap_float_a_picture_publish_button"></string>
+        <string name="fap_float_a_picture_msg">Description</string>
+        <string name="fap_float_a_picture_no_of_characters_txt">0</string>
+        <string name="fap_textView1">Share</string>
+        <string name="fap_float_a_message_subscribers_checkBox">Subscribers</string>
+        <string name="fap_contact_info_top_bar_store_txt">Post An Update</string>
+        <string name="fap_update_hint">ADD PHOTO</string>
+
+        <!--  End of Float a picture screen -->
+
+        <!--  Float an offer screen -->
+
+        <string name="fao_float_an_offer_top_bar_txt">FLOAT AN OFFER</string>
+        <string name="fao_float_an_offer_publish_button">PUBLISH</string>
+        <string name="fao_float_an_offer_msg">type your message here...</string>
+        <string name="fao_float_an_offer_no_of_characters_txt">0</string>
+        <string name="fao_float_an_offer_start_date">02-08-2013</string>
+        <string name="fao_float_an_offer_end_date">02-08-2013</string>
+
+        <!--  End of Float an offer screen -->
+
+        <!--  Generic alert dialog screen -->
+
+        <string name="gad_generic_alert_dilog_text">success</string>
+        <string name="gad_generic_alert_dilog_button">OK</string>
+
+        <!--  End of Generic alert dialog screen -->
+
+        <!--  Image gallery main screen -->
+
+        <string name="igm_image_gallery_main_primary_img_button">PRIMARY IMAGE</string>
+        <string name="igm_image_gallery_main_secondary_img_button">OTHER IMAGES</string>
+
+        <!--  End of Image gallery main screen -->
+
+        <!--  Image gallery screen -->
+        <string name="ig_analytics_action_bar_nowfloats_txt">Gallery Images</string>
+        <!--  End of Image gallery screen -->
+
+        <!--  Inbox list item screen -->
+
+        <string name="ili_inbox_list_item_header_txt">message from nowfloats</string>
+        <string name="ili_inbox_list_item_msg_txt">kjhdakjhdahdakjdhakjhdadkjhakdjahdjhddakdljadhkajdhakdjdka</string>
+        <string name="ili_inbox_list_item_msg_time_txt">21-JAN-2013</string>
+
+        <!--  End of Inbox list item screen -->
+
+        <!--  Inbox screen -->
+        <string name="in_analytics_action_bar_nowfloats_txt">Talk-To-Business</string>
+        <!--  End of Inbox screen -->
+
+        <!--  Log in progress dialog screen -->
+        <string name="lip_text">Get ready to FLOAT ...</string>
+        <!--  End of Log in progress dialog screen -->
+
+        <!--  Message detail view screen -->
+
+        <string name="mdv_time_line_list_item_txt12">Message</string>
+        <string name="mdv_time_line_list_item_txt1">Message</string>
+        <string name="mdv_time_line_list_item_day_txt1">03-july-2013</string>
+        <string name="mdv_tag_line_list_item_day_txt12">Tags</string>
+        <string name="mdv_tag_line_list_item_day_txt1">Tag</string>
+
+        <!-- End of Message detail view screen -->
+
+        <!--  My line chart screen -->
+        <string name="mlc_message_top_bar_store_txt">Weekly Page Visits</string>
+        <!--  End of My line chart screen -->
+
+        <!--  Primary image screen1 screen -->
+        <string name="pis_analytics_action_bar_nowfloats_txt">Featured Image</string>
+        <string name="pis_change">Change</string>
+        <!--  End of Primary image screen1 screen -->
+
+        <!--  Pull to refresh screen -->
+        <string name="ptr_pull_to_refresh_text">Pull to refresh...</string>
+        <!--  End of Primary image screen1 screen -->
+
+        <!--  Search list item screen -->
+        <string name="sli_time_line_list_item_txt_search">Search Queriessssss</string>
+        <string name="sli_time_line_list_item_day_txt_search">31-july-2013</string>
+        <!--  End of Search list item screen -->
+
+
+        <!--      NFStore home -->
+        <string name="nfStore_label">NowFloats Store</string>
+        <string name="nfStore_top_paid">Top Paid</string>
+        <string name="nfStore_top_free">Top Free</string>
+
+        <!--      End NFStore home -->
+
+        <!-- 	My widgets -->
+
+        <string name="my_widgets_header">My Widgets</string>
+
+
+        <!-- 	End My widgets -->
+
+
+
+        <!--  Search screen -->
+        <string name="search_analytics_action_bar_nowfloats_txt">Search Queries</string>
+        <!--  End of Search screen -->
+
+        <!--  Secondary image upload screen -->
+        <string name="sius_secondary_img_upload_screen_top_bar_txt">Image Upload</string>
+        <!--  End of Secondary image upload screen -->
+
+        <!--  Settings screen -->
+
+        <string name="set_analytics_action_bar_nowfloats_txt">Social Sharing</string>
+        <string name="set_settings_screen_fb_txt">Facebook</string>
+        <string name="set_settings_screen_fb_page_txt">Facebook Page</string>
+        <string name="set_settings_screen_twitter_txt">Twitter</string>
+
+        <!--  End of Settings screen -->
+
+        <!--  Slide out screen screen -->
+
+        <string name="sos_slide_out_screen_home">Home</string>
+        <string name="sos_slide_out_screen_talkToBusiness">Talk-To-Business</string>
+        <string name="sos_slide_out_screen_store">NowFloats Store</string>
+        <string name="sos_slide_out_screen_pc">Product Catalogue</string>
+        <string name="sos_slide_out_screen_inbox">Search Queries</string>
+        <string name="sos_slide_out_screen_image_gallery">Image Gallery</string>
+        <string name="sos_slide_out_screen_image_gallery_primary_image">Featured Image</string>
+        <string name="sos_slide_out_screen_image_gallery_other_images">Gallery Images</string>
+        <string name="sos_slide_out_screen_settings">Social Sharing</string>
+        <string name="sos_slide_out_screen_analytics">Analytics</string>
+        <string name="sos_slide_out_screen_manage_store">Manage Website</string>
+        <string name="sos_slide_out_screen_manage_store_business_details">Business Details</string>
+        <string name="sos_slide_out_screen_manage_store_contact_info">Contact Numbers</string>
+        <string name="sos_slide_out_screen_manage_store_business_address">Business Address</string>
+        <string name="sos_slide_out_screen_manage_store_business_hours">Business Hours</string>
+        <string name="sos_slide_out_screen_feedback">Settings</string>
+        <string name="sos_slide_out_screen_manage_store_business_logo">Business Logo</string>
+        <string name="sos_slide_out_screen_logout">Logout</string>
+
+        <!--  End of Slide out screen screen -->
+
+        <!--  Sliding menu lib sliding menuRow screen -->
+        <string name="smlr_slidingmenurowtitle">Medium Text</string>
+        <!--  End of Sliding menu lib sliding menuRow screen -->
+
+        <!--  Time line list item screen -->
+
+        <string name="tlli_time_line_list_item_txt">my time line view</string>
+        <string name="tlli_time_line_list_item_day_txt">09-jan-2013</string>
+
+        <!--  End of Time line list item screen -->
+
+
+        <!-- Product Catalogue Screen Start -->
+        <string name="pc_screen_label">Product Catalogue</string>
+
+
+
+
+        <!-- 	Settings screen start -->
+
+        <string name="settings_screen_label">Settings</string>
+        <string name="settings_share_website">Share your website</string>
+        <string name="settings_like_nf">Like NowFloats</string>
+        <string name="settings_feedback">Feedback</string>
+        <string name="settings_rate_on_app_store">Rate on Play store </string>
+        <string name="settings_change_password">Change Password </string>
+        <string name="settings_abt_us">About us</string>
+        <string name="settings_abt_us_tc">Terms &amp; Conditions</string>
+        <string name="settings_abt_us_pc">Privacy Policy</string>
+        <string name="settings_abt_us_nf">About NowFloats</string>
+        <string name="settings_version">Version</string>
+
+
+        <!-- 	Settings screen end -->
+
+        <!-- 	Toast Messages  -->
+
+        <string name="well_done">Well Done! Your Message has been Posted</string>
+        <string name="no_subscribers">We are not gonna tell anyone!</string>
+        <string name="post_to_subscribers">Cool! Your subscribers will be alerted</string>
+        <string name="got_it">Done!</string>
+        <string name="succesfully_posted">Successfully Posted!</string>
+
+        <!--  	Toast Messages End -->
+        <string name="app_copyright">© 2012-2014 NowFloats</string>
+        <string name="app_all_rights_reserved">All rights reserved.</string>
+        <string name="settings_logout">Logout</string>
+        <string name="signup_tap_to_change">Dont like it? Tap the box to change</string>
 
 </resources>

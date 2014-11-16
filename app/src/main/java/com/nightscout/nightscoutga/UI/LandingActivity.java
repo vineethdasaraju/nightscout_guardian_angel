@@ -1,40 +1,53 @@
-package com.nightscout.nightscoutga;
+package com.nightscout.nightscoutga.UI;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+
+import com.nightscout.nightscoutga.R;
+import com.nightscout.nightscoutga.util.Functions;
 
 
 public class LandingActivity extends Activity {
-    Button landingButton;
-    RelativeLayout uNameCheckStatus;
-    EditText landingEmail;
-    boolean firstRun = true;
+
+    Button signInButton, registerButton;
+    Context ctx = this;
+    boolean firstCheck = true;
+    EditText userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
 
-        landingButton = (Button) findViewById(R.id.landing_button);
-        uNameCheckStatus = (RelativeLayout) findViewById(R.id.domain_check_pd);
-        landingEmail = (EditText) findViewById(R.id.landing_email);
+        userEmail = (EditText) findViewById(R.id.login_main1_popup_username_box);
 
-        landingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uNameCheckStatus.setVisibility(View.VISIBLE);
-            }
-        });
+//        signInButton = (Button) findViewById(R.id.button_landing_page_sign_in);
+//        registerButton = (Button) findViewById(R.id.button_landing_page_register);
+//
+//        signInButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent in = new Intent(ctx, LoginActivity.class);
+//                startActivity(in);
+//            }
+//        });
+//
+//        registerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent in = new Intent(ctx, RegisterActivity.class);
+//                startActivity(in);
+//            }
+//        });
 
-        landingEmail.addTextChangedListener(new TextWatcher() {
+        userEmail.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -45,19 +58,11 @@ public class LandingActivity extends Activity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String enteredEmail = landingEmail.getText().toString();
-                if(!firstRun) {
-                    firstRun = false;
-                    if (enteredEmail.equals("vineethd123@gmail.com")) {
-                        landingButton.setText(R.string.button_login);
-                        landingButton.setVisibility(View.VISIBLE);
-                    } else {
-                        landingButton.setText(R.string.button_register);
-                        landingButton.setVisibility(View.VISIBLE);
-                    }
-                }
+                Functions.toast(s.toString(), ctx);
             }
         });
+
+
     }
 
 
@@ -81,5 +86,9 @@ public class LandingActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void userEmailCheck(String emailID) {
+        Functions.toast("This is a sample toast", ctx);
     }
 }

@@ -1,75 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/activity_vertical_margin"
-    tools:context=".LandingActivity"
-    android:background="@color/white">
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/ic_launcher"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_below="@id/imageView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/project_name"
-            android:padding="10dp"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sub_project_name"
-            android:padding="10dp"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content">
-
-        <EditText
+        <LinearLayout
+            android:id="@+id/login_main_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:hint="@string/hint_user_email"
-            android:id="@+id/landing_email"
-            android:layout_gravity="center_horizontal" />
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:weightSum="6">
 
-        <RelativeLayout
-            android:id="@+id/domain_check_pd"
-            style="@style/GenericProgressBackground"
-            android:layout_width="@dimen/actionBar_leftButton_layout_width"
-            android:layout_height="@dimen/actionBar_leftButton_layout_height"
-            android:layout_gravity="center_horizontal"
-            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ln1_topDiv_height"
+                android:layout_weight="4">
 
-            <ProgressBar style="@style/GenericProgressIndicator" />
-        </RelativeLayout>
+                <com.nightscout.nightscoutga.customviews.ResizableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/ln1_topImage_padding"
+                    android:src="@drawable/ic_launcher" />
+            </RelativeLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/button_register"
-            android:id="@+id/landing_button"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
-</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6"
+                    android:orientation="horizontal" >
+
+                    <com.nightscout.nightscoutga.customviews.IEditText1
+                        android:id="@+id/login_main1_popup_username_box"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_height="@dimen/ln1_login_main1_popup_username_box_height"
+                        android:background="@drawable/login_et_bkg"
+                        android:ems="10"
+                        android:hint="@string/ln_login_main1_popup_username_box_hint"
+                        android:padding="@dimen/ln1_login_main1_popup_username_box_padding"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey1"
+                        android:textCursorDrawable="@drawable/cursor_d"
+                        android:textSize="@dimen/ln1_login_main1_popup_username_box_textSize"
+                        android:textStyle="italic" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/battery15"
+                        android:visibility="gone"
+                        android:id="@+id/check_status" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
