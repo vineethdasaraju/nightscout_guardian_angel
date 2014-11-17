@@ -13,6 +13,7 @@
     <string name="landing_button_register">REGISTER</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_menu">MenuActivity</string>
     <string name="register_activity_title">Registration</string>
     <string name="login_activity_title">SIGN IN</string>
 

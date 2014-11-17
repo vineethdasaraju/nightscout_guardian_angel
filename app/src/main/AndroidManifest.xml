@@ -27,6 +27,11 @@
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name=".UI.MenuActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:label="@string/title_activity_menu" >
+        </activity>
     </application>
 
 </manifest>

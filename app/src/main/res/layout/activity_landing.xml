@@ -68,7 +68,6 @@
                         android:visibility="gone"
                         android:id="@+id/check_status" />
 
-
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
