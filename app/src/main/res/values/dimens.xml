@@ -1169,7 +1169,7 @@
     <dimen name="photo_thumbnail_size">100dp</dimen>
     <dimen name="album_thumbnail_spacing">6dp</dimen>
     <dimen name="photo_thumbnail_spacing">2dp</dimen>
-    <dimen name="activity_vertical_margin">60dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="landing_sign_in_button_margin_bottom">10dp</dimen>
     <dimen name="common_screens_margin">20dp</dimen>
 
