@@ -42,4 +42,7 @@
     <string name="action_sign_in">Sign In</string>
     <string name="ns_s2_back">Back</string>
 
+    <!-- Strings related to Menu -->
+    <string name="title_activity_menu">Menu</string>
+
 </resources>

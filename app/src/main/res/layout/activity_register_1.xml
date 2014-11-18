@@ -50,7 +50,7 @@
                             android:layout_width="@dimen/nf_s1_top_image_layout_width"
                             android:layout_height="@dimen/nf_s1_top_image_layout_height"
                             android:layout_centerInParent="true"
-                            android:src="@drawable/abc_menu_hardkey_panel_mtrl_mult" />
+                            android:src="@drawable/action_btn_normal" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/nf_s1_details_div_layout_height"
                         android:layout_gravity="bottom"
-                        android:background="@drawable/abc_menu_hardkey_panel_mtrl_mult">
+                        android:background="@drawable/common_signin_btn_text_dark">
 
                         <com.nightscout.nightscoutga.customviews.STextView
                             android:id="@+id/nf_s1_details_text"
