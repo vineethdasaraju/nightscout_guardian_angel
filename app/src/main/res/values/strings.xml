@@ -44,5 +44,17 @@
 
     <!-- Strings related to Menu -->
     <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="graph_fragment_title">Charts</string>
+    <string name="patient_fragment_title">Patients</string>
+    <string name="title_settings_fragment">Settings</string>
+    <string name="sos_slide_out_screen_Dashboard">Dashboard</string>
+    <string name="sos_slide_out_screen_patients">Patients</string>
+    <string name="sos_slide_out_screen_graphs_label">Graphs</string>
+    <string name="sos_slide_out_screen_settings_label">Settings</string>
 
 </resources>
