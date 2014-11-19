@@ -30,17 +30,14 @@
         <attr name="behindFadeEnabled" format="boolean" />
         <attr name="behindFadeDegree" format="float" />
     </declare-styleable>
-    
+
     <declare-styleable name="ProEditText">
         <attr name="regex" format="reference"/>
         <attr name="regex_error" format="reference"/>
         <attr name="default_bg" format="reference"/>
         <attr name="font_custom_edittext" format="reference"/>
     </declare-styleable>
-    
-    <declare-styleable name="Label">
-        <attr name="typeface" format="reference"/>
-    </declare-styleable>
+
     
 
 </resources>

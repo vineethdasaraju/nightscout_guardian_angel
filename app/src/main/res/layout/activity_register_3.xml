@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nightscout.nightscoutga.customviews.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ns_s3_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/ns_s3_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/nf_s1_back_layout_height"
+                android:layout_weight="1"
+                android:text="@string/ns_s2_back"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ns_s3_next"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/nf_s1_next_layout_height"
+                android:layout_marginLeft="@dimen/nf_s1_next_layout_marginLeft"
+                android:layout_weight="3"
+                android:text="@string/ns_s1_next"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.nightscout.nightscoutga.customviews.CustomScrollView>

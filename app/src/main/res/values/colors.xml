@@ -1,74 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<drawable name="focused">#30000000</drawable>
-    <drawable name="selected">#30000000</drawable>
-    <color name="list_background">#a4a4a4</color>
-    <color name="top_bar_color">#ffb900</color>
-    <color name="top_bar_update_button_border">#FFC805</color>
-    <color name="top_bar_update_text_color">#222222</color>
-    <color name="background_orange">#fa9600</color>
-    <color name="background_grey">#f0f0f0</color>
-    <color name="background_grey_onclick">#d0d0d0</color>
-    <color name="light_orange">#fab44b</color>
-    <color name="text_brown">#643c00</color>
-    <color name="app_bkd">#fa9600</color>
-    <color name="text_color">#643c00</color>
-    <color name="storefront_yellow">#ffb900</color>
-    <color name="floating_point_text">#99000000</color>
-    <color name="deal_delim">#e5ebb2</color>
-    <color name="white">#ffffff</color>
-    <color name="event_white_marker_color">#99ffffff</color>
+
     <color name="black">#000000</color>
     <color name="green">#23cf34</color>
     <color name="orange">#E47833</color>
     <color name="lite_blue">#4E78A0</color>
     <color name="blue">#0000FF</color>
     <color name="grey">#a4a4a4</color>
-    <color name="grey1">#FF909090</color>
-    <color name="near_place_thought_list_item">#908486</color>
     <color name="transparent">#00000000</color>
     <color name="grey_transparent">#00000099</color>
-    <color name="home_yellow">#FFB900</color>
-    <color name="floating_point_title">#8B5000</color>
-    <color name="deal_share">#2b2e01</color>
-    <color name="storefront_light_yellow">#fbaa34</color>
-    <color name="thoughts_yellow">#ffc805</color>
-    <color name="background_orange_light">#fab44b</color>
-    <color name="share_delim">#fbb44a</color>
-    <color name="biz_msg_txt_color">#3c3c3c</color>
-    <color name="biz_msg_date_txt_color">#828282</color>
-    <color name="holo_blue_bright">#ff00ddff</color>
-    <color name="timestamp">#6f6f6f</color>
-    <color name="date">#afafaf</color>
-	<color name="text_color_brown">#5b5b5b</color>
-	<color name="title_grey">#464646</color>
-	<color name="messages_title_grey">#A0A0A0</color>
-	
-	<color name="login_et_border">#d4d4d4</color>
-	<color name="login_bkg">#787878</color>
-	<color name="launch_active">#d4d4d4</color>
-	<color name="signup_hint_grey">#b4b4b4</color>
-	<color name="signup_back_grey">#b5b5b5</color>
-	
-	<color name="ps_btn1">#464646</color>
-	<color name="ps_tag">#787878</color>
-	
-	<color name="d9d9d9">#d9d9d9</color>
-	<color name="b6b6b6">#b6b6b6</color>
-	
-	<color  name="c_4f4f4f">#4f4f4f</color>
-	<color  name="c_2d2d2d">#2d2d2d</color>
-	<color  name="c_939393">#939393</color>
-	<color  name="c_a3a3a3">#a3a3a3</color>
-	<color  name="c_919191">#919191</color>
-	<color  name="c_f1f1f1">#939393</color>
-	<color  name="c_585858">#585858</color>
-	<color  name="c_989898">#989898</color>
-	<color  name="c_d4d4d4">#d4d4d4</color>
-	
-	<color  name="CustomDialog_heading">#7e7e7e</color>
-	<color  name="CustomDialog_description">#585858</color>
-	<color  name="CustomDialog_img_bckgrnd">#5A5A5A</color>
-	
-	
+    <color name="dark_grey">#4d4d4d</color>
+    <color name="signup_hint_grey">#b4b4b4</color>
+    <color name="white">#FFF</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_green">#006400</color>
+    <color name="launch_active">#d4d4d4</color>
+
 </resources>
