@@ -22,28 +22,20 @@
             android:name="com.nightscout.nightscoutga.UI.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-        <activity
-            android:name="com.nightscout.nightscoutga.UI.MenuActivity"
-            android:label="@string/title_activity_menu"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
-            <intent-filter>
+	    <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <!--
-        activity
-            android:name="com.nightscout.nightscoutga.UI.GraphActivity"
-            android:label="@string/title_activity_graph" >
-        </activity
-        -->
+        <activity
+            android:name="com.nightscout.nightscoutga.UI.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+	<meta-data
+            	android:name="com.google.android.gms.version"
+            	android:value="@integer/google_play_services_version" />
         <activity
             android:name="com.nightscout.nightscoutga.UI.Graph"
             android:label="@string/title_activity_graph" >
