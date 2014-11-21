@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <SwitchPreference
+        android:key="license_toggle"
+        android:summaryOff="Please click to accept"
+        android:summaryOn="Click to Reject"
+        android:switchTextOff="No"
+        android:switchTextOn="Yes"
+        android:disableDependentsState="false"
+        android:title="Accept Agreement">
+    </SwitchPreference>
+
+    <ListPreference
+        android:dependency="license_toggle"
+        android:key="sync_time_list"
+        android:title="Sync Time"
+        android:dialogTitle="Sync Time"
+        android:entries="@array/sync_entries"
+        android:entryValues="@array/sync_values"
+        android:defaultValue="5" />
+
+</PreferenceScreen>

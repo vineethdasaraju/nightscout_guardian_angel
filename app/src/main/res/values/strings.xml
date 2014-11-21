@@ -44,5 +44,14 @@
 
     <!-- Strings related to Menu -->
     <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_graph">GraphActivity</string>
+    <string name="unknown_values">---</string>
+    <string name="USBLabelText">USB</string>
+    <string name="UploadLabelText">Upload</string>
+    <string name="DexBatteryLabelText">Dex Battery</string>
+    <string name="TimeSyncLabelText">Time</string>
+    <string name="display_sgv"></string>
+    <string name="display_trend"></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
