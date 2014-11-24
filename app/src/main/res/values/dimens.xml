@@ -1178,5 +1178,6 @@
     <!-- gallery end -->
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
 
 </resources>

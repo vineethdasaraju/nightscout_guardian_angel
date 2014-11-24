@@ -64,5 +64,32 @@
     <string name="sos_slide_out_screen_patients">Patients</string>
     <string name="sos_slide_out_screen_graphs_label">Graphs</string>
     <string name="sos_slide_out_screen_settings_label">Settings</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_main_fragment">MainFragmentActivity</string>
+    <string name="desc_list_item_icon">List Item Icon</string>
+
+
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Dashboard</item>
+        <item >Add a Patient</item>
+        <item >Graphs</item>
+        <item >Settings</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/icon_dashboard</item>
+        <item>@drawable/icon_patients</item>
+        <item>@drawable/icon_graphs</item>
+        <item>@drawable/icon_settings</item>
+    </array>
 
 </resources>

@@ -1,10 +1,141 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nightscout.nightscoutga.UI.Fragments.DashboardFragment">
+    android:weightSum="1"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Patient Name Label"
+            android:textColor="@color/black"
+            android:id="@+id/dashboard_text_patient_name_label"
+            android:gravity="center"
+            android:layout_weight="0.5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Patient Name"
+            android:textColor="@color/black"
+            android:id="@+id/dashboard_textview_patient_name"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="105"
+            android:textColor="@color/green"
+            android:textSize="150sp"
+            android:gravity="center"
+            android:id="@+id/dashboard_textview_glucose_level"
+            android:layout_below="@+id/dashboard_textview_patient_name"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="6"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="2.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/dashboard_button_graphs"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/dashboard_button_image_graphs"
+                    android:background="@drawable/graphs"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Graphs"
+                    android:layout_below="@id/dashboard_button_image_graphs"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/textView4"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dashboard_button_settings"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/dashboard_button_image_settings"
+                    android:background="@drawable/settings"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Settings"
+                    android:layout_below="@id/dashboard_button_image_settings"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/textView5"
+                    android:layout_weight="1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/dashboard_button_patients"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/dashboard_button_image_patients"
+                    android:background="@drawable/patients"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Patients"
+                    android:layout_below="@id/dashboard_button_image_patients"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/textView6"
+                    android:layout_weight="1" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
