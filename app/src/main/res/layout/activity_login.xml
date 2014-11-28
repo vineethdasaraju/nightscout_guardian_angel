@@ -72,7 +72,6 @@
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
-
                 <com.google.android.gms.common.SignInButton
                     android:id="@+id/plus_sign_in_button"
                     android:layout_width="match_parent"
@@ -109,6 +108,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
+                    <TextView android:id="@+id/login_user_prompt"
+                        android:paddingTop="30dp"
+                        android:paddingBottom="30dp"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textStyle="bold|italic"
+                        android:textSize="20sp"
+                        android:text="dummy"/>
 
                     <AutoCompleteTextView
                         android:id="@+id/email"

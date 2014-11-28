@@ -6,6 +6,7 @@ import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.nightscout.nightscoutga.Adapter.DrawerListAdapter;
 import com.nightscout.nightscoutga.R;
@@ -34,6 +36,7 @@ public class MainFragmentActivity extends Activity {
     private ArrayList<DrawerListItem> navDrawerItems;
     private DrawerListAdapter adapter;
     private Activity context = this;
+    private boolean doubleBackToExitPressedOnce = false;
 
     DashboardFragment dashboardFragment = null;
     PatientsFragment patientsFragment = null;
@@ -147,6 +150,23 @@ public class MainFragmentActivity extends Activity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(context, "Press BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
     public void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
@@ -181,7 +201,7 @@ public class MainFragmentActivity extends Activity {
 
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.main_frame_container, fragment).addToBackStack( "tag" ).commit();
+            fragmentManager.beginTransaction().replace(R.id.main_frame_container, fragment).commit();
 
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);

@@ -85,112 +85,128 @@
     <!-- End of Login new page -->
 
 
-    <!-- nf_signUp_1 page -->
+    <!-- ns_signUp_1 page -->
 
-    <dimen name="nf_s1_nf_s1_main_layout_paddingTop">15dp</dimen>
-    <dimen name="nf_s1_nf_s1_main_layout_paddingLeft">20dp</dimen>
-    <dimen name="nf_s1_nf_s1_main_layout_paddingRight">20dp</dimen>
-    <dimen name="nf_s1_top_div_layout_height">150dp</dimen>
-    <dimen name="nf_s1_top_image_layout_layout_height">120dp</dimen>
-    <dimen name="nf_s1_top_image_layout_layout_width">120dp</dimen>
-    <dimen name="nf_s1_top_image_layout_marginBottom">20dp</dimen>
-    <dimen name="nf_s1_top_image_layout_height">100dp</dimen>
-    <dimen name="nf_s1_top_image_layout_width">100dp</dimen>
-    <dimen name="nf_s1_details_div_layout_height">45dp</dimen>
-    <dimen name="nf_s1_details_text_textSize">20sp</dimen>
-    <dimen name="nf_s1_input1_div_marginTop">15dp</dimen>
-    <dimen name="nf_s1_input1_div_marginBottom">5dp</dimen>
-    <dimen name="nf_s1_signup_bname_layout_height">42dp</dimen>
-    <dimen name="nf_s1_signup_bname_paddingTop">5dp</dimen>
-    <dimen name="nf_s1_signup_bname_paddingLeft">55dp</dimen>
-    <dimen name="nf_s1_signup_bname_paddingBottom">5dp</dimen>
-    <dimen name="nf_s1_signup_bname_paddingRight">5dp</dimen>
-    <dimen name="nf_s1_name_imageDiv_layout_width">42dp</dimen>
-    <dimen name="nf_s1_name_imageDiv_layout_height">42dp</dimen>
-    <dimen name="nf_s1_name_image_layout_height">40dp</dimen>
-    <dimen name="nf_s1_name_image_layout_width">40dp</dimen>
-    <dimen name="nf_s1_bottomDiv_marginTop">15dp</dimen>
-    <dimen name="nf_s1_dropImage_layout_height">20dp</dimen>
-    <dimen name="nf_s1_dropImage_layout_width">20dp</dimen>
-    <dimen name="nf_s1_dropImage_marginRight">10dp</dimen>
-    <dimen name="nf_s1_back_layout_height">42dp</dimen>
-    <dimen name="nf_s1_next_layout_height">42dp</dimen>
-    <dimen name="nf_s1_next_layout_marginLeft">2dp</dimen>
+    <dimen name="ns_s1_ns_s1_main_layout_paddingTop">15dp</dimen>
+    <dimen name="ns_s1_ns_s1_main_layout_paddingLeft">20dp</dimen>
+    <dimen name="ns_s1_ns_s1_main_layout_paddingRight">20dp</dimen>
+    <dimen name="ns_s1_top_div_layout_height">150dp</dimen>
+    <dimen name="ns_s1_top_image_layout_layout_height">120dp</dimen>
+    <dimen name="ns_s1_top_image_layout_layout_width">120dp</dimen>
+    <dimen name="ns_s1_top_image_layout_marginBottom">20dp</dimen>
+    <dimen name="ns_s1_top_image_layout_height">100dp</dimen>
+    <dimen name="ns_s1_top_image_layout_width">100dp</dimen>
+    <dimen name="ns_s1_details_div_layout_height">45dp</dimen>
+    <dimen name="ns_s1_details_text_textSize">22sp</dimen>
+    <dimen name="ns_s1_input1_div_marginTop">15dp</dimen>
+    <dimen name="ns_s1_input1_div_marginBottom">5dp</dimen>
+    <dimen name="ns_s1_signup_bname_layout_height">42dp</dimen>
+    <dimen name="ns_s1_signup_bname_paddingTop">5dp</dimen>
+    <dimen name="ns_s1_signup_bname_paddingLeft">55dp</dimen>
+    <dimen name="ns_s1_signup_bname_paddingBottom">5dp</dimen>
+    <dimen name="ns_s1_signup_bname_paddingRight">5dp</dimen>
+    <dimen name="ns_s1_name_imageDiv_layout_width">42dp</dimen>
+    <dimen name="ns_s1_name_imageDiv_layout_height">42dp</dimen>
+    <dimen name="ns_s1_name_image_layout_height">40dp</dimen>
+    <dimen name="ns_s1_name_image_layout_width">40dp</dimen>
+    <dimen name="ns_s1_bottomDiv_marginTop">15dp</dimen>
+    <dimen name="ns_s1_dropImage_layout_height">20dp</dimen>
+    <dimen name="ns_s1_dropImage_layout_width">20dp</dimen>
+    <dimen name="ns_s1_dropImage_marginRight">10dp</dimen>
+    <dimen name="ns_s1_back_layout_height">42dp</dimen>
+    <dimen name="ns_s1_next_layout_height">42dp</dimen>
+    <dimen name="ns_s1_next_layout_marginLeft">2dp</dimen>
 
-    <!-- End of nf_signUp_1 page -->
-
-
-    <!-- nf_signUp_2 page -->
-
-    <dimen name="nf_s2_signup_addr1_layout_height">35dp</dimen>
-    <dimen name="nf_s2_signup_addr1_paddingTop">5dp</dimen>
-    <dimen name="nf_s2_signup_addr1_paddingLeft">14dp</dimen>
-    <dimen name="nf_s2_signup_addr1_paddingBottom">5dp</dimen>
-    <dimen name="nf_s2_signup_addr1_paddingRight">10dp</dimen>
-    <dimen name="nf_s2_streetDiv_marginTop">10dp</dimen>
-    <dimen name="nf_s2_signup_city_marginRight">2dp</dimen>
-    <dimen name="nf_s2_signup_pin_marginLeft">2dp</dimen>
-    <dimen name="nf_s2_countryScroll_layout_height">20dp</dimen>
-    <dimen name="nf_s2_countryScroll_layout_width">20dp</dimen>
-    <dimen name="nf_s2_countryScroll_marginRight">10dp</dimen>
-    <dimen name="nf_s2_back_layout_height">42dp</dimen>
-    <dimen name="nf_s2_next_marginLeft">2dp</dimen>
-
-    <!-- End of nf_signUp_2 page -->
+    <!-- End of ns_signUp_1 page -->
 
 
-    <!-- nf_signUp_3 page -->
+    <!-- ns_signUp_2 page -->
 
-    <dimen name="nf_s3_signup_email_layout_height">42dp</dimen>
-    <dimen name="nf_s3_signup_email_paddingTop">5dp</dimen>
-    <dimen name="nf_s3_signup_email_paddingLeft">55dp</dimen>
-    <dimen name="nf_s3_signup_email_paddingBottom">5dp</dimen>
-    <dimen name="nf_s3_signup_email_paddingRight">5dp</dimen>
-    <dimen name="nf_s3_emailImageDiv_layout_width">42dp</dimen>
-    <dimen name="nf_s3_emailImageDiv_layout_height">42dp</dimen>
-    <dimen name="nf_s3_emailImage_layout_height">40dp</dimen>
-    <dimen name="nf_s3_emailImage_layout_width">40dp</dimen>
-    <dimen name="nf_s3_bottomDiv_marginTop">15dp</dimen>
-    <dimen name="nf_s3_back_layout_height">42dp</dimen>
-    <dimen name="nf_s3_next_marginLeft">2dp</dimen>
+    <dimen name="ns_s2_ns_s2_main_layout_paddingTop">15dp</dimen>
+    <dimen name="ns_s2_ns_s2_main_layout_paddingLeft">20dp</dimen>
+    <dimen name="ns_s2_ns_s2_main_layout_paddingRight">20dp</dimen>
+    <dimen name="ns_s2_top_div_layout_height">150dp</dimen>
+    <dimen name="ns_s2_top_image_layout_layout_height">120dp</dimen>
+    <dimen name="ns_s2_top_image_layout_layout_width">120dp</dimen>
+    <dimen name="ns_s2_top_image_layout_marginBottom">20dp</dimen>
+    <dimen name="ns_s2_top_image_layout_height">100dp</dimen>
+    <dimen name="ns_s2_top_image_layout_width">100dp</dimen>
+    <dimen name="ns_s2_details_div_layout_height">45dp</dimen>
+    <dimen name="ns_s2_details_text_textSize">22sp</dimen>
+    <dimen name="ns_s2_input1_div_marginTop">15dp</dimen>
+    <dimen name="ns_s2_input1_div_marginBottom">5dp</dimen>
+    <dimen name="ns_s2_signup_bname_layout_height">42dp</dimen>
+    <dimen name="ns_s2_signup_bname_paddingTop">5dp</dimen>
+    <dimen name="ns_s2_signup_bname_paddingLeft">55dp</dimen>
+    <dimen name="ns_s2_signup_bname_paddingBottom">5dp</dimen>
+    <dimen name="ns_s2_signup_bname_paddingRight">5dp</dimen>
+    <dimen name="ns_s2_name_imageDiv_layout_width">42dp</dimen>
+    <dimen name="ns_s2_name_imageDiv_layout_height">42dp</dimen>
+    <dimen name="ns_s2_name_image_layout_height">40dp</dimen>
+    <dimen name="ns_s2_name_image_layout_width">40dp</dimen>
+    <dimen name="ns_s2_bottomDiv_marginTop">15dp</dimen>
+    <dimen name="ns_s2_dropImage_layout_height">20dp</dimen>
+    <dimen name="ns_s2_dropImage_layout_width">20dp</dimen>
+    <dimen name="ns_s2_dropImage_marginRight">10dp</dimen>
+    <dimen name="ns_s2_back_layout_height">42dp</dimen>
+    <dimen name="ns_s2_next_layout_height">42dp</dimen>
+    <dimen name="ns_s2_next_layout_marginLeft">2dp</dimen>
 
-    <!-- End of nf_signUp_3 page -->
+    <!-- End of ns_signUp_2 page -->
 
 
-    <!-- nf_signUp_4 page -->
+    <!-- ns_signUp_3 page -->
 
-    <dimen name="nf_s4_editAddressDiv_marginBottom">30dp</dimen>
-    <dimen name="nf_s4_signup_bsubdomain_layout_height">42dp</dimen>
-    <dimen name="nf_s4_signup_bsubdomain_paddingTop">5dp</dimen>
-    <dimen name="nf_s4_signup_bsubdomain_paddingLeft">5dp</dimen>
-    <dimen name="nf_s4_signup_bsubdomain_paddingBottom">5dp</dimen>
-    <dimen name="nf_s4_signup_bsubdomain_paddingRight">5dp</dimen>
-    <dimen name="nf_s4_domain_textSize">25sp</dimen>
-    <dimen name="nf_s4_domain_layout_margin">10dp</dimen>
-    <dimen name="nf_s4_back_layout_height">42dp</dimen>
-    <dimen name="nf_s4_next_marginLeft">2dp</dimen>
+    <dimen name="ns_s3_signup_email_layout_height">42dp</dimen>
+    <dimen name="ns_s3_signup_email_paddingTop">5dp</dimen>
+    <dimen name="ns_s3_signup_email_paddingLeft">55dp</dimen>
+    <dimen name="ns_s3_signup_email_paddingBottom">5dp</dimen>
+    <dimen name="ns_s3_signup_email_paddingRight">5dp</dimen>
+    <dimen name="ns_s3_emailImageDiv_layout_width">42dp</dimen>
+    <dimen name="ns_s3_emailImageDiv_layout_height">42dp</dimen>
+    <dimen name="ns_s3_emailImage_layout_height">40dp</dimen>
+    <dimen name="ns_s3_emailImage_layout_width">40dp</dimen>
+    <dimen name="ns_s3_bottomDiv_marginTop">15dp</dimen>
+    <dimen name="ns_s3_back_layout_height">42dp</dimen>
+    <dimen name="ns_s3_next_marginLeft">2dp</dimen>
 
-    <!-- End of nf_signUp_4 page -->
+    <!-- End of ns_signUp_3 page -->
 
 
-    <!-- nf_signUp_5 page -->
+    <!-- ns_signUp_4 page -->
 
-    <dimen name="nf_s5_holder1_padding">15dp</dimen>
-    <dimen name="nf_s5_signup_bsubtv_textSize">25sp</dimen>
-    <dimen name="nf_s5_domain_textSize">20sp</dimen>
-    <dimen name="nf_s5_domain_availability_layout_width">15dp</dimen>
-    <dimen name="nf_s5_domain_availability_layout_height">15dp</dimen>
-    <dimen name="nf_s5_changeDiv_layout_height">60dp</dimen>
-    <dimen name="nf_s5_changeDiv_marginTop">-15dp</dimen>
-    <dimen name="nf_s5_insideChangeDiv_layout_height">33dp</dimen>
-    <dimen name="nf_s5_insideChangeDiv_layout_marginLeft">45dp</dimen>
-    <dimen name="nf_s5_label_textSize">15sp</dimen>
-    <dimen name="nf_s5_signup_here_btn_layout_height">30dp</dimen>
-    <dimen name="nf_s5_signup_here_btn_textSize">15sp</dimen>
-    <dimen name="nf_s5_back_layout_height">42dp</dimen>
-    <dimen name="nf_s5_next_layout_marginLeft">2dp</dimen>
+    <dimen name="ns_s4_editAddressDiv_marginBottom">30dp</dimen>
+    <dimen name="ns_s4_signup_bsubdomain_layout_height">42dp</dimen>
+    <dimen name="ns_s4_signup_bsubdomain_paddingTop">5dp</dimen>
+    <dimen name="ns_s4_signup_bsubdomain_paddingLeft">5dp</dimen>
+    <dimen name="ns_s4_signup_bsubdomain_paddingBottom">5dp</dimen>
+    <dimen name="ns_s4_signup_bsubdomain_paddingRight">5dp</dimen>
+    <dimen name="ns_s4_domain_textSize">25sp</dimen>
+    <dimen name="ns_s4_domain_layout_margin">10dp</dimen>
+    <dimen name="ns_s4_back_layout_height">42dp</dimen>
+    <dimen name="ns_s4_next_marginLeft">2dp</dimen>
 
-    <!-- End of nf_signUp_5 page -->
+    <!-- End of ns_signUp_4 page -->
+
+
+    <!-- ns_signUp_5 page -->
+
+    <dimen name="ns_s5_holder1_padding">15dp</dimen>
+    <dimen name="ns_s5_signup_bsubtv_textSize">25sp</dimen>
+    <dimen name="ns_s5_domain_textSize">20sp</dimen>
+    <dimen name="ns_s5_domain_availability_layout_width">15dp</dimen>
+    <dimen name="ns_s5_domain_availability_layout_height">15dp</dimen>
+    <dimen name="ns_s5_changeDiv_layout_height">60dp</dimen>
+    <dimen name="ns_s5_changeDiv_marginTop">-15dp</dimen>
+    <dimen name="ns_s5_insideChangeDiv_layout_height">33dp</dimen>
+    <dimen name="ns_s5_insideChangeDiv_layout_marginLeft">45dp</dimen>
+    <dimen name="ns_s5_label_textSize">15sp</dimen>
+    <dimen name="ns_s5_signup_here_btn_layout_height">30dp</dimen>
+    <dimen name="ns_s5_signup_here_btn_textSize">15sp</dimen>
+    <dimen name="ns_s5_back_layout_height">42dp</dimen>
+    <dimen name="ns_s5_next_layout_marginLeft">2dp</dimen>
+
+    <!-- End of ns_signUp_5 page -->
 
 
     <!-- signUp_holder page -->
@@ -1138,12 +1154,12 @@
     <!-- End of Business Logo screen -->
 
 
-    <!-- NF STore list item start -->
+    <!-- ns STore list item start -->
 
-    <dimen name="nfs_li_name">15sp</dimen>
-    <dimen name="nfs_li_desc">10sp</dimen>
-    <dimen name="nfs_li_price">12sp</dimen>
-    <!-- NF STore list item end -->
+    <dimen name="nss_li_name">15sp</dimen>
+    <dimen name="nss_li_desc">10sp</dimen>
+    <dimen name="nss_li_price">12sp</dimen>
+    <!-- ns STore list item end -->
 
 
     <!-- widgets detail view -->
@@ -1179,5 +1195,6 @@
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="ns_s2_signup_pincode_paddingLeft">20dp</dimen>
 
 </resources>

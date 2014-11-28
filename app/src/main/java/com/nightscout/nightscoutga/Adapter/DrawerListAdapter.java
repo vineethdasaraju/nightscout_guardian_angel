@@ -8,14 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.UI.Fragments.DrawerListItem;
 
 import java.util.ArrayList;
-import com.nightscout.nightscoutga.R;
 
-/**
- * Created by Vineeth on 11/23/2014.
- */
 public class DrawerListAdapter extends BaseAdapter {
 
     private Context context;
@@ -26,8 +23,6 @@ public class DrawerListAdapter extends BaseAdapter {
         this.context = context;
         this.drawerListItems = drawerListItems;
     }
-
-
 
     @Override
     public int getCount() {

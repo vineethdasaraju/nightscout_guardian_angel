@@ -3,6 +3,7 @@ package com.nightscout.nightscoutga.UI.Login;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.content.CursorLoader;
@@ -28,12 +29,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
+import com.nightscout.nightscoutga.Background.checkEmailIDAsyncTask;
 import com.nightscout.nightscoutga.R;
-import com.nightscout.nightscoutga.UI.signup.RegisterActivity;
+import com.nightscout.nightscoutga.UI.signup.SignUpActivity;
 import com.nightscout.nightscoutga.util.Functions;
 
 import java.util.ArrayList;
@@ -61,7 +64,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
      */
     private UserLoginTask mAuthTask = null;
 
-    // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
@@ -71,7 +73,8 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     private View mLoginFormView;
     Button mEmailSignInButton;
     private Context ctx = this;
-    String userEmail; int i=0;
+    private Activity app = this;
+    TextView userPrompt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             return;
         }
 
+        userPrompt = (TextView) findViewById(R.id.login_user_prompt);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -172,7 +176,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
      */
 
     public void attemptLogin(){
-        Functions.toast("Login will be attempted", ctx);
+        Toast.makeText(ctx, "Login will be attempted", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -223,8 +227,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 //            mAuthTask.execute((Void) null);
 //        }
 //    }
-
-
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
@@ -378,30 +380,20 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     }
 
     private void checkDBForAccount(String emailID) {
-        //TODO: Make server call to check if email account already exists
-        if(emailID.equals("vineethd123@gmail.com")){
-            mPasswordView.setVisibility(View.VISIBLE);
-            mEmailSignInButton.setText(getString(R.string.login_activity_title));
-            mEmailSignInButton.setVisibility(View.VISIBLE);
-            mPasswordView.requestFocus();
+        checkEmailIDAsyncTask task = new checkEmailIDAsyncTask(ctx, app, emailID, mEmailSignInButton, mPasswordView, userPrompt, mPlusSignInButton, mEmailView);
+        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ) {
+            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
-            mPasswordView.setVisibility(View.GONE);
-            mEmailSignInButton.setText(getString(R.string.landing_page_signup));
-            mEmailSignInButton.setVisibility(View.VISIBLE);
-            mEmailSignInButton.requestFocus();
+            task.execute();
         }
     }
 
     private void startRegistration(String emailID){
-        Intent it = new Intent(ctx, RegisterActivity.class);
+        Intent it = new Intent(ctx, SignUpActivity.class);
         it.putExtra("Email ID", emailID);
         startActivity(it);
     }
 
-    /**
-     * Represents an asynchronous login/registration task used to authenticate
-     * the user.
-     */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;

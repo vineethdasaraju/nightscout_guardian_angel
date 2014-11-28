@@ -1,11 +1,26 @@
 package com.nightscout.nightscoutga.util;
 
-/**
- * Created by User on 19/11/2014.
- */
 public class Constants {
 
+    public final static String HTTP_PUT				=	"PUT";
+    public final static String HTTP_POST			=	"POST";
+    public final static String HTTP_DEL				=	"DELETE";
+    public final static String HTTP_GET 			=	"GET";
+
+    public static String uName;
+
+    public static final String serverAddress = "http://ec2-54-173-219-144.compute-1.amazonaws.com:8080";
+    public static final String apiPrefix = serverAddress + "/nightscoutpro";
+    public static final String apiRegister2 = "/ga/register2";
+    public static final String apiLogin = "/ga/login";
+    public static final String apiInvite = "/ga/invite";
+    public static final String apiRegister1 = "/ga/"+ uName +"/register1";
+
+    public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
+    public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
+
     public final static float MG_DL_TO_MMOL_L = 0.05556f;
+    public static boolean isDotCom = false;
 
     public enum TREND_ARROW_VALUES {
         NONE(0),

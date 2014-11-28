@@ -33,6 +33,7 @@
     <string name="alert_exit">Are you sure you want to exit?</string>
     <string name="option_no">No</string>
     <string name="ns_s1_signup_name">Name</string>
+    <string name="ns_s1_signup_uName">Username</string>
     <string name="ns_s1_details_text">Personal Information</string>
     <string name="signup_pwd">Password</string>
     <string name="ns_s1_signup_email">Email ID</string>
@@ -40,6 +41,11 @@
     <string name="ns_s1_cancel">Cancel</string>
     <string name="ns_s1_next">Next</string>
     <string name="action_sign_in">Sign In</string>
+    <string name="ns_s2_signup_name">Name</string>
+    <string name="ns_s2_signup_email">Email ID</string>
+    <string name="ns_s2_signup_phone">Phone Number</string>
+    <string name="ns_s2_details_text">Location Information</string>
+    <string name="ns_s2_next">Next</string>
     <string name="ns_s2_back">Back</string>
 
     <!-- Strings related to Menu -->
@@ -70,17 +76,15 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_main_fragment">MainFragmentActivity</string>
     <string name="desc_list_item_icon">List Item Icon</string>
-
-
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item >Dashboard</item>
-        <item >Add a Patient</item>
-        <item >Graphs</item>
-        <item >Settings</item>
+        <item>Dashboard</item>
+        <item>Add a Patient</item>
+        <item>Graphs</item>
+        <item>Settings</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -91,5 +95,19 @@
         <item>@drawable/icon_graphs</item>
         <item>@drawable/icon_settings</item>
     </array>
+
+    <string name="title_activity_main_tabbed">MainTabbedActivity</string>
+    <string name="title_activity_signup">Registration</string>
+    <string name="ns_s2_street_name">Street No.</string>
+    <string name="ns_signup_locality">Locality</string>
+    <string name="ns_s2_signup_city">City / State</string>
+    <string name="ns_s2_signup_pincode">Pincode</string>
+    <string name="ns_s2_signup_state">State</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_emergency_screen">EmergencyScreenActivity</string>
+
+    <string name="mapview_api_key">AIzaSyA_X6S05xxrM8_jrkiuPqQAAv7OxUJpAhM</string>
+    <string name="ns_s2_signup_country">Country</string>
+
 
 </resources>

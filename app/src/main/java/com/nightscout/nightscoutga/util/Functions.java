@@ -16,17 +16,26 @@ public class Functions {
 
         boolean isValid = false;
 
-        if(email.contains("@")){
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-            CharSequence inputStr = email;
+        if(Constants.isDotCom){
 
-            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(inputStr);
-            if (matcher.matches()) {
-                isValid = true;
+            if(email.contains("@")){
+                String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+                CharSequence inputStr = email;
+
+                Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+                Matcher matcher = pattern.matcher(inputStr);
+                if (matcher.matches()) {
+                    isValid = true;
+                }
+                return isValid;
+            }else{
+                return false;
             }
-            return isValid;
-        }else{
+
+        } else {
+            if(email.contains(".co")||email.contains(".ed")){
+                Constants.isDotCom = true;
+            }
             return false;
         }
     }
@@ -43,7 +52,6 @@ public class Functions {
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                     toastFlag = true;

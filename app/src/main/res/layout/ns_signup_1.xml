@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nightscout.nightscoutga.customviews.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ns_s1_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ns_s1_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/ns_s1_ns_s1_main_layout_paddingLeft"
+                android:paddingRight="@dimen/ns_s1_ns_s1_main_layout_paddingRight"
+                android:paddingTop="@dimen/ns_s1_ns_s1_main_layout_paddingTop">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+
+                <LinearLayout
+                    android:id="@+id/ns_s1_top_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ns_s1_top_div_layout_height">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/ns_s1_top_image_layout"
+                            android:layout_width="@dimen/ns_s1_top_image_layout_layout_width"
+                            android:layout_height="@dimen/ns_s1_top_image_layout_layout_height"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="@dimen/ns_s1_top_image_layout_marginBottom"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:id="@+id/ns_s1_top_image"
+                                android:layout_width="@dimen/ns_s1_top_image_layout_width"
+                                android:layout_height="@dimen/ns_s1_top_image_layout_height"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_launcher"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ns_s1_details_div"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s1_details_div_layout_height"
+                            android:layout_gravity="bottom"
+                            android:background="@color/black">
+
+                            <com.nightscout.nightscoutga.customviews.STextView
+                                android:id="@+id/ns_s1_details_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/ns_s1_details_text"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/ns_s1_details_text_textSize" />
+                        </RelativeLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ns_s1_input1_div_marginTop">
+
+                        <EditText
+                            android:id="@+id/signup_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s1_signup_bname_layout_height"
+                            android:hint="@string/ns_s1_signup_name"
+                            android:inputType="textCapWords"
+                            android:paddingBottom="@dimen/ns_s1_signup_bname_paddingBottom"
+                            android:paddingLeft="@dimen/ns_s1_signup_bname_paddingLeft"
+                            android:paddingRight="@dimen/ns_s1_signup_bname_paddingRight"
+                            android:paddingTop="@dimen/ns_s1_signup_bname_paddingTop" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ns_s1_input1_div_marginTop">
+
+                        <EditText
+                            android:id="@+id/signup_uName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s1_signup_bname_layout_height"
+                            android:hint="@string/ns_s1_signup_uName"
+                            android:inputType="textCapWords"
+                            android:paddingBottom="@dimen/ns_s1_signup_bname_paddingBottom"
+                            android:paddingLeft="@dimen/ns_s1_signup_bname_paddingLeft"
+                            android:paddingRight="@dimen/ns_s1_signup_bname_paddingRight"
+                            android:paddingTop="@dimen/ns_s1_signup_bname_paddingTop" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/ns_s1_input1_div"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ns_s1_input1_div_marginTop">
+
+                        <EditText
+                            android:id="@+id/signup_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s1_signup_bname_layout_height"
+                            android:hint="@string/signup_pwd"
+                            android:inputType="textPassword"
+                            android:paddingBottom="@dimen/ns_s1_signup_bname_paddingBottom"
+                            android:paddingLeft="@dimen/ns_s1_signup_bname_paddingLeft"
+                            android:paddingRight="@dimen/ns_s1_signup_bname_paddingRight"
+                            android:paddingTop="@dimen/ns_s1_signup_bname_paddingTop" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ns_s3_emailDiv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ns_s1_input1_div_marginTop">
+
+                        <EditText
+                            android:id="@+id/signup_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s3_signup_email_layout_height"
+                            android:hint="@string/ns_s1_signup_email"
+                            android:inputType="textEmailAddress"
+                            android:paddingBottom="@dimen/ns_s3_signup_email_paddingBottom"
+                            android:paddingLeft="@dimen/ns_s3_signup_email_paddingLeft"
+                            android:paddingRight="@dimen/ns_s3_signup_email_paddingRight"
+                            android:paddingTop="@dimen/ns_s3_signup_email_paddingTop" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ns_s3_bottomDiv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ns_s3_bottomDiv_marginTop">
+
+                        <EditText
+                            android:id="@+id/signup_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ns_s3_signup_email_layout_height"
+                            android:hint="@string/ns_s1_signup_phone"
+                            android:inputType="phone"
+                            android:paddingBottom="@dimen/ns_s3_signup_email_paddingBottom"
+                            android:paddingLeft="@dimen/ns_s3_signup_email_paddingLeft"
+                            android:paddingRight="@dimen/ns_s3_signup_email_paddingRight"
+                            android:paddingTop="@dimen/ns_s3_signup_email_paddingTop" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/ns_s1_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/ns_s1_back_layout_height"
+                        android:layout_weight="1"
+                        android:text="@string/ns_s1_cancel"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/ns_s1_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/ns_s1_next_layout_height"
+                        android:layout_marginLeft="@dimen/ns_s1_next_layout_marginLeft"
+                        android:layout_weight="3"
+                        android:text="@string/ns_s1_next"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.nightscout.nightscoutga.customviews.CustomScrollView>
