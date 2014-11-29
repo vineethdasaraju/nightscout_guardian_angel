@@ -34,6 +34,10 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
+import com.nightscout.nightscoutga.Background.HttpManager;
+import com.nightscout.nightscoutga.Background.JsonParser;
+import com.nightscout.nightscoutga.Background.RequestPackage;
+import com.nightscout.nightscoutga.Background.ResponseModel;
 import com.nightscout.nightscoutga.Background.checkEmailIDAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.UI.signup.SignUpActivity;
@@ -41,6 +45,7 @@ import com.nightscout.nightscoutga.util.Functions;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.nightscout.nightscoutga.util.Constants;
 
 /**
  * A login screen that offers login via email/password and via Google+ sign in.
@@ -75,7 +80,9 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     private Context ctx = this;
     private Activity app = this;
     TextView userPrompt;
-
+    TextView output;          //remove after completion
+    List<ResponseModel> responseList;
+    String content;             //remove after completion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,58 +182,68 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
      * errors are presented and no actual login attempt is made.
      */
 
-    public void attemptLogin(){
+  /*  public void attemptLogin(){
         Toast.makeText(ctx, "Login will be attempted", Toast.LENGTH_SHORT).show();
     }
+*/
 
 
-//    public void attemptLogin() {
-//        if (mAuthTask != null) {
-//            return;
-//        }
-//
-//        // Reset errors.
-//        mEmailView.setError(null);
-//        mPasswordView.setError(null);
-//
-//        // Store values at the time of the login attempt.
-//        String email = mEmailView.getText().toString();
-//        String password = mPasswordView.getText().toString();
-//
-//        boolean cancel = false;
-//        View focusView = null;
-//
-//
-//        // Check for a valid password, if the user entered one.
-//        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-//            mPasswordView.setError(getString(R.string.error_invalid_password));
-//            focusView = mPasswordView;
-//            cancel = true;
-//        }
-//
-//        // Check for a valid email address.
-//        if (TextUtils.isEmpty(email)) {
-//            mEmailView.setError(getString(R.string.error_field_required));
-//            focusView = mEmailView;
-//            cancel = true;
-//        } else if (!Functions.isEmailValid(email)) {
-//            mEmailView.setError(getString(R.string.error_invalid_email));
-//            focusView = mEmailView;
-//            cancel = true;
-//        }
-//
-//        if (cancel) {
-//            // There was an error; don't attempt login and focus the first
-//            // form field with an error.
-//            focusView.requestFocus();
-//        } else {
-//            // Show a progress spinner, and kick off a background task to
-//            // perform the user login attempt.
-//            showProgress(true);
-//            mAuthTask = new UserLoginTask(email, password);
-//            mAuthTask.execute((Void) null);
-//        }
-//    }
+    public void attemptLogin() {
+        if (mAuthTask != null) {
+           return;
+        }
+
+        // Reset errors.
+        mEmailView.setError(null);
+        mPasswordView.setError(null);
+
+        // Store values at the time of the login attempt.
+        String email = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+
+        // Check for a valid password, if the user entered one.
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }
+
+        // Check for a valid email address.
+        if (TextUtils.isEmpty(email)) {
+            mEmailView.setError(getString(R.string.error_field_required));
+            focusView = mEmailView;
+            cancel = true;
+        } else if (!Functions.isEmailValid(email)) {
+            mEmailView.setError(getString(R.string.error_invalid_email));
+            focusView = mEmailView;
+            cancel = true;
+        }
+
+        if (cancel) {
+            // There was an error; don't attempt login and focus the first
+            // form field with an error.
+            focusView.requestFocus();
+        } else {
+            // Show a progress spinner, and kick off a background task to
+            // perform the user login attempt.
+            showProgress(true);
+            //mAuthTask = new UserLoginTask(email, password);
+            //mAuthTask.execute((Void) null);
+             RequestPackage rp = new RequestPackage();
+            rp.setMethod("POST");
+            rp.setUri("http://services.hanselandpetal.com/restfuljson.php");
+            rp.setMap("emailID", email);
+            rp.setMap("password",password);
+            content = "{\"responseCode\":200,\"responseMessage\":\"The username or password you entered is incorrect\"}";
+            UserLoginTask usersync = new UserLoginTask(content);
+            usersync.execute(rp);
+        }
+    }
+
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
@@ -380,12 +397,25 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     }
 
     private void checkDBForAccount(String emailID) {
-        checkEmailIDAsyncTask task = new checkEmailIDAsyncTask(ctx, app, emailID, mEmailSignInButton, mPasswordView, userPrompt, mPlusSignInButton, mEmailView);
+       /* checkEmailIDAsyncTask task = new checkEmailIDAsyncTask(ctx, app, emailID, mEmailSignInButton, mPasswordView, userPrompt, mPlusSignInButton, mEmailView);
         if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ) {
             task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
             task.execute();
-        }
+        }*/
+            //TODO: Make server call to check if email account already exists
+            RequestPackage rp = new RequestPackage();
+            rp.setMethod("POST");
+            //rp.setUri(Constants.apiPrefix.toString() + Constants.apiLogin.t);
+            //rp.setUri("http://services.hanselandpetal.com/restfuljson.php");
+            rp.setUri("http://ec2-54-173-219-144.compute-1.amazonaws.com:8080/nightscoutpro/ga/login");
+            rp.setMap("emailID", emailID);
+            //rp.setMap("password","");
+           /* rp.setMap("responseCode","400");
+            rp.setMap("responseMessage","The username or password you entered is incorrect");*/
+            //content = "{\"responseCode\":400,\"responseMessage\":\"The username or password you entered is incorrect\"}";
+            UserLoginTask usersync = new UserLoginTask();
+            usersync.execute(rp);
     }
 
     private void startRegistration(String emailID){
@@ -394,21 +424,57 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         startActivity(it);
     }
 
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    protected void updateDisplay(){
+        if (responseList != null) {
+            for (ResponseModel rm: responseList){
+                //output.append(rm.getResponseMessage()+"\n");
+                String check = "The username or password you entered is incorrect";
+                if(rm.getResponseMessage().equals("Hi! Welcome to nightscout app!")) {
+                    //Sign in code
+                }
+                else if (rm.getResponseMessage().equals("The username or password you entered is incorrect")){
+                    mPasswordView.setVisibility(View.VISIBLE);
+                    mEmailSignInButton.setText(getString(R.string.login_activity_title));
+                    mEmailSignInButton.setVisibility(View.VISIBLE);
+                    mPasswordView.requestFocus();
+                }
+                else{
 
-        private final String mEmail;
-        private final String mPassword;
+                    mPasswordView.setVisibility(View.GONE);
+                    mEmailSignInButton.setText(getString(R.string.landing_page_signup));
+                    mEmailSignInButton.setVisibility(View.VISIBLE);
+                    mEmailSignInButton.requestFocus();
 
+                }
+            }
+        }
+    }
+
+    public class UserLoginTask extends AsyncTask<RequestPackage, Void, String> {
+
+        private String mEmail;
+        private String mPassword;
+        private String content;
+
+        UserLoginTask() {
+
+        }
+
+        UserLoginTask(String content) {
+            this.content = content;
+
+        }
         UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
         }
 
         @Override
-        protected Boolean doInBackground(Void... params) {
+        protected String doInBackground(RequestPackage... params) {
             // TODO: attempt authentication against a network service.
-
-            try {
+            String content = HttpManager.getData(params[0]);
+            return content;
+            /*try {
                 // Simulate network access.
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -425,11 +491,22 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
             // TODO: register the new account here.
             return true;
+        */
         }
-
-        @Override
+            @Override
+            protected void onPostExecute(String result) {
+                //output.append(result);
+                JsonParser jp = new JsonParser();
+                try {
+                    responseList = jp.parser(result);
+                    updateDisplay();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+      /*  @Override
         protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
+           mAuthTask = null;
             showProgress(false);
 
             if (success) {
@@ -438,7 +515,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
             }
-        }
+        }*/
 
         @Override
         protected void onCancelled() {
