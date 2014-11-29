@@ -242,7 +242,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
              RequestPackage rp = new RequestPackage();
             rp.setMethod("POST");
             rp.setUri(Constants.apiPrefix + Constants.apiLogin);
-            rp.setMap("emailID", email);
+            rp.setMap("userName", email);
             rp.setMap("password",password);
            // content = "{\"responseCode\":200,\"responseMessage\":\"The username or password you entered is incorrect\"}";
             UserLoginTask usersync = new UserLoginTask();
@@ -433,8 +433,15 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             for (ResponseModel rm: responseList){
                 //output.append(rm.getResponseMessage()+"\n");
                 String check = "The username or password you entered is incorrect";
-                if(rm.getResponseMessage().equals("Hi! Welcome to nightscout app!")) {
+                if(rm.getResponseCode()==200) {
                     //Sign in code
+                    Toast.makeText(ctx, "Login Successful", Toast.LENGTH_SHORT).show();
+                }
+                else if (rm.getResponseMessage().equals("You can't login now as you are yet an unverifiedpatient in nightscout app. So, please wait or register in guardian angel app")){
+                    mPasswordView.setVisibility(View.GONE);
+                    mEmailSignInButton.setText(getString(R.string.landing_page_signup));
+                    mEmailSignInButton.setVisibility(View.VISIBLE);
+                    mEmailSignInButton.requestFocus();
                 }
                 else if (rm.getResponseMessage().equals("The username or password you entered is incorrect")){
                     mPasswordView.setVisibility(View.VISIBLE);
