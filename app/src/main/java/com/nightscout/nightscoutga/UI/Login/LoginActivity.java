@@ -18,6 +18,8 @@ import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Base64;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -43,6 +45,7 @@ import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.UI.signup.SignUpActivity;
 import com.nightscout.nightscoutga.util.Functions;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import com.nightscout.nightscoutga.util.Constants;
@@ -181,8 +184,8 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-
-  /*  public void attemptLogin(){
+/*
+    public void attemptLogin(){
         Toast.makeText(ctx, "Login will be attempted", Toast.LENGTH_SHORT).show();
     }
 */
@@ -200,9 +203,12 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-
+        //byte[]   bytesEncoded = Base64.encodeBase64(str .getBytes());
+        String pass = Base64.encodeToString(password.getBytes(),Base64.DEFAULT);
+        Log.d("myactivity",pass);
         boolean cancel = false;
         View focusView = null;
+
 
 
         // Check for a valid password, if the user entered one.
@@ -235,14 +241,15 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             //mAuthTask.execute((Void) null);
              RequestPackage rp = new RequestPackage();
             rp.setMethod("POST");
-            rp.setUri("http://services.hanselandpetal.com/restfuljson.php");
+            rp.setUri(Constants.apiPrefix + Constants.apiLogin);
             rp.setMap("emailID", email);
             rp.setMap("password",password);
-            content = "{\"responseCode\":200,\"responseMessage\":\"The username or password you entered is incorrect\"}";
-            UserLoginTask usersync = new UserLoginTask(content);
+           // content = "{\"responseCode\":200,\"responseMessage\":\"The username or password you entered is incorrect\"}";
+            UserLoginTask usersync = new UserLoginTask();
             usersync.execute(rp);
         }
     }
+
 
 
     private boolean isPasswordValid(String password) {
@@ -406,13 +413,10 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             //TODO: Make server call to check if email account already exists
             RequestPackage rp = new RequestPackage();
             rp.setMethod("POST");
-            //rp.setUri(Constants.apiPrefix.toString() + Constants.apiLogin.t);
-            //rp.setUri("http://services.hanselandpetal.com/restfuljson.php");
-            rp.setUri("http://ec2-54-173-219-144.compute-1.amazonaws.com:8080/nightscoutpro/ga/login");
-            rp.setMap("emailID", emailID);
-            //rp.setMap("password","");
-           /* rp.setMap("responseCode","400");
-            rp.setMap("responseMessage","The username or password you entered is incorrect");*/
+            rp.setUri(Constants.apiPrefix + Constants.apiLogin);
+            //rp.setUri("http://192.168.1.5:8080/nightscoutpro/ns/login");
+            rp.setMap("userName", emailID);
+            // rp.setMap("password", "");
             //content = "{\"responseCode\":400,\"responseMessage\":\"The username or password you entered is incorrect\"}";
             UserLoginTask usersync = new UserLoginTask();
             usersync.execute(rp);
