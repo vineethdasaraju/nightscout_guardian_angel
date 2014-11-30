@@ -11,7 +11,7 @@ public class Constants {
 
     public static String uName;
 
-    public static final String serverAddress = "http://ec2-54-173-219-144.compute-1.amazonaws.com:8080";
+    public static final String serverAddress = "http://192.168.1.5:8080";
     public static final String apiPrefix = serverAddress + "/nightscoutpro";
     public static final String apiRegister2 = "/ga/register2";
     public static final String apiLogin = "/ga/login";
