@@ -98,16 +98,16 @@
 
     <string name="title_activity_main_tabbed">MainTabbedActivity</string>
     <string name="title_activity_signup">Registration</string>
-    <string name="ns_s2_street_name">Street No.</string>
-    <string name="ns_signup_locality">Locality</string>
-    <string name="ns_s2_signup_city">City / State</string>
-    <string name="ns_s2_signup_pincode">Pincode</string>
+    <string name="ns_s2_street_name">Street No. / Locality</string>
+    <string name="ns_signup_city">City</string>
     <string name="ns_s2_signup_state">State</string>
+    <string name="ns_s2_signup_pincode">Pincode</string>
+    <string name="ns_s2_signup_country">Country</string>
     <string name="title_activity_change_password">ChangePasswordActivity</string>
     <string name="title_activity_emergency_screen">EmergencyScreenActivity</string>
 
     <string name="mapview_api_key">AIzaSyA_X6S05xxrM8_jrkiuPqQAAv7OxUJpAhM</string>
-    <string name="ns_s2_signup_country">Country</string>
+    <string name="title_MapView_dialog">Mapview Dialog</string>
 
 
 </resources>

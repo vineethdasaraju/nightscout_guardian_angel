@@ -20,6 +20,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.nightscout.nightscoutga.Background.AddressUpdateAsyncTask;
 import com.nightscout.nightscoutga.R;
+import com.nightscout.nightscoutga.util.Constants;
 
 public class MapViewDialog extends FragmentActivity {
 	
@@ -45,7 +46,7 @@ public class MapViewDialog extends FragmentActivity {
 		cancelButton = (Button) findViewById(R.id.mapview_cancel);
 		okButton 	 = (Button) findViewById(R.id.mapview_confirm);
 		
-//		latlng = Constants.latlng;
+		latlng = Constants.latlng;
 		googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng, 16));
 
 		cancelButton.setOnClickListener(new OnClickListener() {
@@ -65,7 +66,7 @@ public class MapViewDialog extends FragmentActivity {
 				double longitude = coordinates.longitude;
 				AddressUpdateAsyncTask task = new AddressUpdateAsyncTask(context, latitude, longitude, activity);
 				task.execute();
-//				Constants.latlng = new LatLng(latitude, longitude);
+				Constants.latlng = new LatLng(latitude, longitude);
 			}
 		});
 		

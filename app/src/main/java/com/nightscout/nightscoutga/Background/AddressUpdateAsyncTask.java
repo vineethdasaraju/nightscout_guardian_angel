@@ -7,6 +7,8 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
 
+import com.nightscout.nightscoutga.UI.signup.OtherDetailsFragment;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -60,7 +62,7 @@ public class AddressUpdateAsyncTask extends AsyncTask<Void, Void, Address>{
 	protected void onPostExecute(Address result) {
 		super.onPostExecute(result);
 		pd.dismiss();
-        //TODO: Update UI based on response
+        OtherDetailsFragment.updateCurrentLocation(result);
 		activity.finish();
 	}
 

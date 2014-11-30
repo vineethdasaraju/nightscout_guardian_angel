@@ -118,10 +118,10 @@
                         android:layout_marginTop="@dimen/ns_s2_input1_div_marginTop">
 
                         <EditText
-                            android:id="@+id/ns_s2_signup_locality"
+                            android:id="@+id/ns_s2_signup_city"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/ns_s2_signup_bname_layout_height"
-                            android:hint="@string/ns_signup_locality"
+                            android:hint="@string/ns_signup_city"
                             android:paddingBottom="@dimen/ns_s2_signup_bname_paddingBottom"
                             android:paddingLeft="@dimen/ns_s2_signup_bname_paddingLeft"
                             android:paddingRight="@dimen/ns_s2_signup_bname_paddingRight"
@@ -135,10 +135,10 @@
                         android:layout_marginTop="@dimen/ns_s2_input1_div_marginTop">
 
                         <EditText
-                            android:id="@+id/ns_s2_signup_city"
+                            android:id="@+id/ns_s2_signup_state"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/ns_s3_signup_email_layout_height"
-                            android:hint="@string/ns_s2_signup_city"
+                            android:hint="@string/ns_s2_signup_state"
                             android:paddingBottom="@dimen/ns_s3_signup_email_paddingBottom"
                             android:paddingLeft="@dimen/ns_s3_signup_email_paddingLeft"
                             android:paddingRight="@dimen/ns_s3_signup_email_paddingRight"

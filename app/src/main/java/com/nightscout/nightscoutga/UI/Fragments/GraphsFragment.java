@@ -62,7 +62,6 @@ public class GraphsFragment extends Fragment {
 
     @Override
     public void onResume() {
-        super.onResume();
         graphView.redrawAll();
     }
 

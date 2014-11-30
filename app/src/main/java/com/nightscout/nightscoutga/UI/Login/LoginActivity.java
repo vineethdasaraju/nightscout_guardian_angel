@@ -3,12 +3,13 @@ package com.nightscout.nightscoutga.UI.Login;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.app.Activity;
+import android.app.Dialog;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -18,6 +19,7 @@ import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,11 +36,17 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.nightscout.nightscoutga.Background.checkEmailIDAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.UI.signup.SignUpActivity;
+import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +70,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
-    private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
@@ -73,8 +80,35 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     private View mLoginFormView;
     Button mEmailSignInButton;
     private Context ctx = this;
-    private Activity app = this;
-    TextView userPrompt;
+    String userEmail;
+    int i = 0;
+    private static final int ERRORDIALOG_REQUEST = 9001;
+
+
+    public static final String EXTRA_MESSAGE = "message";
+    public static final String PROPERTY_REG_ID = "registration_id";
+    private static final String PROPERTY_APP_VERSION = "appVersion";
+    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+
+    /**
+     * Substitute you own sender ID here. This is the project number you got
+     * from the API Console, as described in "Getting Started."
+     */
+    String SENDER_ID = "755643285059";
+
+    /**
+     * Tag used on log messages.
+     */
+    static final String TAG = "GCM";
+
+    TextView mDisplay, userPrompt;
+    GoogleCloudMessaging gcm;
+    SharedPreferences prefs;
+    Context context;
+
+
+    String regid;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +116,19 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        if (checkPlayServices()) {
+            // If this check succeeds, proceed with normal processing.
+            //Toast.makeText(this, "Google Play Services APK present.", Toast.LENGTH_SHORT).show();
+            gcm = GoogleCloudMessaging.getInstance(this);
+            regid = getRegistrationId(context);
+
+//            if (regid.isEmpty()) {
+                registerInBackground();
+//            }
+        }
+
+
         setContentView(R.layout.activity_login);
 
         // Find the Google+ sign in button.
@@ -109,9 +156,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
+
             @Override
             public void afterTextChanged(Editable s) {
                 String emailID = mEmailView.getText().toString();
@@ -147,12 +196,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             @Override
             public void onClick(View view) {
                 String functionality = mEmailSignInButton.getText().toString();
-                if(functionality.equals(getString(R.string.login_activity_title))){
+                if (functionality.equals(getString(R.string.login_activity_title))) {
                     attemptLogin();
                 } else {
                     startRegistration(mEmailView.getText().toString());
                 }
-
             }
         });
 
@@ -161,7 +209,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         mEmailLoginFormView = findViewById(R.id.email_login_form);
         mSignOutButtons = findViewById(R.id.plus_sign_out_buttons);
     }
-
 
 
     private void populateAutoComplete() {
@@ -175,7 +222,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
      * errors are presented and no actual login attempt is made.
      */
 
-    public void attemptLogin(){
+    public void attemptLogin() {
         Toast.makeText(ctx, "Login will be attempted", Toast.LENGTH_SHORT).show();
     }
 
@@ -356,7 +403,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
-
     }
 
     private interface ProfileQuery {
@@ -380,70 +426,146 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     }
 
     private void checkDBForAccount(String emailID) {
-        checkEmailIDAsyncTask task = new checkEmailIDAsyncTask(ctx, app, emailID, mEmailSignInButton, mPasswordView, userPrompt, mPlusSignInButton, mEmailView);
-        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ) {
+        checkEmailIDAsyncTask task = new checkEmailIDAsyncTask(ctx, LoginActivity.this, emailID, mEmailSignInButton, mPasswordView, userPrompt, mPlusSignInButton, mEmailView);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
             task.execute();
         }
     }
 
-    private void startRegistration(String emailID){
+    private void startRegistration(String emailID) {
         Intent it = new Intent(ctx, SignUpActivity.class);
         it.putExtra("Email ID", emailID);
         startActivity(it);
     }
 
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    private boolean checkPlayServices() {
+        int isAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
 
-        private final String mEmail;
-        private final String mPassword;
-
-        UserLoginTask(String email, String password) {
-            mEmail = email;
-            mPassword = password;
-        }
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
-
-            try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
-
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
-
-            // TODO: register the new account here.
+        if (isAvailable == ConnectionResult.SUCCESS) {
             return true;
+        } else if (GooglePlayServicesUtil.isUserRecoverableError(isAvailable)) {
+            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(isAvailable, this, ERRORDIALOG_REQUEST);
+            dialog.show();
+        } else {
+            Toast.makeText(this, "Can't connect to Google Play services", Toast.LENGTH_SHORT).show();
         }
+        return false;
 
-        @Override
-        protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
-            showProgress(false);
+    }
 
-            if (success) {
-                finish();
-            } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
+    private String getRegistrationId(Context context) {
+        final SharedPreferences prefs = getGCMPreferences(context);
+        String registrationId = prefs.getString(PROPERTY_REG_ID, "");
+        if (registrationId.isEmpty()) {
+            Log.i(TAG, "Registration not found.");
+            return "";
+        }
+        // Check if app was updated
+        int registeredVersion = prefs.getInt(PROPERTY_APP_VERSION, Integer.MIN_VALUE);
+//        int currentVersion = getAppVersion(context);
+//        if (registeredVersion != currentVersion) {
+//            Log.i(TAG, "App version changed.");
+//            return "";
+//        }
+        return registrationId;
+    }
+
+    private SharedPreferences getGCMPreferences(Context context) {
+
+        return getSharedPreferences(LoginActivity.class.getSimpleName(),
+                Context.MODE_PRIVATE);
+    }
+
+
+    /**
+     * @return Application's version code from the {@code PackageManager}.
+     */
+//    private static int getAppVersion(Context context) {
+//        try {
+//            PackageInfo packageInfo = context.getPackageManager()
+//                    .getPackageInfo(context.getPackageName(), 0);
+//            return packageInfo.versionCode;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            // should never happen
+//            throw new RuntimeException("Could not get package name: " + e);
+//        }
+//    }
+
+
+    /**
+     * Registers the application with GCM servers asynchronously.
+     * Stores the registration ID and app versionCode in the application's
+     * shared preferences.
+     */
+    private void registerInBackground() {
+        new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                String msg = "";
+                try {
+                    if (gcm == null) {
+                        gcm = GoogleCloudMessaging.getInstance(context);
+                    }
+                    regid = gcm.register(SENDER_ID);
+                    msg = "Device registered, registration ID=" + regid;
+
+
+                    sendRegistrationIdToBackend();
+
+                    // Persist the regID - no need to register again.
+                    storeRegistrationId(context, regid);
+                } catch (IOException ex) {
+                    msg = "Error :" + ex.getMessage();
+                    // If there is an error, don't just keep trying to register.
+                    // Require the user to click a button again, or perform
+                    // exponential back-off.
+                }
+                return msg;
             }
-        }
 
-        @Override
-        protected void onCancelled() {
-            mAuthTask = null;
-            showProgress(false);
+            @Override
+            protected void onPostExecute(String msg) {
+//                mDisplay.append(msg + "\n");
+            }
+        }.execute(null, null, null);
+
+    }
+
+    private void sendRegistrationIdToBackend() {
+        try {
+            String registerGCMAPI = Constants.apiPrefix + "/userid/"+ Constants.userid + "/regid/" + regid;
+            URL registerGCMAPIURL = new URL(registerGCMAPI);
+
+            HttpURLConnection con = (HttpURLConnection) registerGCMAPIURL.openConnection();
+            con.setRequestMethod(Constants.HTTP_GET);
+            int responseCode = con.getResponseCode();
+            Log.d("GCMResponse", responseCode + "");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+    /**
+     * Stores the registration ID and app versionCode in the application's
+     * {@code SharedPreferences}.
+     *
+     * @param context application's context.
+     * @param regId   registration ID
+     */
+    private void storeRegistrationId(Context context, String regId) {
+        final SharedPreferences prefs = getGCMPreferences(context);
+//        int appVersion = getAppVersion(context);
+//        Log.i(TAG, "Saving regId on app version " + appVersion);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(PROPERTY_REG_ID, regId);
+        editor.putInt(PROPERTY_APP_VERSION, 1);
+//        editor.putInt(PROPERTY_APP_VERSION, appVersion);
+        editor.commit();
+    }
+
+
 }

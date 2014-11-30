@@ -5,11 +5,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
 import org.json.JSONObject;
 
 import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
@@ -53,28 +57,28 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 		DataOutputStream outputStream = null;
 
 		URL new_url;
-//		try {
-//			new_url = new URL(Constants.ChangePassword);
-//			HttpURLConnection connection = (HttpURLConnection) new_url
-//					.openConnection();
-//			connection.setRequestMethod(Constants.HTTP_POST);
-//			connection.setRequestProperty("Content-Type",
-//					Constants.BG_SERVICE_CONTENT_TYPE_JSON);
-//			connection.setRequestProperty("Connection", "Keep-Alive");
-//			outputStream = new DataOutputStream(connection.getOutputStream());
-//			byte[] BytesToBeSent = content.getBytes();
-//			if (BytesToBeSent != null) {
-//				outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
-//			}
-//			int responseCode = connection.getResponseCode();
-//			if (responseCode == 200 || responseCode == 202) {
-//				success = true;
-//			}
-//		} catch (MalformedURLException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			new_url = new URL(Constants.ChangePassword);
+			HttpURLConnection connection = (HttpURLConnection) new_url
+					.openConnection();
+			connection.setRequestMethod(Constants.HTTP_POST);
+			connection.setRequestProperty("Content-Type",
+					Constants.BG_SERVICE_CONTENT_TYPE_JSON);
+			connection.setRequestProperty("Connection", "Keep-Alive");
+			outputStream = new DataOutputStream(connection.getOutputStream());
+			byte[] BytesToBeSent = content.getBytes();
+			if (BytesToBeSent != null) {
+				outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
+			}
+			int responseCode = connection.getResponseCode();
+			if (responseCode == 200 || responseCode == 202) {
+				success = true;
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 }

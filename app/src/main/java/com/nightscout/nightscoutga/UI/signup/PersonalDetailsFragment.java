@@ -1,5 +1,9 @@
 package com.nightscout.nightscoutga.UI.signup;
 
+import android.content.Context;
+import android.location.Address;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,8 +11,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.nightscout.nightscoutga.Background.ReverseGeoCoderAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.customviews.FragmentX;
+import com.nightscout.nightscoutga.util.Constants;
+
+import java.util.concurrent.ExecutionException;
 
 public class PersonalDetailsFragment extends FragmentX {
 
@@ -16,6 +24,8 @@ public class PersonalDetailsFragment extends FragmentX {
     Button backButton, nextButton;
     EditText signupFieldName, signupFieldEmail, signupFieldPassword, signupFieldPhoneNo,signupFieldUName;
     String name,uName, password, emailID, phoneNum;
+    Address lastKnownAddress;
+    boolean updatedAddress;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -26,6 +36,8 @@ public class PersonalDetailsFragment extends FragmentX {
 
             Bundle extras = getActivity().getIntent().getExtras();
             String email_ID = extras.getString("Email ID");
+
+            getLastKnownLocation();
 
             signupFieldName = (EditText) root.findViewById(R.id.signup_name);
             signupFieldUName = (EditText) root.findViewById(R.id.signup_uName);
@@ -51,6 +63,9 @@ public class PersonalDetailsFragment extends FragmentX {
                     ((SignUpActivity) getActivity()).emailID = emailID;
                     ((SignUpActivity) getActivity()).phoneNum = phoneNum;
 
+                    updatedAddress = OtherDetailsFragment
+                            .updateBasedOnMostRecentLocation(lastKnownAddress);
+
                     ((SignUpActivity) getActivity()).slideTo(1);
                 }
             });
@@ -59,6 +74,28 @@ public class PersonalDetailsFragment extends FragmentX {
 
         }
         return root;
+    }
+
+    private void getLastKnownLocation() {
+
+        LocationManager locationManager = (LocationManager) getActivity()
+                .getSystemService(Context.LOCATION_SERVICE);
+
+        String locationProvider = LocationManager.NETWORK_PROVIDER;
+        // Or use LocationManager.GPS_PROVIDER
+
+        Location lastKnownLocation = locationManager
+                .getLastKnownLocation(locationProvider);
+
+        ReverseGeoCoderAsyncTask task = new ReverseGeoCoderAsyncTask(getActivity(), lastKnownLocation, getActivity());
+        try {
+            task.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        lastKnownAddress = Constants.lastKnownAddress;
     }
 
     @Override

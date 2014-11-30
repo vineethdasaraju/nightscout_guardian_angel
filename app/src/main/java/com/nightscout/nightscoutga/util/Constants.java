@@ -1,5 +1,9 @@
 package com.nightscout.nightscoutga.util;
 
+import android.location.Address;
+
+import com.google.android.gms.maps.model.LatLng;
+
 public class Constants {
 
     public final static String HTTP_PUT				=	"PUT";
@@ -9,18 +13,30 @@ public class Constants {
 
     public static String uName;
 
+//    public static final String serverAddress = "http://192.168.0.24:8080";
     public static final String serverAddress = "http://ec2-54-173-219-144.compute-1.amazonaws.com:8080";
     public static final String apiPrefix = serverAddress + "/nightscoutpro";
-    public static final String apiRegister2 = "/ga/register2";
-    public static final String apiLogin = "/ga/login";
-    public static final String apiInvite = "/ga/invite";
-    public static final String apiRegister1 = "/ga/"+ uName +"/register1";
+    public static final String apiRegister2 = apiPrefix + "/ga/register2";
+    public static final String apiLogin = apiPrefix + "/ga/login";
+    public static final String apiInvite = apiPrefix + "/ga/invite";
+    public static final String ChangePassword = apiPrefix + "/ga/invite";
 
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
 
     public final static float MG_DL_TO_MMOL_L = 0.05556f;
     public static boolean isDotCom = false;
+
+//    GCM
+    public static final String MSG_KEY = "info";
+
+//    Registration
+public static LatLng latlng;
+
+    // User Details
+    public static String userid = "25";
+    public static Address lastKnownAddress;
+
 
     public enum TREND_ARROW_VALUES {
         NONE(0),
@@ -112,7 +128,5 @@ public class Constants {
             }
             return false;
         }
-
     }
-
 }
