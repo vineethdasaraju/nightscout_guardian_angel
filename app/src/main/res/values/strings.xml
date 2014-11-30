@@ -82,7 +82,7 @@
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>Dashboard</item>
-        <item>Add a Patient</item>
+        <item>My Profile</item>
         <item>Graphs</item>
         <item>Settings</item>
     </string-array>
@@ -109,5 +109,20 @@
     <string name="mapview_api_key">AIzaSyA_X6S05xxrM8_jrkiuPqQAAv7OxUJpAhM</string>
     <string name="ns_s2_signup_country">Country</string>
 
+    <string name="bd_business_details_store_business_name_txt">Business Name</string>
+    <string name="bd_business_details_store_business_name_txt_box">Business Name</string>
+    <string name="bd_business_details_store_business_desc_txt">Business Description</string>
+    <string name="bd_business_details_store_business_desc_txt_box">Business Description</string>
+    <string name="ci_contact_info_top_bar_store_txt">Contact Numbers</string>
+    <string name="ci_contact_info_store_mobile_no1_txt">Phone Numbers</string>
+    <string name="ci_contact_info_store_mobile_no1_txt_box">Not available</string>
+    <string name="ci_contact_info_store_mobile_no2_txt_box">Not available</string>
+    <string name="ci_contact_info_store_mobile_no3_txt_box">Not available</string>
+    <string name="ci_contact_info_store_email_txt">Email</string>
+    <string name="ci_contact_info_store_email_txt_box">no email available</string>
+    <string name="ci_contact_info_store_website_txt">Other Website</string>
+    <string name="ci_contact_info_store_website_txt_box">no website available</string>
+    <string name="ci_contact_info_store_fbpage_txt">Facebook Page</string>
+    <string name="ci_contact_info_store_fbpage_txt_box">www.facebook.com/</string>
 
 </resources>

@@ -20,6 +20,9 @@
     <color name="list_background">#E6E6E6</color>
     <color name="list_background_pressed">#b4b4b4</color>
     <color name="drawer_listview_item_title">#000</color>
+    <color name="biz_msg_txt_color">#3c3c3c</color>
+    <color  name="c_a3a3a3">#a3a3a3</color>
+    <color name="timestamp">#6f6f6f</color>
 
 
 

@@ -1,5 +1,7 @@
 package com.nightscout.nightscoutga.util;
 
+import android.text.Editable;
+
 public class Constants {
 
     public final static String HTTP_PUT				=	"PUT";
@@ -15,6 +17,14 @@ public class Constants {
     public static final String apiLogin = "/ga/login";
     public static final String apiInvite = "/ga/invite";
     public static final String apiRegister1 = "/ga/"+ uName +"/register1";
+
+    //My Profile Information
+
+    public static String username = "null";
+    public static String phoneNumber = "null";
+    public static String userEmail = "null";
+    public static String fbPage = "null";
+    public static String userAddress = "null";
 
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";

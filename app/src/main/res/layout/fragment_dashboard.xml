@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/dashboard_button_image_patients"
-                    android:background="@drawable/patients"
+                    android:background="@drawable/profile"
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Patients"
+                    android:text="My Profile"
                     android:layout_below="@id/dashboard_button_image_patients"
                     android:textColor="@color/black"
                     android:gravity="center"

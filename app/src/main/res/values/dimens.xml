@@ -366,7 +366,6 @@
     <dimen name="ci_contact_info_store_mobile_no1_txt_box_minHeight">100dp</dimen>
     <dimen name="ci_contact_info_store_mobile_no1_txt_box_marginLeft">17dp</dimen>
     <dimen name="ci_contact_info_store_mobile_no1_txt_box_marginRight">17dp</dimen>
-    <dimen name="ci_contact_info_store_mobile_no2_txt_box_height">40dp</dimen>
     <dimen name="ci_contact_info_store_mobile_no2_txt_box_minHeight">40dp</dimen>
     <dimen name="ci_contact_info_store_mobile_no2_txt_box_marginLeft">17dp</dimen>
     <dimen name="ci_contact_info_store_mobile_no2_txt_box_marginRight">17dp</dimen>

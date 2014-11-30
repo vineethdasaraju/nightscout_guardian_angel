@@ -1,10 +1,216 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nightscout.nightscoutga.UI.Fragments.MyProfileFragment">
+    android:background="@color/white"
+    android:orientation="vertical" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+   
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/ci_scrollView_paddingBottom" >
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/business_details_store_business_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bd_business_details_store_business_name_txt_marginLeft"
+                android:layout_marginTop="@dimen/bd_business_details_store_business_name_txt_marginTop"
+                android:text="Name"
+                android:textColor="@color/c_a3a3a3"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_textSize"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/bd_firstView_height" />
+
+            <EditText
+                android:id="@+id/guardianName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bd_business_details_store_business_name_txt_box_marginLeft"
+                android:layout_marginRight="@dimen/bd_business_details_store_business_name_txt_box_marginRight"
+                android:background="@drawable/rounded_corner_3"
+                android:ems="10"
+                android:lines="1"
+                android:minHeight="@dimen/bd_business_details_store_business_name_txt_box_minHeight"
+                android:paddingBottom="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingBottom"
+                android:paddingLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingLeft"
+                android:paddingRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingRight"
+                android:paddingTop="@dimen/bd_business_details_store_business_name_txt_box_paddingTop"
+                android:text="@string/bd_business_details_store_business_name_txt_box"
+                android:textColor="@color/biz_msg_txt_color"
+                android:textColorHint="@color/timestamp"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_box_textSize" />
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/bd_firstView_height" />
+
+
+
+            <TextView
+                android:id="@+id/contact_info_store_mobile_no1_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no1_txt_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no1_txt_marginRight"
+                android:layout_marginTop="@dimen/ci_contact_info_store_mobile_no1_txt_marginTop"
+                android:text="Phone Number"
+                android:textColor="@color/c_a3a3a3"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_textSize"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ci_firstView_height"
+                android:layout_above="@+id/contact_info_store_mobile_no1_txt_box" />
+
+            <EditText
+                android:id="@+id/guardianPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ci_contact_info_store_mobile_no1_txt_box_height"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no1_txt_box_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no1_txt_box_marginRight"
+                android:background="@drawable/rounded_corner_3"
+                android:ems="10"
+                android:hint="@string/ci_contact_info_store_mobile_no1_txt_box"
+                android:inputType="phone"
+                android:minHeight="@dimen/ci_contact_info_store_mobile_no1_txt_box_minHeight"
+                android:paddingBottom="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingBottom"
+                android:paddingLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingLeft"
+                android:paddingRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingRight"
+                android:paddingTop="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingTop"
+                android:textColor="@color/biz_msg_txt_color"
+                android:textColorHint="@color/timestamp"
+                android:textSize="@dimen/ci_contact_info_store_mobile_no2_txt_box_textSize" />
+
+
+
+            <TextView
+                android:id="@+id/contact_info_store_email_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no1_txt_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no1_txt_marginRight"
+                android:layout_marginTop="@dimen/ci_contact_info_store_mobile_no1_txt_marginTop"
+                android:text="@string/ci_contact_info_store_email_txt"
+                android:textColor="@color/c_a3a3a3"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_textSize"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ci_firstView_height"
+                android:layout_above="@+id/contact_info_store_email_txt_box" />
+
+            <EditText
+                android:id="@+id/guardianEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginRight"
+                android:background="@drawable/rounded_corner_3"
+                android:ems="10"
+                android:hint="@string/ci_contact_info_store_email_txt_box"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/ci_contact_info_store_mobile_no2_txt_box_minHeight"
+                android:paddingBottom="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingBottom"
+                android:paddingLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingLeft"
+                android:paddingRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingRight"
+                android:paddingTop="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingTop"
+                android:textColor="@color/biz_msg_txt_color"
+                android:textColorHint="@color/timestamp"
+                android:textSize="@dimen/ci_contact_info_store_mobile_no2_txt_box_textSize" />
+
+            <TextView
+                android:id="@+id/contact_info_store_website_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no1_txt_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no1_txt_marginRight"
+                android:layout_marginTop="@dimen/ci_contact_info_store_mobile_no1_txt_marginTop"
+                android:text="Address"
+                android:textColor="@color/c_a3a3a3"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_textSize"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ci_firstView_height"
+                android:layout_above="@+id/contact_info_store_website_txt_box" />
+
+            <EditText
+                android:id="@+id/guardianAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginRight"
+                android:background="@drawable/rounded_corner_3"
+                android:ems="10"
+                android:hint="@string/ci_contact_info_store_website_txt_box"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:minHeight="@dimen/ci_contact_info_store_mobile_no2_txt_box_minHeight"
+                android:maxHeight="100dp"
+                android:maxLines="3"
+                android:paddingBottom="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingBottom"
+                android:paddingLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingLeft"
+                android:paddingRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingRight"
+                android:paddingTop="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingTop"
+                android:textColor="@color/biz_msg_txt_color"
+                android:textColorHint="@color/timestamp"
+                android:textSize="@dimen/ci_contact_info_store_mobile_no2_txt_box_textSize"
+                />
+
+            <TextView
+                android:id="@+id/contact_info_store_fbpage_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no1_txt_marginLeft"
+                android:layout_marginTop="@dimen/ci_contact_info_store_mobile_no1_txt_marginTop"
+                android:text="@string/ci_contact_info_store_fbpage_txt"
+                android:textColor="@color/c_a3a3a3"
+                android:textSize="@dimen/bd_business_details_store_business_name_txt_textSize"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ci_firstView_height"
+                android:layout_above="@+id/contact_info_store_fbpage_txt_box" />
+
+            <EditText
+                android:id="@+id/guardianFbPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginLeft"
+                android:layout_marginRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_marginRight"
+                android:background="@drawable/rounded_corner_3"
+                android:ems="10"
+                android:hint="@string/ci_contact_info_store_fbpage_txt_box"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/ci_contact_info_store_mobile_no2_txt_box_minHeight"
+                android:paddingBottom="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingBottom"
+                android:paddingLeft="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingLeft"
+                android:paddingRight="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingRight"
+                android:paddingTop="@dimen/ci_contact_info_store_mobile_no2_txt_box_paddingTop"
+                android:text="@string/ci_contact_info_store_fbpage_txt_box"
+                android:textColor="@color/biz_msg_txt_color"
+                android:textColorHint="@color/timestamp"
+                android:textSize="@dimen/ci_contact_info_store_mobile_no2_txt_box_textSize" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Save"
+                android:id="@+id/saveButton"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -54,7 +54,7 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 
 		URL new_url;
 //		try {
-//			new_url = new URL(Constants.ChangePassword);
+//			new_url = new URL(Constants.GraphUpdate);
 //			HttpURLConnection connection = (HttpURLConnection) new_url
 //					.openConnection();
 //			connection.setRequestMethod(Constants.HTTP_POST);
@@ -75,6 +75,7 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
+
 		return null;
 	}
 }

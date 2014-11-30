@@ -42,10 +42,6 @@
             android:label="@string/title_activity_graph"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.nightscout.nightscoutga.UI.SettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.nightscout.nightscoutga.UI.Fragments.MainFragmentActivity"
             android:label="@string/title_activity_main_fragment"
             android:screenOrientation="portrait" >
