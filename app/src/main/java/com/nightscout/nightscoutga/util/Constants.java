@@ -1,8 +1,9 @@
 package com.nightscout.nightscoutga.util;
 
-import android.location.Address;
-
 import com.google.android.gms.maps.model.LatLng;
+import android.location.Address;
+import com.google.android.gms.maps.model.LatLng;
+import android.text.Editable;
 
 public class Constants {
 
@@ -21,6 +22,14 @@ public class Constants {
     public static final String apiInvite = apiPrefix + "/ga/invite";
     public static final String ChangePassword = apiPrefix + "/ga/invite";
 
+    //My Profile Information
+
+    public static String username = "null";
+    public static String phoneNumber = "null";
+    public static String userEmail = "null";
+    public static String fbPage = "null";
+    public static String userAddress = "null";
+
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
 
@@ -31,7 +40,7 @@ public class Constants {
     public static final String MSG_KEY = "info";
 
 //    Registration
-public static LatLng latlng;
+    public static LatLng latlng;
 
     // User Details
     public static String userid = "25";

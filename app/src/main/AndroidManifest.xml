@@ -4,6 +4,8 @@
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--
  To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
      option is required to comply with the Google+ Sign-In developer policies
@@ -47,14 +49,6 @@
             android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
         <activity
-            android:name="com.nightscout.nightscoutga.UI.Graph"
-            android:label="@string/title_activity_graph"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.nightscout.nightscoutga.UI.SettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.nightscout.nightscoutga.UI.signup.MapViewDialog"
             android:label="@string/title_MapView_dialog"
             android:theme="@android:style/Theme.Dialog"
@@ -79,7 +73,8 @@
 
         <activity
             android:name="com.nightscout.nightscoutga.UI.ChangePasswordActivity"
-            android:label="@string/title_activity_change_password" >
+            android:label="@string/title_activity_change_password"
+            android:theme="@android:style/Theme.Dialog">
         </activity>
         <activity
             android:name="com.nightscout.nightscoutga.UI.EmergencyScreenActivity"

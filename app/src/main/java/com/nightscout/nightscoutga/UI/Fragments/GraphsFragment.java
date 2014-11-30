@@ -50,18 +50,30 @@ public class GraphsFragment extends Fragment {
             layout.addView(graphView);
             Log.e("Hello", "After22");
         }
-        else{
+        else if(sx != null && sy != null){
             graphUpdate(sx, sy);
         }
-        graphView = new LineGraphView(
+        else {
+            graphView = new LineGraphView(
+                    getActivity() // context
+                    , "GraphViewDemo" // heading
+            );
+            graphView.addSeries(exampleSeries);
+            LinearLayout layout = (LinearLayout) rootView.findViewById(R.id.graphicalview);
+            //Log.e("Hello", layout + "After");
+            layout.addView(graphView);
+            //graphView.redrawAll();
+        }
+        /*graphView = new LineGraphView(
                 getActivity() // context
                 , "GraphViewDemo" // heading
-        );
+        );*/
         return rootView;
     }
 
     @Override
     public void onResume() {
+        super.onResume();
         graphView.redrawAll();
     }
 

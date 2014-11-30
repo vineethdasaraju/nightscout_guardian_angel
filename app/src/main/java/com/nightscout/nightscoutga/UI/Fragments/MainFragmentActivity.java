@@ -3,6 +3,8 @@ package com.nightscout.nightscoutga.UI.Fragments;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -39,7 +41,7 @@ public class MainFragmentActivity extends Activity {
     private boolean doubleBackToExitPressedOnce = false;
 
     DashboardFragment dashboardFragment = null;
-    PatientsFragment patientsFragment = null;
+    MyProfileFragment myProfileFragment = null;
     SettingsFragment settingsFragment = null;
     GraphsFragment graphsFragment = null;
 
@@ -47,6 +49,21 @@ public class MainFragmentActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_fragment);
+
+        //PreferenceManager pm = new PreferenceManager();
+
+        //SharedPreferences udetails = PreferenceManager.getDefaultSharedPreferences(this);
+
+        SharedPreferences sharedPref = context.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        if(!sharedPref.contains("guardianName")) {
+            editor.putString("guardianName", "Pradeep");
+            editor.putString("guardianPhone", "9848123456");
+            editor.putString("guardianEmail", "abc@gmail.com");
+            editor.putString("guardianAddress", "3800 SW 34th Street, Gainesville, Florida 32608");
+            editor.putString("guardianFbPage", "facebook.com/pradeep");
+            editor.commit();
+        }
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -178,10 +195,10 @@ public class MainFragmentActivity extends Activity {
                 fragment = dashboardFragment;
                 break;
             case 1:
-                if (patientsFragment == null) {
-                    patientsFragment = new PatientsFragment();
+                if (myProfileFragment == null) {
+                    myProfileFragment = new MyProfileFragment();
                 }
-                fragment = patientsFragment;
+                fragment = myProfileFragment;
                 break;
             case 2:
                 if (graphsFragment == null) {

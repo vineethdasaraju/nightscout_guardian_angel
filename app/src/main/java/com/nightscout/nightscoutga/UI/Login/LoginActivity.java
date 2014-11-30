@@ -124,7 +124,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             regid = getRegistrationId(context);
 
 //            if (regid.isEmpty()) {
-                registerInBackground();
+            registerInBackground();
 //            }
         }
 
