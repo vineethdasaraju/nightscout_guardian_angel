@@ -115,9 +115,7 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
                     responseContent.append(temp);
                     isFirst = false;
                 }
-
                 response = responseContent.toString();
-
             } catch (Exception e) {
             } finally {
                 try {
