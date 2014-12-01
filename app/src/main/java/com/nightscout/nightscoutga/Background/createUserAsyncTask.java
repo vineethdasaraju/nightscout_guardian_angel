@@ -72,8 +72,8 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
     protected void onPostExecute(Integer responseC) {
         pd.dismiss();
         if(responseC == 200){
-            // Intent it = new Intent(app, MainFragmentActivity.this);
-            // app.startActivity(it);
+            Intent it = new Intent(app, MainFragmentActivity.class);
+            app.startActivity(it);
         } else {
             Functions.toast("An error has occured while creating the account. Please try again later.", app);
         }
