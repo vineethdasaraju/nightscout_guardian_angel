@@ -5,12 +5,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.nightscout.nightscoutga.Adapter.SignUpPagerAdapter;
+import com.nightscout.nightscoutga.Background.createUserAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.customviews.CustomViewPager;
 
@@ -81,7 +81,8 @@ public class SignUpActivity extends FragmentActivity {
             e.printStackTrace();
         }
         Toast.makeText(this, obj.toString(), Toast.LENGTH_SHORT).show();
-        Log.d("Registration", obj.toString());
+        createUserAsyncTask task = new createUserAsyncTask(obj, SignUpActivity.this);
+        task.execute();
     }
 
     public void showDialog() {

@@ -5,11 +5,15 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
 import org.json.JSONObject;
 
 import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
@@ -53,6 +57,7 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 		DataOutputStream outputStream = null;
 
 		URL new_url;
+
 //		try {
 //			new_url = new URL(Constants.GraphUpdate);
 //			HttpURLConnection connection = (HttpURLConnection) new_url

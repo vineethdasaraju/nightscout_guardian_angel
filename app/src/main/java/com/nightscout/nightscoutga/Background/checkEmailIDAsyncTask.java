@@ -56,7 +56,7 @@ public class checkEmailIDAsyncTask extends AsyncTask <Void, Void, Integer>{
 
             HttpURLConnection con = (HttpURLConnection) checkEmailIDapi.openConnection();
             // optional default is GET
-            con.setRequestMethod("GET");
+            con.setRequestMethod(Constants.HTTP_GET);
             //add request header
 
             int responseCode = con.getResponseCode();
@@ -89,6 +89,16 @@ public class checkEmailIDAsyncTask extends AsyncTask <Void, Void, Integer>{
     protected void onPostExecute(Integer responseInt) {
         pd.dismiss();
         switch (responseInt) {
+            case 0:
+                mPlusSignInButton.setVisibility(View.GONE);
+                userPrompt.setText("Oops! You still don't have an invite to join the community. Please try again after you get one.");
+                userPrompt.setVisibility(View.VISIBLE);
+                mPasswordView.setVisibility(View.GONE);
+                mEmailSignInButton.setVisibility(View.GONE);
+                InputMethodManager imm = (InputMethodManager)app.getSystemService(
+                        Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(mEmailView.getWindowToken(), 0);
+                break;
             case 1:
                 mPlusSignInButton.setVisibility(View.GONE);
                 userPrompt.setVisibility(View.GONE);
@@ -103,16 +113,6 @@ public class checkEmailIDAsyncTask extends AsyncTask <Void, Void, Integer>{
                 mEmailSignInButton.setText(app.getString(R.string.landing_page_signup));
                 mEmailSignInButton.setVisibility(View.VISIBLE);
                 mEmailSignInButton.requestFocus();
-                break;
-            case 0:
-                mPlusSignInButton.setVisibility(View.GONE);
-                userPrompt.setText("Oops! You still don't have an invite to join the community. Please try again after you get one.");
-                userPrompt.setVisibility(View.VISIBLE);
-                mPasswordView.setVisibility(View.GONE);
-                mEmailSignInButton.setVisibility(View.GONE);
-                InputMethodManager imm = (InputMethodManager)app.getSystemService(
-                        Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(mEmailView.getWindowToken(), 0);
                 break;
         }
     }

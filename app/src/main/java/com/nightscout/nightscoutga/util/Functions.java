@@ -1,6 +1,8 @@
 package com.nightscout.nightscoutga.util;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
@@ -40,8 +42,19 @@ public class Functions {
         }
     }
 
+    public static boolean isNetworkStatusAvialable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo netInfos = connectivityManager.getActiveNetworkInfo();
+            if (netInfos != null)
+                if (netInfos.isConnected())
+                    return true;
+        }
+        return false;
+    }
 
-    public static boolean toastFlag = false;
+    public static boolean toastFlag = true;
 
     public static void toast(String mesg, Context ctx) {
         if (toastFlag) {
@@ -52,12 +65,28 @@ public class Functions {
                     try {
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                     toastFlag = true;
                 }
             }).start();
         }
+
+    }
+
+    public static boolean isNullOrEmpty(String value) {
+        if (null == value) {
+            return true;
+        }
+
+        value = value.trim();
+
+        if ("null".equalsIgnoreCase(value) || value.length() == 0) {
+            return true;
+        }
+
+        return false;
     }
 
 
