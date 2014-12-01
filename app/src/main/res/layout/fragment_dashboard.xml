@@ -34,12 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="105"
+            android:text="---"
             android:textColor="@color/green"
             android:textSize="150sp"
             android:gravity="center"
-            android:id="@+id/dashboard_textview_glucose_level"
-            android:layout_below="@+id/dashboard_textview_patient_name"
+            android:id="@+id/dashboard_text_glucose_level"
             android:layout_centerHorizontal="true"
             android:layout_weight="6"/>
 

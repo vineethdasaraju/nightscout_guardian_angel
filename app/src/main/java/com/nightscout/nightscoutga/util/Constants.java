@@ -11,7 +11,7 @@ public class Constants {
     public final static String HTTP_DEL				=	"DELETE";
     public final static String HTTP_GET 			=	"GET";
 
-    public static String uName;
+    public static String uName = "skurella";
 
     public static final String serverAddress = "http://192.168.0.24:8080";
     public static String ProjectID = "755643285059";
