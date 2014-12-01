@@ -1,4 +1,4 @@
-package com.nightscout.nightscoutga;
+package com.nightscout.nightscoutga.Background;
 
 import android.app.Activity;
 import android.content.ComponentName;

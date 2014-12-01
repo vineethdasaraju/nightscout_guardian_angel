@@ -1,8 +1,6 @@
 package com.nightscout.nightscoutga.UI.Fragments;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.nightscout.nightscoutga.R;
+import com.nightscout.nightscoutga.util.Constants;
+import com.nightscout.nightscoutga.util.Functions;
 
-public class MyProfileFragment extends Fragment implements View.OnClickListener{
+public class MyProfileFragment extends Fragment {
 
     View rootView = null;
     EditText name, phoneNum, guardianEmail, guardianAddress, guardianFbPage;
@@ -35,70 +35,31 @@ public class MyProfileFragment extends Fragment implements View.OnClickListener{
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.remove("guardianName");
-                editor.putString("guardianName", name.getText().toString());
-                //} else if (id == phoneNum.getId()) {
-                editor.remove("guardianPhone");
-                editor.putString("guardianPhone", phoneNum.getText().toString());
-                //Constants.phoneNumber = phoneNum.getText().toString();
-                //} else if (id == guardianEmail.getId()) {
-                editor.remove("guardianEmail");
-                editor.putString("guardianEmail", guardianEmail.getText().toString());
-                //Constants.userEmail = guardianEmail.getText().toString();
-                //} else if (id == guardianAddress.getId()) {
-                editor.remove("guardianAddress");
-                editor.putString("guardianAddress", guardianAddress.getText().toString());
-                //Constants.userAddress = guardianAddress.getText().toString();
-                //} else if (id == guardianFbPage.getId()) {
-                editor.remove("guardianFbPage");
-                editor.putString("guardianFbPage", guardianFbPage.getText().toString());
-                //Constants.fbPage = guardianFbPage.getText().toString();
-                //}
-                editor.commit();
+                storeData();
             }
         });
 
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-        name.setText(sharedPref.getString("guardianName", null));
-        phoneNum.setText(sharedPref.getString("guardianPhone", null));
-        guardianEmail.setText(sharedPref.getString("guardianEmail", null));
-        guardianAddress.setText(sharedPref.getString("guardianAddress", null));
-        guardianFbPage.setText(sharedPref.getString("guardianFbPage", null));
+        name.setText(Constants.fullname);
+        phoneNum.setText(Constants.phoneNumber);
+        guardianEmail.setText(Constants.userEmail);
+        guardianAddress.setText(Constants.userAddress);
+        guardianFbPage.setText(Constants.fbPage);
 
         // Inflate the layout for this fragment
         return rootView;
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        /*SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        if(id == saveButton.getId()) {
-            //if (id == name.getId()) {
-            editor.remove("guardianName");
-            editor.putString("guardianName", name.getText().toString());
-            //} else if (id == phoneNum.getId()) {
-            editor.remove("guardianPhone");
-            editor.putString("guardianPhone", phoneNum.getText().toString());
-            //Constants.phoneNumber = phoneNum.getText().toString();
-            //} else if (id == guardianEmail.getId()) {
-            editor.remove("guardianEmail");
-            editor.putString("guardianEmail", guardianEmail.getText().toString());
-            //Constants.userEmail = guardianEmail.getText().toString();
-            //} else if (id == guardianAddress.getId()) {
-            editor.remove("guardianAddress");
-            editor.putString("guardianAddress", guardianAddress.getText().toString());
-            //Constants.userAddress = guardianAddress.getText().toString();
-            //} else if (id == guardianFbPage.getId()) {
-            editor.remove("guardianFbPage");
-            editor.putString("guardianFbPage", guardianFbPage.getText().toString());
-            //Constants.fbPage = guardianFbPage.getText().toString();
-            //}
-            editor.commit();
-        }*/
+    private void storeData() {
+        String userEmailID = guardianEmail.getText().toString();
+        String fullName = name.getText().toString();
+        String phoneNumber = phoneNum.getText().toString();
+        String userAddress = guardianAddress.getText().toString();
+        String fbPage = guardianFbPage.getText().toString();
+
+        Functions.savePreferences(Constants.KEY_userEmail, userEmailID, getActivity());
+        Functions.savePreferences(Constants.KEY_userAddress, userAddress, getActivity());
+        Functions.savePreferences(Constants.KEY_phoneNumber, phoneNumber, getActivity());
+        Functions.savePreferences(Constants.KEY_fullname, fullName, getActivity());
+        Functions.savePreferences(Constants.KEY_fbPage, fbPage, getActivity());
     }
 }
