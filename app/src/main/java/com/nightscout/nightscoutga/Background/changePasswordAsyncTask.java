@@ -21,7 +21,6 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 	Context context;
 	JSONObject obj;
 	ProgressDialog pd = null;
-	String responseMessage = "";
 	boolean success = false;
 	Activity app = null;
 
@@ -55,32 +54,29 @@ public class changePasswordAsyncTask extends AsyncTask<Void, Void, Void> {
 		String response = "";
 		String content = obj.toString();
 		DataOutputStream outputStream = null;
-
 		URL new_url;
-
-//		try {
-//			new_url = new URL(Constants.GraphUpdate);
-//			HttpURLConnection connection = (HttpURLConnection) new_url
-//					.openConnection();
-//			connection.setRequestMethod(Constants.HTTP_POST);
-//			connection.setRequestProperty("Content-Type",
-//					Constants.BG_SERVICE_CONTENT_TYPE_JSON);
-//			connection.setRequestProperty("Connection", "Keep-Alive");
-//			outputStream = new DataOutputStream(connection.getOutputStream());
-//			byte[] BytesToBeSent = content.getBytes();
-//			if (BytesToBeSent != null) {
-//				outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
-//			}
-//			int responseCode = connection.getResponseCode();
-//			if (responseCode == 200 || responseCode == 202) {
-//				success = true;
-//			}
-//		} catch (MalformedURLException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-
+		try {
+			new_url = new URL(Constants.ChangePassword);
+			HttpURLConnection connection = (HttpURLConnection) new_url
+					.openConnection();
+			connection.setRequestMethod(Constants.HTTP_POST);
+			connection.setRequestProperty("Content-Type",
+					Constants.BG_SERVICE_CONTENT_TYPE_JSON);
+			connection.setRequestProperty("Connection", "Keep-Alive");
+			outputStream = new DataOutputStream(connection.getOutputStream());
+			byte[] BytesToBeSent = content.getBytes();
+			if (BytesToBeSent != null) {
+				outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
+			}
+			int responseCode = connection.getResponseCode();
+			if (responseCode == 200 || responseCode == 202) {
+				success = true;
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 }

@@ -71,10 +71,10 @@ public class GcmIntentService  extends IntentService  {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.btn_star)
-                        .setContentTitle("Notification")
+                        .setContentTitle("Alert!")
                         .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
                         .setContentText(msg)
-                        .setTicker("New Message from Guardian Angel Application")
+                        .setTicker("Your friend needs you immediately.")
                         .setDefaults(NotificationCompat.DEFAULT_VIBRATE)
                         .setDefaults(NotificationCompat.DEFAULT_LIGHTS)
                         .setDefaults(NotificationCompat.DEFAULT_SOUND);

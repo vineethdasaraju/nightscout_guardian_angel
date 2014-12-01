@@ -5,9 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -25,6 +27,7 @@ import com.nightscout.nightscoutga.Background.LoginAsyncTask;
 import com.nightscout.nightscoutga.Background.checkEmailIDAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.UI.signup.SignUpActivity;
+import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
 /**
@@ -60,6 +63,9 @@ public class LoginActivity extends PlusBaseActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_login);
+
+        checkForPreviousLogin();
+
         mPlusSignInButton = (SignInButton) findViewById(R.id.plus_sign_in_button);
         if (supportsGooglePlayServices()) {
             mPlusSignInButton.setOnClickListener(new OnClickListener() {
@@ -79,9 +85,11 @@ public class LoginActivity extends PlusBaseActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
+
             @Override
             public void afterTextChanged(Editable s) {
                 String mailID = mEmailView.getText().toString();
@@ -222,5 +230,16 @@ public class LoginActivity extends PlusBaseActivity {
         it.putExtra("Email ID", emailID);
         startActivity(it);
         finish();
+    }
+
+    private void checkForPreviousLogin() {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this);
+        Constants.userid = sharedPreferences.getString(Constants.KEY_userid, "");
+        if(!Functions.isNullOrEmpty(Constants.userid)){
+            Intent it = new Intent(this, SplashScreen.class);
+            startActivity(it);
+            finish();
+        }
     }
 }

@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nightscout.nightscoutga"
     android:versionCode="2014480001"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--
  To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
@@ -18,21 +17,22 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <permission android:name="com.nightscout.nightscoutga.permission.C2D_MESSAGE"
+    <permission
+        android:name="com.nightscout.nightscoutga.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@drawable/ic_appicon"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.nightscout.nightscoutga.UI.Login.LoginActivity"
@@ -41,6 +41,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -53,46 +54,53 @@
         <activity
             android:name="com.nightscout.nightscoutga.UI.signup.MapViewDialog"
             android:label="@string/title_MapView_dialog"
-            android:theme="@android:style/Theme.Dialog"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.nightscout.nightscoutga.UI.Fragments.MainFragmentActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
-
         <activity
             android:name="com.nightscout.nightscoutga.UI.ChangePasswordActivity"
             android:label="@string/title_activity_change_password"
-            android:theme="@android:style/Theme.Dialog">
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
             android:name="com.nightscout.nightscoutga.UI.EmergencyScreenActivity"
             android:label="@string/title_activity_emergency_screen"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden">
+            android:windowSoftInputMode="adjustResize|stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver
-            android:name=".Background.GCMBroadcastReceiver"
+            android:name="com.nightscout.nightscoutga.Background.GCMBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
                 <category android:name="com.nightscout.nightscoutga" />
             </intent-filter>
         </receiver>
-        <service android:name=".Background.GcmIntentService" />
+
+        <service android:name="com.nightscout.nightscoutga.Background.GcmIntentService" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="@string/mapview_api_key"/>
+            android:value="@string/mapview_api_key" />
 
+        <activity
+            android:name="com.nightscout.nightscoutga.UI.Login.SplashScreen"
+            android:label="@string/title_activity_splash_screen" >
+        </activity>
     </application>
+
 </manifest>

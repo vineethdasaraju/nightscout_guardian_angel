@@ -105,10 +105,8 @@
     <string name="ns_s2_signup_country">Country</string>
     <string name="title_activity_change_password">ChangePasswordActivity</string>
     <string name="title_activity_emergency_screen">EmergencyScreenActivity</string>
-
     <string name="mapview_api_key">AIzaSyA_X6S05xxrM8_jrkiuPqQAAv7OxUJpAhM</string>
     <string name="title_MapView_dialog">Mapview Dialog</string>
-
     <string name="bd_business_details_store_business_name_txt">Business Name</string>
     <string name="bd_business_details_store_business_name_txt_box">Business Name</string>
     <string name="bd_business_details_store_business_desc_txt">Business Description</string>
@@ -124,5 +122,6 @@
     <string name="ci_contact_info_store_website_txt_box">no website available</string>
     <string name="ci_contact_info_store_fbpage_txt">Facebook Page</string>
     <string name="ci_contact_info_store_fbpage_txt_box">www.facebook.com/</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 
 </resources>

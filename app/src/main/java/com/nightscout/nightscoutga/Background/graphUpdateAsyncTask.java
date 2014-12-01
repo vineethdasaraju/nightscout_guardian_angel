@@ -12,9 +12,6 @@ import org.json.JSONObject;
 import java.io.DataOutputStream;
 import java.net.URL;
 
-/**
- * Created by User on 28/11/2014.
- */
 public class graphUpdateAsyncTask extends AsyncTask<Void, Void, Void> {
 
     Context context;

@@ -86,18 +86,6 @@ public class MainFragmentActivity extends Activity {
             }
         }
 
-        getUserDetailsfromPref();
-//
-//        if(!sharedpreferences.contains("guardianName")) {
-//            editor.putString("guardianName", "Pradeep");
-//            editor.putString("guardianPhone", "9848123456");
-//            editor.putString("guardianEmail", "abc@gmail.com");
-//            editor.putString("guardianAddress", "3800 SW 34th Street, Gainesville, Florida 32608");
-//            editor.putString("guardianFbPage", "facebook.com/pradeep");
-//            editor.commit();
-//        }
-
-
         mTitle = mDrawerTitle = getTitle();
 
         // load slide menu items
@@ -271,6 +259,7 @@ public class MainFragmentActivity extends Activity {
         Constants.userLng = "";
     }
 
+
     private boolean checkPlayServices() {
         int isAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
 
@@ -375,9 +364,4 @@ public class MainFragmentActivity extends Activity {
             throw new RuntimeException("Could not get package name: " + e);
         }
     }
-
-    private void getUserDetailsfromPref() {
-//        SharedPreferences preferences =
-    }
-
 }
