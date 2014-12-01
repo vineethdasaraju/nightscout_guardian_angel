@@ -1,27 +1,39 @@
 package com.nightscout.nightscoutga.UI.Fragments;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.nightscout.nightscoutga.Adapter.DrawerListAdapter;
 import com.nightscout.nightscoutga.R;
+import com.nightscout.nightscoutga.util.Constants;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MainFragmentActivity extends Activity {
@@ -29,7 +41,7 @@ public class MainFragmentActivity extends Activity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
-    // nav drawer title
+    SharedPreferences sharedpreferences;
 
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
@@ -45,25 +57,46 @@ public class MainFragmentActivity extends Activity {
     SettingsFragment settingsFragment = null;
     GraphsFragment graphsFragment = null;
 
+
+    private static final int ERRORDIALOG_REQUEST = 9001;
+    GoogleCloudMessaging gcm;
+    static final String TAG = "GCM";
+    String regid;
+
+    public static final String EXTRA_MESSAGE = "message";
+    public static final String PROPERTY_REG_ID = "registration_id";
+    private static final String PROPERTY_APP_VERSION = "appVersion";
+    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+
+    String SENDER_ID = Constants.ProjectID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_fragment);
 
-        //PreferenceManager pm = new PreferenceManager();
+        loadSavedPreferences();
 
-        //SharedPreferences udetails = PreferenceManager.getDefaultSharedPreferences(this);
+        if (checkPlayServices()) {
+            gcm = GoogleCloudMessaging.getInstance(this);
+            regid = getRegistrationId(context);
 
-        SharedPreferences sharedPref = context.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        if(!sharedPref.contains("guardianName")) {
-            editor.putString("guardianName", "Pradeep");
-            editor.putString("guardianPhone", "9848123456");
-            editor.putString("guardianEmail", "abc@gmail.com");
-            editor.putString("guardianAddress", "3800 SW 34th Street, Gainesville, Florida 32608");
-            editor.putString("guardianFbPage", "facebook.com/pradeep");
-            editor.commit();
+            if (regid.isEmpty()) {
+                registerInBackground();
+            }
         }
+
+        getUserDetailsfromPref();
+//
+//        if(!sharedpreferences.contains("guardianName")) {
+//            editor.putString("guardianName", "Pradeep");
+//            editor.putString("guardianPhone", "9848123456");
+//            editor.putString("guardianEmail", "abc@gmail.com");
+//            editor.putString("guardianAddress", "3800 SW 34th Street, Gainesville, Florida 32608");
+//            editor.putString("guardianFbPage", "facebook.com/pradeep");
+//            editor.commit();
+//        }
+
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -124,12 +157,6 @@ public class MainFragmentActivity extends Activity {
             displayView(0);
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -229,4 +256,128 @@ public class MainFragmentActivity extends Activity {
             Log.e("MainActivity", "Error in creating fragment");
         }
     }
+
+    private void loadSavedPreferences() {
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this);
+        Constants.userid = sharedPreferences.getString(Constants.KEY_userid, "");
+        Constants.username = sharedPreferences.getString(Constants.KEY_username, "");
+        Constants.fullname = sharedPreferences.getString(Constants.KEY_fullname, "");
+        Constants.phoneNumber = sharedPreferences.getString(Constants.KEY_phoneNumber, "");
+        Constants.userEmail = sharedPreferences.getString(Constants.KEY_userEmail, "");
+        Constants.fbPage = sharedPreferences.getString(Constants.KEY_fbPage, "");
+        Constants.userAddress = sharedPreferences.getString(Constants.KEY_userAddress, "");
+        Constants.userLat = "";
+        Constants.userLng = "";
+    }
+
+    private boolean checkPlayServices() {
+        int isAvailable = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+
+        if (isAvailable == ConnectionResult.SUCCESS) {
+            return true;
+        } else if (GooglePlayServicesUtil.isUserRecoverableError(isAvailable)) {
+            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(isAvailable, this, ERRORDIALOG_REQUEST);
+            dialog.show();
+        } else {
+            Toast.makeText(this, "Can't connect to Google Play services", Toast.LENGTH_SHORT).show();
+        }
+        return false;
+    }
+
+    private void registerInBackground() {
+        new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                String msg = "";
+                try {
+                    if (gcm == null) {
+                        gcm = GoogleCloudMessaging.getInstance(context);
+                    }
+                    regid = gcm.register(SENDER_ID);
+                    msg = "Device registered, registration ID=" + regid;
+
+
+                    sendRegistrationIdToBackend();
+
+                    // Persist the regID - no need to register again.
+                    storeRegistrationId(context, regid);
+                } catch (IOException ex) {
+                    msg = "Error :" + ex.getMessage();
+                    // If there is an error, don't just keep trying to register.
+                    // Require the user to click a button again, or perform
+                    // exponential back-off.
+                }
+                return msg;
+            }
+
+            @Override
+            protected void onPostExecute(String msg) {
+//                mDisplay.append(msg + "\n");
+            }
+        }.execute(null, null, null);
+
+    }
+
+    private void sendRegistrationIdToBackend() {
+        try {
+            String registerGCMAPI = Constants.apiPrefix + "/userid/"+ Constants.userid + "/regid/" + regid;
+            URL registerGCMAPIURL = new URL(registerGCMAPI);
+            HttpURLConnection con = (HttpURLConnection) registerGCMAPIURL.openConnection();
+            con.setRequestMethod(Constants.HTTP_GET);
+            int responseCode = con.getResponseCode();
+            Log.d("GCMResponse", responseCode + "");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String getRegistrationId(Context context) {
+        final SharedPreferences prefs = getGCMPreferences(context);
+        String registrationId = prefs.getString(PROPERTY_REG_ID, "");
+        if (registrationId.isEmpty()) {
+            Log.i(TAG, "Registration not found.");
+            return "";
+        }
+//        Check if app was updated
+        int registeredVersion = prefs.getInt(PROPERTY_APP_VERSION, Integer.MIN_VALUE);
+        int currentVersion = getAppVersion(context);
+        if (registeredVersion != currentVersion) {
+            Log.i(TAG, "App version changed.");
+            return "";
+        }
+        return registrationId;
+    }
+
+    private SharedPreferences getGCMPreferences(Context context) {
+        return getSharedPreferences(MainFragmentActivity.class.getSimpleName(), Context.MODE_PRIVATE);
+    }
+
+    private void storeRegistrationId(Context context, String regId) {
+        final SharedPreferences prefs = getGCMPreferences(context);
+        int appVersion = getAppVersion(context);
+        Log.i(TAG, "Saving regId on app version " + appVersion);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(PROPERTY_REG_ID, regId);
+        editor.putInt(PROPERTY_APP_VERSION, 1);
+        editor.putInt(PROPERTY_APP_VERSION, appVersion);
+        editor.commit();
+    }
+
+    private static int getAppVersion(Context context) {
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            return packageInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            // should never happen
+            throw new RuntimeException("Could not get package name: " + e);
+        }
+    }
+
+    private void getUserDetailsfromPref() {
+//        SharedPreferences preferences =
+    }
+
 }

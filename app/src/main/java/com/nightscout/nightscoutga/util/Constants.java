@@ -1,9 +1,8 @@
 package com.nightscout.nightscoutga.util;
 
-import com.google.android.gms.maps.model.LatLng;
 import android.location.Address;
+
 import com.google.android.gms.maps.model.LatLng;
-import android.text.Editable;
 
 public class Constants {
 
@@ -14,37 +13,51 @@ public class Constants {
 
     public static String uName;
 
-//    public static final String serverAddress = "http://192.168.0.24:8080";
-    public static final String serverAddress = "http://ec2-54-173-219-144.compute-1.amazonaws.com:8080";
+    public static final String serverAddress = "http://192.168.0.24:8080";
+    public static String ProjectID = "755643285059";
+//    public static final String serverAddress = "http://ec2-54-173-219-144.compute-1.amazonaws.com:8080";
     public static final String apiPrefix = serverAddress + "/nightscoutpro";
     public static final String apiRegister2 = apiPrefix + "/ga/register2";
     public static final String apiLogin = apiPrefix + "/ga/login";
     public static final String apiInvite = apiPrefix + "/ga/invite";
     public static final String ChangePassword = apiPrefix + "/ga/invite";
 
-    //My Profile Information
-
-    public static String username = "null";
-    public static String phoneNumber = "null";
-    public static String userEmail = "null";
-    public static String fbPage = "null";
-    public static String userAddress = "null";
-
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
+    public final static String NEW_LINE 		= "\n";
 
     public final static float MG_DL_TO_MMOL_L = 0.05556f;
     public static boolean isDotCom = false;
 
 //    GCM
-    public static final String MSG_KEY = "info";
+    public static final String MSG_KEY = "title";
 
 //    Registration
     public static LatLng latlng;
+    public static Address lastKnownAddress;
+    public static LatLng userLatLng = null;
+
+    // Keys for storing user details
+    public static String KEY_userid = "userid";
+    public static String KEY_username = "username";
+    public static String KEY_phoneNumber = "phoneNumber";
+    public static String KEY_fullname = "fullname";
+    public static String KEY_userEmail = "userEmail";
+    public static String KEY_fbPage = "fbPage";
+    public static String KEY_userAddress = "userAddress";
+    public static String KEY_userLat = "userLat";
+    public static String KEY_userLng = "userLng";
 
     // User Details
-    public static String userid = "25";
-    public static Address lastKnownAddress;
+    public static String userid = "26";
+    public static String fullname = "";
+    public static String username = "null";
+    public static String phoneNumber = "null";
+    public static String userEmail = "null";
+    public static String fbPage = "null";
+    public static String userAddress = "null";
+    public static String userLat = "";
+    public static String userLng = "";
 
 
     public enum TREND_ARROW_VALUES {

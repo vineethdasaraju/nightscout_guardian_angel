@@ -56,7 +56,7 @@
                                 android:layout_width="@dimen/ns_s1_top_image_layout_width"
                                 android:layout_height="@dimen/ns_s1_top_image_layout_height"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/ic_launcher"/>
+                                android:src="@drawable/ic_appicon"/>
                         </RelativeLayout>
 
                         <RelativeLayout

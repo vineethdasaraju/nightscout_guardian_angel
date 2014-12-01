@@ -1,12 +1,71 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.nightscout.nightscoutga.UI.EmergencyScreenActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/emergency_screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emergency"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/emergency_screen_info"
+        android:text="User1 is in a serious condition."
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:layout_below="@+id/emergency_screen_title"
+        android:layout_width="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/emergency_screen_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/emergency_screen_info">
+
+        <fragment
+            android:id="@+id/emergency_screen_map"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            class="com.google.android.gms.maps.MapFragment" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/emergency_screen_buttons"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/emergency_screen_mapview"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/emergency_screen_patient_details"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Patient Details" />
+
+        <Button
+            android:id="@+id/emergency_screen_acknowledge"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Acknowledge" />
+    </LinearLayout>
 </RelativeLayout>

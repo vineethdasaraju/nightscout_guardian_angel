@@ -2,11 +2,13 @@ package com.nightscout.nightscoutga;
 
 import android.R;
 import android.app.IntentService;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -28,8 +30,16 @@ public class GcmIntentService  extends IntentService  {
         Bundle extras = intent.getExtras();
         GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
         String messageType = gcm.getMessageType(intent);
-//        String title = extras.getString(Constants.MSG_KEY);
-//        Log.d("myApplication", title);
+//        Object title = extras.get("data");
+//        String message = extras.getString("message");
+//
+//        for (String key: extras.keySet())
+//        {
+//            Log.d("myApplication", " key: " + key);
+//            Log.d("myApplication", " value: " + extras.get(key));
+//        }
+
+//        Log.d("myApplication", title.toString());
 
         if (!extras.isEmpty()) {  // has effect of unparcelling Bundle
 
@@ -41,6 +51,11 @@ public class GcmIntentService  extends IntentService  {
                 sendNotification(""+extras.get(Constants.MSG_KEY));
             }
         }
+
+        PowerManager pm = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
+        PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "TAG");
+        wl.acquire();
+
         // Release the wake lock provided by the WakefulBroadcastReceiver.
         GCMBroadcastReceiver.completeWakefulIntent(intent);
     }
@@ -55,14 +70,19 @@ public class GcmIntentService  extends IntentService  {
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_delete)
+                        .setSmallIcon(R.drawable.btn_star)
                         .setContentTitle("Notification")
-                        .setStyle(new NotificationCompat.BigTextStyle()
-                                .bigText(msg))
-                        .setContentText(msg);
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
+                        .setContentText(msg)
+                        .setTicker("New Message from Guardian Angel Application")
+                        .setDefaults(NotificationCompat.DEFAULT_VIBRATE)
+                        .setDefaults(NotificationCompat.DEFAULT_LIGHTS)
+                        .setDefaults(NotificationCompat.DEFAULT_SOUND);
 
         mBuilder.setContentIntent(contentIntent);
-        mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+       // mBuilder.flag |= Notification.FLAG_INSISTENT;
+        Notification note = mBuilder.build();
+        note.flags |= Notification.FLAG_INSISTENT;
+        mNotificationManager.notify(NOTIFICATION_ID, note);
     }
-
 }
