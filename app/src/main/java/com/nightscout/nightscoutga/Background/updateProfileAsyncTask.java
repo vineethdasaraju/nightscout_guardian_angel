@@ -1,15 +1,12 @@
 package com.nightscout.nightscoutga.Background;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.DataOutputStream;
@@ -18,28 +15,24 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
-
-    JSONObject obj;
-    ProgressDialog pd;
-    Activity app;
-    Context callActivity;
+public class updateProfileAsyncTask extends AsyncTask<Void, Void, Integer> {
+    JSONObject object = null;
+    Context ctx;
     int responseCode;
+    ProgressDialog pd = null;
 
-    public createUserAsyncTask(JSONObject obj, Activity app) {
-        this.obj = obj;
-        this.app = app;
+    public updateProfileAsyncTask(Context ctx, JSONObject obj) {
+        this.ctx = ctx;
+        this.object = obj;
     }
-
     @Override
     protected Integer doInBackground(Void... params) {
         String response = "";
-        String content = obj.toString();
+        String content = object.toString();
         DataOutputStream outputStream = null;
-
         URL new_url;
         try {
-            new_url = new URL(Constants.apiRegister2);
+            new_url = new URL(Constants.updateProfile);
             HttpURLConnection connection = (HttpURLConnection) new_url
                     .openConnection();
             connection.setRequestMethod(Constants.HTTP_POST);
@@ -52,7 +45,6 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
                 outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
             }
             responseCode = connection.getResponseCode();
-            Log.d("create User AsyncTask", responseCode + "");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -63,25 +55,16 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
 
     @Override
     protected void onPreExecute() {
-        pd = ProgressDialog.show(app, null, "Getting your location.");
-        pd.setCancelable(true);
+        pd = ProgressDialog.show(ctx, "Please Wait", "Updating your Profile...");
     }
 
     @Override
-    protected void onPostExecute(Integer responseC) {
+    protected void onPostExecute(Integer responseCode) {
         pd.dismiss();
-        if(responseC == 200){
-            String userEmail = null;
-            try {
-                userEmail = obj.getString("emailId");
-                String password = obj.getString("password");
-                LoginAsyncTask task = new LoginAsyncTask(app, userEmail, password);
-                task.execute();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+        if(responseCode==200){
+            Functions.toast("Your details have been updated", ctx);
         } else {
-            Functions.toast("An error has occured while creating the account. Please try again later.", app);
+            Functions.toast("Error updating your details. Please try later.", ctx);
         }
     }
 }

@@ -8,9 +8,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.nightscout.nightscoutga.Background.updateProfileAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MyProfileFragment extends Fragment {
 
@@ -55,6 +59,21 @@ public class MyProfileFragment extends Fragment {
         String phoneNumber = phoneNum.getText().toString();
         String userAddress = guardianAddress.getText().toString();
         String fbPage = guardianFbPage.getText().toString();
+
+        JSONObject obj = new JSONObject();
+        try {
+            obj.put("userName", Constants.uName);
+            obj.put("userId", Constants.userid);
+            obj.put("emailId", userEmailID);
+            obj.put("phoneNum", phoneNumber);
+            obj.put("address", userAddress);
+            obj.put("fullName", fullName);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        updateProfileAsyncTask task = new updateProfileAsyncTask(getActivity(), obj);
+        task.execute();
 
         Functions.savePreferences(Constants.KEY_userEmail, userEmailID, getActivity());
         Functions.savePreferences(Constants.KEY_userAddress, userAddress, getActivity());

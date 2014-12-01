@@ -21,6 +21,7 @@ public class Constants {
     public static final String apiLogin = apiPrefix + "/ga/login";
     public static final String apiInvite = apiPrefix + "/ga/invite";
     public static final String ChangePassword = apiPrefix + "/ga/invite";
+    public static final String updateProfile = apiPrefix + "/updateProfile";
 
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
@@ -58,6 +59,9 @@ public class Constants {
     public static String userAddress = "null";
     public static String userLat = "";
     public static String userLng = "";
+
+
+    public static boolean isFromLogin;
 
 
     public enum TREND_ARROW_VALUES {

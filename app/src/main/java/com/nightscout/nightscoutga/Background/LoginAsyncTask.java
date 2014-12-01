@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.nightscout.nightscoutga.UI.Fragments.MainFragmentActivity;
 import com.nightscout.nightscoutga.util.Constants;
@@ -41,7 +40,6 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         pd.dismiss();
-        Log.d("response", result);
         if (!Functions.isNullOrEmpty(result)) {
             JSONObject data;
             try {
@@ -96,7 +94,7 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
             connection.setRequestProperty("Content-Type",Constants.BG_SERVICE_CONTENT_TYPE_JSON);
             outputStream = new DataOutputStream(connection.getOutputStream());
             byte[] BytesToBeSent = content.getBytes();
-            if (BytesToBeSent != null) {
+            if(BytesToBeSent != null) {
                 outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
             }
 
@@ -165,5 +163,7 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
         }
 
     }
+
+
 
 }
