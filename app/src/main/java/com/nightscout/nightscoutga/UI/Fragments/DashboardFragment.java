@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.nightscout.nightscoutga.Background.showGlucoseAsyncTask;
 import com.nightscout.nightscoutga.R;
+import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
 public class DashboardFragment extends Fragment {
@@ -16,7 +17,7 @@ public class DashboardFragment extends Fragment {
     public DashboardFragment(){}
 
     View graphsButton, patientsButton, settingsButton;
-    TextView glucoseLevel;
+    TextView glucoseLevel, patientName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,7 +27,9 @@ public class DashboardFragment extends Fragment {
         patientsButton = rootView.findViewById(R.id.dashboard_button_patients);
         settingsButton = rootView.findViewById(R.id.dashboard_button_settings);
         glucoseLevel = (TextView) rootView.findViewById(R.id.dashboard_text_glucose_level);
+        patientName = (TextView) rootView.findViewById(R.id.dashboard_textview_patient_name);
 
+        patientName.setText(Constants.Patient_FullName);
         glucoseLevel.setText("100");
 
         graphsButton.setOnClickListener(new View.OnClickListener() {

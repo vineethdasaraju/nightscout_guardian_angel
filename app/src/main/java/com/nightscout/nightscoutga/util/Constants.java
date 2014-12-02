@@ -3,6 +3,7 @@ package com.nightscout.nightscoutga.util;
 import android.location.Address;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.nightscout.nightscoutga.Models.User;
 
 public class Constants {
 
@@ -12,6 +13,16 @@ public class Constants {
     public final static String HTTP_GET 			=	"GET";
 
     public static String uName = "skurella";
+
+    public static User[] patients;
+
+    public static String KEY_PATIENT_USERNAME = "Patient_UserName";
+    public static String KEY_PATIENT_FULLNAME = "Patient_FullName";
+    public static String KEY_PATIENT_EMAILID = "Patient_EmailID";
+
+    public static String Patient_Username = "null";
+    public static String Patient_FullName = "null";
+    public static String Patient_EmailID = "null";
 
     public static final String serverAddress = "http://192.168.0.24:8080";
     public static String ProjectID = "755643285059";

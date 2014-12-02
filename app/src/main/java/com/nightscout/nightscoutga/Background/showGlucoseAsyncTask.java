@@ -44,7 +44,7 @@ public class showGlucoseAsyncTask extends AsyncTask <Void, Void, Integer>{
 
     @Override
     protected Integer doInBackground(Void... params) {
-        String glucoseAPI = Constants.apiPrefix + "/showGlucose/guardianid/" + Constants.userid + "/patientusername/" + Constants.uName;
+        String glucoseAPI = Constants.apiPrefix + "/showGlucose/guardianid/" + Constants.userid + "/patientusername/" + Constants.Patient_Username;
         try {
             showGlucoseAPI = new URL(glucoseAPI);
             HttpURLConnection con = (HttpURLConnection) showGlucoseAPI.openConnection();

@@ -5,10 +5,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 
+import com.google.gson.Gson;
+import com.nightscout.nightscoutga.Models.User;
 import com.nightscout.nightscoutga.UI.Fragments.MainFragmentActivity;
 import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,6 +21,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import static com.nightscout.nightscoutga.Models.User.updatePatientDetails;
+
 public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
 
     private Activity appContext = null;
@@ -25,6 +30,7 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
     String Username = null, Password = null, responseMessage = "";
     Boolean success = false;
     int responseCode = 0;
+    User[] patients;
 
     public LoginAsyncTask(Activity context, String Username, String Password) {
         this.appContext = context;
@@ -164,6 +170,30 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
 
     }
 
+    private void storePatientData(JSONObject data) {
+        if(!Functions.isNullOrEmpty(data.toString())){
+            try {
+                JSONArray jsonArr = data.getJSONArray("patientList");
+                Gson gson = new Gson();
+                //int i = (jsonArr.length() - 5) > 0 ? jsonArr.length() - 5 : 0;
+                patients = new User[jsonArr.length()];
+                for(int i = 0; i < jsonArr.length(); i++){
+                    patients[i] = gson.fromJson(jsonArr.get(i).toString(), User.class);
+                }
+                if(patients != null) {
+                    updatePatientDetails(patients);
+                    Functions.savePreferences(Constants.KEY_PATIENT_USERNAME, patients[patients.length - 1].getUserName(), appContext);
+                    Functions.savePreferences(Constants.KEY_PATIENT_FULLNAME, patients[patients.length - 1].getFullName(), appContext);
+                    Functions.savePreferences(Constants.KEY_PATIENT_EMAILID, patients[patients.length - 1].getEmailId(), appContext);
+                }
 
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 
 }

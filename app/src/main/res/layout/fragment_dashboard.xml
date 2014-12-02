@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Patient Name Label"
+            android:text="Patient Name"
             android:textColor="@color/black"
             android:id="@+id/dashboard_text_patient_name_label"
             android:gravity="center"

@@ -257,6 +257,9 @@ public class MainFragmentActivity extends Activity {
         Constants.userAddress = sharedPreferences.getString(Constants.KEY_userAddress, "");
         Constants.userLat = "";
         Constants.userLng = "";
+        Constants.Patient_Username = sharedPreferences.getString(Constants.KEY_PATIENT_USERNAME, "");
+        Constants.Patient_FullName = sharedPreferences.getString(Constants.KEY_PATIENT_FULLNAME, "");
+        Constants.Patient_EmailID = sharedPreferences.getString(Constants.KEY_PATIENT_EMAILID, "");
     }
 
 
