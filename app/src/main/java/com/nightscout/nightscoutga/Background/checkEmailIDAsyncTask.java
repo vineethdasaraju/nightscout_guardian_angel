@@ -95,8 +95,7 @@ public class checkEmailIDAsyncTask extends AsyncTask <Void, Void, Integer>{
                 userPrompt.setVisibility(View.VISIBLE);
                 mPasswordView.setVisibility(View.GONE);
                 mEmailSignInButton.setVisibility(View.GONE);
-                InputMethodManager imm = (InputMethodManager)app.getSystemService(
-                        Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager)app.getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(mEmailView.getWindowToken(), 0);
                 break;
             case 1:
@@ -113,6 +112,8 @@ public class checkEmailIDAsyncTask extends AsyncTask <Void, Void, Integer>{
                 mEmailSignInButton.setText(app.getString(R.string.landing_page_signup));
                 mEmailSignInButton.setVisibility(View.VISIBLE);
                 mEmailSignInButton.requestFocus();
+                InputMethodManager imm2 = (InputMethodManager)app.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm2.hideSoftInputFromWindow(mEmailView.getWindowToken(), 0);
                 break;
         }
     }

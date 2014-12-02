@@ -12,7 +12,7 @@ public class Constants {
     public final static String HTTP_DEL				=	"DELETE";
     public final static String HTTP_GET 			=	"GET";
 
-    public static String uName = "skurella";
+    public static String uName;
 
     public static User[] patients;
 
@@ -33,6 +33,8 @@ public class Constants {
     public static final String apiInvite = apiPrefix + "/ga/invite";
     public static final String ChangePassword = apiPrefix + "/ga/invite";
     public static final String updateProfile = apiPrefix + "/updateProfile";
+    public static final String getEmergencyPatientDetails = apiPrefix + "/get_emergency_patient";
+    public static final String acknowledgeEmergency = apiPrefix + "/acknowledge_guardian/" + Constants.userid;
 
     public static final String BG_SERVICE_CONTENT_TYPE_OCTET_STREAM = 	"binary/octet-stream";
     public static final String BG_SERVICE_CONTENT_TYPE_JSON 		= 	"application/json";
@@ -72,8 +74,8 @@ public class Constants {
     public static String userLng = "";
 
 
-    public static boolean isFromLogin;
-
+    public static String emergencyPatientName = "";
+    public static String emergencyPatientPhone = "";
 
     public enum TREND_ARROW_VALUES {
         NONE(0),

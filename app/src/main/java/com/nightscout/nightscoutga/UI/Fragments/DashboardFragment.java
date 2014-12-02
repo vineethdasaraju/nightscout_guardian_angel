@@ -11,12 +11,10 @@ import com.nightscout.nightscoutga.Background.showGlucoseAsyncTask;
 import com.nightscout.nightscoutga.R;
 import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
-
 public class DashboardFragment extends Fragment {
-
     public DashboardFragment(){}
-
     View graphsButton, patientsButton, settingsButton;
+
     TextView glucoseLevel, patientName;
 
     @Override
@@ -27,32 +25,31 @@ public class DashboardFragment extends Fragment {
         patientsButton = rootView.findViewById(R.id.dashboard_button_patients);
         settingsButton = rootView.findViewById(R.id.dashboard_button_settings);
         glucoseLevel = (TextView) rootView.findViewById(R.id.dashboard_text_glucose_level);
+
         patientName = (TextView) rootView.findViewById(R.id.dashboard_textview_patient_name);
 
         patientName.setText(Constants.Patient_FullName);
-        glucoseLevel.setText("100");
 
+
+        glucoseLevel.setText("100");
         graphsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((MainFragmentActivity) getActivity()).displayView(2);
             }
         });
-
         patientsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((MainFragmentActivity) getActivity()).displayView(1);
             }
         });
-
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((MainFragmentActivity) getActivity()).displayView(3);
             }
         });
-
         showGlucoseAsyncTask task = new showGlucoseAsyncTask(getActivity(), glucoseLevel);
         if (Functions.isNetworkStatusAvialable(getActivity())) {
             task.execute();
@@ -61,7 +58,6 @@ public class DashboardFragment extends Fragment {
                     "Please check your internet connectivity.",
                     getActivity());
         }
-
         return rootView;
     }
 }

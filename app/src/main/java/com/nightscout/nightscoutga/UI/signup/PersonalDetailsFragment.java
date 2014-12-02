@@ -45,8 +45,10 @@ public class PersonalDetailsFragment extends FragmentX {
             signupFieldPhoneNo = (EditText) root.findViewById(R.id.signup_phone);
             signupFieldPassword = (EditText) root.findViewById(R.id.signup_pwd);
             nextButton = (Button) root.findViewById(R.id.ns_s1_next);
+            backButton = (Button) root.findViewById(R.id.ns_s1_back);
 
             signupFieldEmail.setText(email_ID);
+            signupFieldUName.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_FLAG_MULTI_LINE);
 
             nextButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -67,6 +69,13 @@ public class PersonalDetailsFragment extends FragmentX {
                             .updateBasedOnMostRecentLocation(lastKnownAddress);
 
                     ((SignUpActivity) getActivity()).slideTo(1);
+                }
+            });
+
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((SignUpActivity) getActivity()).slideTo(-1);
                 }
             });
         } catch (Exception e) {

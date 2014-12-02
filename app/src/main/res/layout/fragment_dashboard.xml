@@ -130,11 +130,7 @@
                     android:gravity="center"
                     android:id="@+id/textView6"
                     android:layout_weight="1" />
-
-
             </RelativeLayout>
-
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

@@ -1,10 +1,5 @@
 package com.nightscout.nightscoutga.Models;
 
-//import com.nightscout.android.dexcom.Constants;
-
-/**
- * Created by User on 30/11/2014.
- */
 public class Glucose {
 
     int patientId;

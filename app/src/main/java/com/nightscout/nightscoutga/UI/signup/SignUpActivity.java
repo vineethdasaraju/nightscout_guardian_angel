@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.nightscout.nightscoutga.Adapter.SignUpPagerAdapter;
 import com.nightscout.nightscoutga.Background.createUserAsyncTask;
@@ -80,7 +79,6 @@ public class SignUpActivity extends FragmentActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Toast.makeText(this, obj.toString(), Toast.LENGTH_SHORT).show();
         createUserAsyncTask task = new createUserAsyncTask(obj, SignUpActivity.this);
         task.execute();
     }
@@ -91,12 +89,14 @@ public class SignUpActivity extends FragmentActivity {
         builder.setMessage(R.string.alert_exit)
                 .setPositiveButton(R.string.option_yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        finish();
                     }
                 })
                 .setNegativeButton(R.string.option_no, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 });
+        builder.show();
 
 //        final Dialog dialog = new Dialog(this);
 //        //tell the Dialog to use the dialog.xml as it's layout description
