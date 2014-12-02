@@ -34,7 +34,7 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        pd = ProgressDialog.show(appContext, null, "...");
+        pd = ProgressDialog.show(appContext, null, "Heating Up....");
     }
 
     @Override
@@ -97,7 +97,6 @@ public class LoginAsyncTask extends AsyncTask<Void, Void, String> {
             if(BytesToBeSent != null) {
                 outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
             }
-
             InputStreamReader inputStreamReader = null;
             BufferedReader bufferedReader = null;
             try {

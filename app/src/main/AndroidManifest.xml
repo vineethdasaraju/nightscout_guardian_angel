@@ -41,7 +41,6 @@
             android:windowSoftInputMode="adjustResize|stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -71,11 +70,6 @@
             android:label="@string/title_activity_emergency_screen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver
@@ -83,7 +77,6 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
                 <category android:name="com.nightscout.nightscoutga" />
             </intent-filter>
         </receiver>
@@ -99,7 +92,8 @@
 
         <activity
             android:name="com.nightscout.nightscoutga.UI.Login.SplashScreen"
-            android:label="@string/title_activity_splash_screen" >
+            android:label="@string/title_activity_splash_screen"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

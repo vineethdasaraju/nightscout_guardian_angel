@@ -113,7 +113,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/ns_s1_signup_bname_layout_height"
                             android:hint="@string/ns_s1_signup_uName"
-                            android:inputType="textCapWords"
                             android:paddingBottom="@dimen/ns_s1_signup_bname_paddingBottom"
                             android:paddingLeft="@dimen/ns_s1_signup_bname_paddingLeft"
                             android:paddingRight="@dimen/ns_s1_signup_bname_paddingRight"

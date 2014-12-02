@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.nightscout.nightscoutga.util.Constants;
 import com.nightscout.nightscoutga.util.Functions;
@@ -24,11 +23,17 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
     ProgressDialog pd;
     Activity app;
     Context callActivity;
+    String password;
     int responseCode;
 
     public createUserAsyncTask(JSONObject obj, Activity app) {
         this.obj = obj;
         this.app = app;
+        try {
+            password = obj.getString("password");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -52,7 +57,6 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
                 outputStream.write(BytesToBeSent, 0, BytesToBeSent.length);
             }
             responseCode = connection.getResponseCode();
-            Log.d("create User AsyncTask", responseCode + "");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -63,7 +67,7 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
 
     @Override
     protected void onPreExecute() {
-        pd = ProgressDialog.show(app, null, "Getting your location.");
+        pd = ProgressDialog.show(app, null, "Creating your account.");
         pd.setCancelable(true);
     }
 
@@ -74,7 +78,7 @@ public class createUserAsyncTask extends AsyncTask<Void, Void, Integer> {
             String userEmail = null;
             try {
                 userEmail = obj.getString("emailId");
-                String password = obj.getString("password");
+                Functions.toast("Successfully registered, loggin you in.", app);
                 LoginAsyncTask task = new LoginAsyncTask(app, userEmail, password);
                 task.execute();
             } catch (JSONException e) {
